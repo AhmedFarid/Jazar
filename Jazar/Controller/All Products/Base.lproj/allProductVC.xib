@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="allProductVC" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="allProductVC" customModule="Jazar" customModuleProvider="target">
             <connections>
                 <outlet property="allProductCollectionView" destination="Gub-LQ-GSS" id="SPc-F3-rSh"/>
                 <outlet property="searchTF" destination="lXh-Mr-EcU" id="lnd-oG-rEC"/>
@@ -34,7 +34,7 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search For product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXh-Mr-EcU" customClass="textFieldView" customModule="MGH_Kitchen_Tools" customModuleProvider="target">
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search For product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXh-Mr-EcU" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
                     <rect key="frame" x="8" y="60" width="398" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -46,7 +46,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
                             <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="icon_search"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="search"/>
                     </userDefinedRuntimeAttributes>
                 </textField>
             </subviews>
@@ -65,6 +65,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_search" width="15" height="15"/>
+        <image name="search" width="20.5" height="20.5"/>
     </resources>
 </document>

@@ -27,8 +27,11 @@ class newOffersVC: UIViewController,NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(false)
-        handelApiflashSale(name: name)
         searchTF.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        handelApiflashSale(name: name)
     }
     
     func SetupSearch() {

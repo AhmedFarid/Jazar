@@ -17,7 +17,7 @@
 "Ehp-h1-nJs.placeholder" = "موعد التسليم";
 
 /* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "gbd-4B-Hft"; */
-"gbd-4B-Hft.normalTitle" = "الدفع عند الاستلام";
+"gbd-4B-Hft.normalTitle" = "استكمال الطلب";
 
 /* Class = "UILabel"; text = "Delivery"; ObjectID = "gON-lc-kUx"; */
 "gON-lc-kUx.text" = "توصيل";
@@ -47,7 +47,7 @@
 "vPe-tk-lQq.placeholder" = "منطقة";
 
 /* Class = "UILabel"; text = "Address Information"; ObjectID = "wUM-M3-xLv"; */
-"wUM-M3-xLv.text" = "معلومات العنوان";
+"wUM-M3-xLv.text" = "العنوان";
 
 /* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wvC-jY-N8s"; */
 "wvC-jY-N8s.placeholder" = "الاسم الكامل";
@@ -56,5 +56,5 @@
 "YHB-SA-QAr.text" = "عدد من المنتجات";
 
 /* Class = "UILabel"; text = "Promo Value"; ObjectID = "Zys-sf-YLl"; */
-"Zys-sf-YLl.text" = "القيمة الترويجية";
+"Zys-sf-YLl.text" = "قيمه البرومو";
 

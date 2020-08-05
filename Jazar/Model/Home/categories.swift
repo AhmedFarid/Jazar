@@ -23,8 +23,15 @@ struct dataCategories: Codable {
 
 struct dataCategoriesArray: Codable {
     let id: Int?
-    let name: String?
-    let image: String?
+       let name: String?
+       let subcategories: [dataCategoriesArray]?
+       let image: String?
+       let categoryid: Int?
+    
+    enum CodingKeys: String, CodingKey {
+           case id, name, subcategories, image
+           case categoryid = "category_id"
+       }
 }
 
 struct metaCategories: Codable {

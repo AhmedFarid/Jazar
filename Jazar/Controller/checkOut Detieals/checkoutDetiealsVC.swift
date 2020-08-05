@@ -39,7 +39,7 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     var delivery_type = ""
     var cityName = ""
     var regionId = 0
-    var receivePointsId = 0
+    var receivePointsId = "0"
     var typeDelivery = ""
     
     override func viewDidLoad() {
@@ -66,7 +66,8 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
         phoneTF.text = "\(phone)"
         fullNameTF.text = "\(fullName)"
     }
-
+    
+   
     
     func order() {
         loaderHelper()

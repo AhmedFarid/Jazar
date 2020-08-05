@@ -301,10 +301,17 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
             vc.images = products[indexPath.row].productImages ?? []
             self.navigationController!.pushViewController(vc, animated: true)
         }else if collectionView == categoryCollectionView {
-            let vc = allProductVC(nibName: "allProductVC", bundle: nil)
-            vc.singleItme = categorie[indexPath.row]
-            vc.url = URLs.searchProduct
-            self.navigationController!.pushViewController(vc, animated: true)
+            if categorie[indexPath.row].subcategories?.count == 0 {
+                let vc = allProductVC(nibName: "allProductVC", bundle: nil)
+                vc.singleItme = categorie[indexPath.row]
+                vc.url = URLs.searchProduct
+                self.navigationController!.pushViewController(vc, animated: true)
+                
+            }else {
+                let vc = subCategours(nibName: "subCategours", bundle: nil)
+                vc.categorie = categorie[indexPath.row].subcategories ?? []
+                self.navigationController!.pushViewController(vc, animated: true)
+            }
         }else if collectionView == dailyDishCollectionView {
             let vc = blogsDetailsVC(nibName: "blogsDetailsVC", bundle: nil)
             vc.singlItme = blogs[indexPath.row]

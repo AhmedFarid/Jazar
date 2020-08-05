@@ -121,6 +121,8 @@
 		6999FCC224B377540040C249 /* sliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999FCC124B377540040C249 /* sliders.swift */; };
 		6999FCC524B3779D0040C249 /* homeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999FCC424B3779D0040C249 /* homeApi.swift */; };
 		6999FCC724B379F80040C249 /* products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6999FCC624B379F80040C249 /* products.swift */; };
+		69C223F324DB1D340045EA04 /* subCategours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C223F124DB1D340045EA04 /* subCategours.swift */; };
+		69C223F424DB1D340045EA04 /* subCategours.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C223F224DB1D340045EA04 /* subCategours.xib */; };
 		69ECC69624AB75B0003ACC70 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECC69424AB75B0003ACC70 /* loginVC.swift */; };
 		69ECC69924AB78C6003ACC70 /* textFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECC69824AB78C6003ACC70 /* textFieldView.swift */; };
 		69ECC69B24AB7F58003ACC70 /* navHerlper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ECC69A24AB7F58003ACC70 /* navHerlper.swift */; };
@@ -286,6 +288,8 @@
 		6999FCC124B377540040C249 /* sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sliders.swift; sourceTree = "<group>"; };
 		6999FCC424B3779D0040C249 /* homeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeApi.swift; sourceTree = "<group>"; };
 		6999FCC624B379F80040C249 /* products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = products.swift; sourceTree = "<group>"; };
+		69C223F124DB1D340045EA04 /* subCategours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subCategours.swift; sourceTree = "<group>"; };
+		69C223F224DB1D340045EA04 /* subCategours.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = subCategours.xib; sourceTree = "<group>"; };
 		69ECC69424AB75B0003ACC70 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		69ECC69824AB78C6003ACC70 /* textFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldView.swift; sourceTree = "<group>"; };
 		69ECC69A24AB7F58003ACC70 /* navHerlper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navHerlper.swift; sourceTree = "<group>"; };
@@ -638,6 +642,8 @@
 		696B1ED524B6108600D609A5 /* Shop now */ = {
 			isa = PBXGroup;
 			children = (
+				69C223F024DB1CBF0045EA04 /* New Group1 */,
+				69C223EF24DB1CB80045EA04 /* subCategours */,
 				696B1ED624B610AB00D609A5 /* allCategoursVC.swift */,
 				6936A1E424D1A215008A94FF /* allCategoursVC.xib */,
 			);
@@ -809,6 +815,22 @@
 				6999FCC424B3779D0040C249 /* homeApi.swift */,
 			);
 			path = homeApi;
+			sourceTree = "<group>";
+		};
+		69C223EF24DB1CB80045EA04 /* subCategours */ = {
+			isa = PBXGroup;
+			children = (
+				69C223F124DB1D340045EA04 /* subCategours.swift */,
+				69C223F224DB1D340045EA04 /* subCategours.xib */,
+			);
+			path = subCategours;
+			sourceTree = "<group>";
+		};
+		69C223F024DB1CBF0045EA04 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		69ECC68924AB6B67003ACC70 /* API Service */ = {
@@ -1099,6 +1121,7 @@
 				6936A1F124D1A234008A94FF /* myOrdersCell.xib in Resources */,
 				6936A1EB24D1A228008A94FF /* checkOutVC.xib in Resources */,
 				69335F2324D963B500B4A517 /* blogsCell.xib in Resources */,
+				69C223F424DB1D340045EA04 /* subCategours.xib in Resources */,
 				69335F2824D9802E00B4A517 /* blogsDetailsVC.xib in Resources */,
 				6936A1CA24D1A1DE008A94FF /* reviewsVC.xib in Resources */,
 				6936A1BB24D19FED008A94FF /* flashSaleCell.xib in Resources */,
@@ -1226,6 +1249,7 @@
 				6999FCB224B354E60040C249 /* authApi.swift in Sources */,
 				698964DF24BDE481001B9A6C /* htmlToString.swift in Sources */,
 				696B1EE824B629C200D609A5 /* cartCollectionCell.swift in Sources */,
+				69C223F324DB1D340045EA04 /* subCategours.swift in Sources */,
 				6999FCAA24B327220040C249 /* sideMenuVC.swift in Sources */,
 				6937C81424ACE24400723A2A /* imageViewCostom.swift in Sources */,
 				6999FCAC24B353E40040C249 /* config.swift in Sources */,

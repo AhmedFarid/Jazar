@@ -86,6 +86,9 @@
 "Hrs" = "ساعه";
 
 /* profuct list lang */
+"Immediatelu Delivery within 30 minutes" = "حالا خلال نصف ساعه";
+
+/* profuct list lang */
 "In Stock:" = "في المخزن";
 
 /* profuct list lang */
@@ -186,6 +189,9 @@
 
 /* profuct list lang */
 "Save" = "حفظ";
+
+/* profuct list lang */
+"Schedule" = "مجدول";
 
 /* profuct list lang */
 "Select Language" = "اختار اللغة";

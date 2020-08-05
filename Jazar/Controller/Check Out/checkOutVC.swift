@@ -14,7 +14,8 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     var delviers = [cityData]()
     var status = [cityData]()
     var points = [dataTiming]()
-    var deleveryType = ["Immediatelu Delivery within 30 minutes","Schedule"]
+
+    var deleveryType = [NSLocalizedString("Immediatelu Delivery within 30 minutes", comment: "profuct list lang"),NSLocalizedString("Schedule", comment: "profuct list lang")]
     
     
     @IBOutlet weak var promoCodeTF: textFieldView!
@@ -45,7 +46,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     var promoText = ""
     var cityId = 0
     var regionId = 0
-    var receivePointsId = 0
+    var receivePointsId = ""
     var typeDelivery = ""
     var slow = 0
     var fast = 0
@@ -178,6 +179,24 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     
     
     func creatOrder() {
+        
+        guard let delviryTF = delviryType.text, !delviryTF.isEmpty else {
+            let messages = NSLocalizedString("enter your delviry Type", comment: "hhhh")
+            let title = NSLocalizedString("order", comment: "hhhh")
+            self.showAlert(title: title, message: messages)
+            return
+        }
+        
+        if typeDelivery == "Schedule" || typeDelivery == "مجدول"{
+            guard let timing = timingTF.text, !timing.isEmpty else {
+                let messages = NSLocalizedString("enter your delviry Time", comment: "hhhh")
+                let title = NSLocalizedString("order", comment: "hhhh")
+                self.showAlert(title: title, message: messages)
+                return
+            }
+        }
+        
+        
         guard let name = fullNameTF.text, !name.isEmpty else {
             let messages = NSLocalizedString("enter your Name", comment: "hhhh")
             let title = NSLocalizedString("order", comment: "hhhh")
@@ -360,7 +379,7 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
             
         }else if pickerView == delviryTypePicker {
             delviryType.text = deleveryType[row]
-            if deleveryType[row] == "Schedule" {
+            if deleveryType[row] == "Schedule" || deleveryType[row] == "مجدول"{
                 timingTF.isHidden = false
                 timinImage.isHidden = false
                 timingVIew.isHidden = false
@@ -378,7 +397,7 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
                 regionTF.text = ""
             }
         }else {
-            self.receivePointsId = points[row].id ?? 0
+            self.receivePointsId = "\(points[row].id ?? 0)"
             self.deliveryPrices = points[row].price ?? 0
             let LE = NSLocalizedString("LE", comment: "profuct list lang")
             self.deliveryPrice.text = "\(deliveryPrices) \(LE)"

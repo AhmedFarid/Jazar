@@ -28,6 +28,9 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
         super.viewDidLoad()
         setUpNavColore(false)
         //handelApiflashSale(name: name)
+        if url == URLs.searchProduct {
+            searchTF.isHidden = false
+        }
         searchTF.delegate = self
     }
     

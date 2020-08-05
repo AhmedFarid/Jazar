@@ -45,32 +45,32 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8u-YN-Uie" customClass="viewCosttom" customModule="Jazar" customModuleProvider="target">
                     <rect key="frame" x="8" y="705" width="398" height="81"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of products" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-tZ-QAw">
-                            <rect key="frame" x="8" y="8" width="143.5" height="32"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of products" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-tZ-QAw">
+                            <rect key="frame" x="8" y="8" width="374" height="32"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="143.5" id="Lfa-9V-juQ"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143.5" id="Lfa-9V-juQ"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYN-LR-c49">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYN-LR-c49">
                             <rect key="frame" x="8" y="41" width="74" height="32"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="74" id="I5i-Ok-Sro"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="74" id="I5i-Ok-Sro"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-xh-8s6">
-                            <rect key="frame" x="159.5" y="24" width="237.5" height="0.0"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-xh-8s6">
+                            <rect key="frame" x="390" y="24" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="17"/>
                             <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="093-HZ-bWg">
-                            <rect key="frame" x="159.5" y="57" width="237.5" height="0.0"/>
+                            <rect key="frame" x="390" y="57" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="17"/>
                             <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -79,6 +79,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="WYN-LR-c49" firstAttribute="leading" secondItem="F8u-YN-Uie" secondAttribute="leading" constant="8" id="Aaj-95-4dY"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WYN-LR-c49" secondAttribute="trailing" constant="20" symbolic="YES" id="HBH-b6-gOb"/>
                         <constraint firstItem="VFb-xh-8s6" firstAttribute="centerY" secondItem="hfl-tZ-QAw" secondAttribute="centerY" id="KcR-dd-614"/>
                         <constraint firstItem="hfl-tZ-QAw" firstAttribute="top" secondItem="F8u-YN-Uie" secondAttribute="top" constant="8" id="TAr-am-rcS"/>
                         <constraint firstItem="WYN-LR-c49" firstAttribute="top" secondItem="hfl-tZ-QAw" secondAttribute="bottom" constant="1" id="WrW-ad-Qfe"/>
@@ -87,8 +88,8 @@
                         <constraint firstAttribute="bottom" secondItem="WYN-LR-c49" secondAttribute="bottom" constant="8" id="nbR-4k-7wi"/>
                         <constraint firstItem="093-HZ-bWg" firstAttribute="leading" secondItem="VFb-xh-8s6" secondAttribute="leading" id="oZF-gz-ZRy"/>
                         <constraint firstItem="hfl-tZ-QAw" firstAttribute="leading" secondItem="F8u-YN-Uie" secondAttribute="leading" constant="8" id="s8I-30-fIK"/>
-                        <constraint firstAttribute="trailing" secondItem="093-HZ-bWg" secondAttribute="trailing" constant="1" id="xvc-pj-3Wq"/>
-                        <constraint firstAttribute="trailing" secondItem="VFb-xh-8s6" secondAttribute="trailing" constant="1" id="z8c-AW-rfY"/>
+                        <constraint firstAttribute="trailing" secondItem="093-HZ-bWg" secondAttribute="trailing" constant="8" id="xvc-pj-3Wq"/>
+                        <constraint firstAttribute="trailing" secondItem="VFb-xh-8s6" secondAttribute="trailing" constant="8" id="z8c-AW-rfY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
@@ -111,6 +112,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="52" id="s7t-73-oaA"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                     <state key="normal" title="Check Out">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>

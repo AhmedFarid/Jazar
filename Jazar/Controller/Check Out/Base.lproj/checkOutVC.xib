@@ -58,7 +58,7 @@
                                             <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Products" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHB-SA-QAr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Products" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHB-SA-QAr">
                                             <rect key="frame" x="8" y="8" width="125" height="26.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="125" id="B94-ml-Zv2"/>
@@ -67,19 +67,19 @@
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-MR-5nA">
-                                            <rect key="frame" x="8" y="77" width="85" height="26.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Price" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-MR-5nA">
+                                            <rect key="frame" x="8" y="77" width="125" height="26.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="85" id="QXS-XS-KMH"/>
+                                                <constraint firstAttribute="width" constant="125" id="QXS-XS-KMH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-0c-Wa1">
-                                            <rect key="frame" x="8" y="146" width="70" height="26.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-0c-Wa1">
+                                            <rect key="frame" x="8" y="146" width="125" height="26.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="4vu-mj-llC"/>
+                                                <constraint firstAttribute="width" constant="125" id="4vu-mj-llC"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,10 +97,10 @@
                                             <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Total" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWA-RP-XUh">
-                                            <rect key="frame" x="8" y="42.5" width="85" height="26.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Total" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWA-RP-XUh">
+                                            <rect key="frame" x="8" y="42.5" width="125" height="26.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="85" id="YYb-nc-HBz"/>
+                                                <constraint firstAttribute="width" constant="125" id="YYb-nc-HBz"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,10 +112,10 @@
                                             <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Value" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zys-sf-YLl">
-                                            <rect key="frame" x="8" y="111.5" width="85" height="26.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Value" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zys-sf-YLl">
+                                            <rect key="frame" x="8" y="111.5" width="125" height="26.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="85" id="mM7-xg-i7L"/>
+                                                <constraint firstAttribute="width" constant="125" id="mM7-xg-i7L"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,10 +133,14 @@
                                         <constraint firstItem="ne8-3A-xpN" firstAttribute="centerY" secondItem="VlS-0c-Wa1" secondAttribute="centerY" id="0Af-Yk-cq4"/>
                                         <constraint firstItem="Zys-sf-YLl" firstAttribute="top" secondItem="0bd-MR-5nA" secondAttribute="bottom" constant="8" id="1uJ-w5-A86"/>
                                         <constraint firstItem="ne8-3A-xpN" firstAttribute="trailing" secondItem="Blh-QL-PWx" secondAttribute="trailing" id="27m-0S-ta7"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0bd-MR-5nA" secondAttribute="trailing" constant="20" symbolic="YES" id="2MJ-cV-2fG"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zys-sf-YLl" secondAttribute="trailing" constant="20" symbolic="YES" id="2sF-zy-8NW"/>
                                         <constraint firstItem="YHB-SA-QAr" firstAttribute="leading" secondItem="3OG-jA-cPr" secondAttribute="leading" constant="8" id="5gi-Ih-yxs"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VlS-0c-Wa1" secondAttribute="trailing" constant="20" symbolic="YES" id="629-VC-uLD"/>
                                         <constraint firstItem="0bd-MR-5nA" firstAttribute="leading" secondItem="3OG-jA-cPr" secondAttribute="leading" constant="8" id="6vL-ya-cz0"/>
                                         <constraint firstItem="VlS-0c-Wa1" firstAttribute="leading" secondItem="3OG-jA-cPr" secondAttribute="leading" constant="8" id="7vG-Pj-Sa9"/>
                                         <constraint firstItem="ne8-3A-xpN" firstAttribute="leading" secondItem="Blh-QL-PWx" secondAttribute="leading" id="9Jg-XN-Cph"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OWA-RP-XUh" secondAttribute="trailing" constant="20" symbolic="YES" id="DPG-mp-8de"/>
                                         <constraint firstItem="YHB-SA-QAr" firstAttribute="top" secondItem="3OG-jA-cPr" secondAttribute="top" constant="8" id="LOK-VX-4IF"/>
                                         <constraint firstItem="Rlk-wJ-d5m" firstAttribute="trailing" secondItem="Blh-QL-PWx" secondAttribute="trailing" id="PGJ-Fh-Hnt"/>
                                         <constraint firstItem="OWA-RP-XUh" firstAttribute="top" secondItem="YHB-SA-QAr" secondAttribute="bottom" constant="8" id="UJb-Ta-Nfg"/>
@@ -209,8 +213,9 @@
                                     <color key="backgroundColor" red="0.97647058819999999" green="0.50980392159999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="NEo-Qe-wcR"/>
-                                        <constraint firstAttribute="width" constant="100" id="V9L-6o-Txy"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="V9L-6o-Txy"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                     <state key="normal" title="Enter">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -261,6 +266,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="a7a-YV-s0O"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                     <state key="normal" title="Check Out">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
@@ -318,7 +324,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="rhO-YO-QM4"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
@@ -356,7 +362,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="YjE-cf-WqD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
@@ -455,13 +461,13 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Have Promo Code?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80B-y6-Pbq" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Have Promo Code?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80B-y6-Pbq" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
                                     <rect key="frame" x="16" y="16" width="274" height="56"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="qmy-po-wnG"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">

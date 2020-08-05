@@ -47,7 +47,7 @@
 "WYM-c3-7Fr.text" = "رقم البيت";
 
 /* Class = "UIButton"; normalTitle = "Confirm Order"; ObjectID = "xq0-vZ-SeV"; */
-"xq0-vZ-SeV.normalTitle" = "أكد الطلب";
+"xq0-vZ-SeV.normalTitle" = "الدفع عند الاستلام";
 
 /* Class = "UILabel"; text = "Floor Number"; ObjectID = "Y1y-Wt-kcK"; */
 "Y1y-Wt-kcK.text" = "رقم الطابق";

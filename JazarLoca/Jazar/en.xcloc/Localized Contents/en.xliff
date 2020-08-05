@@ -1252,6 +1252,11 @@
         <target>Hrs</target>
         <note>profuct list lang</note>
       </trans-unit>
+      <trans-unit id="Immediatelu Delivery within 30 minutes" xml:space="preserve">
+        <source>Immediatelu Delivery within 30 minutes</source>
+        <target>Immediatelu Delivery within 30 minutes</target>
+        <note>profuct list lang</note>
+      </trans-unit>
       <trans-unit id="In Stock:" xml:space="preserve">
         <source>In Stock:</source>
         <target>In Stock:</target>
@@ -1415,6 +1420,11 @@
       <trans-unit id="Save" xml:space="preserve">
         <source>Save</source>
         <target>Save</target>
+        <note>profuct list lang</note>
+      </trans-unit>
+      <trans-unit id="Schedule" xml:space="preserve">
+        <source>Schedule</source>
+        <target>Schedule</target>
         <note>profuct list lang</note>
       </trans-unit>
       <trans-unit id="Select Language" xml:space="preserve">

@@ -11,7 +11,7 @@ import Alamofire
 
 class checkOutApi: NSObject {
     
-    class func makeOrderApi(state_id:Int,receive_points_id:Int,type_delivery:String,delivery_type:String,city_id: String,gift_id: String,code:String,customer_name: String,customer_phone: String,customer_city: String,customer_region: String,customer_street: String,customer_home_number: String,customer_floor_number: String,customer_address: String,payment_method: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: Messages?)-> Void){
+    class func makeOrderApi(state_id:Int,receive_points_id:String,type_delivery:String,delivery_type:String,city_id: String,gift_id: String,code:String,customer_name: String,customer_phone: String,customer_city: String,customer_region: String,customer_street: String,customer_home_number: String,customer_floor_number: String,customer_address: String,payment_method: String,completion: @escaping(_ error: Error?,_ success: Bool,_ fav: Messages?)-> Void){
         
         guard let user_token = helperAuth.getAPIToken() else {
             completion(nil, false,nil)
