@@ -1,0 +1,18 @@
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "5od-Mz-VuT"; */
+"5od-Mz-VuT.placeholder" = "الاسم الكامل";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "d16-9F-iAM"; */
+"d16-9F-iAM.placeholder" = "كلمه السر";
+
+/* Class = "UIButton"; normalTitle = "Approve the privacy policy in the application view"; ObjectID = "EOR-IB-QxM"; */
+"EOR-IB-QxM.normalTitle" = "الموافقة على سياسة الخصوصية في طريقة عرض التطبيق";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "fq9-Vw-3Tb"; */
+"fq9-Vw-3Tb.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "nEy-d5-qln"; */
+"nEy-d5-qln.placeholder" = "هاتف";
+
+/* Class = "UIButton"; normalTitle = "SIGN UP"; ObjectID = "oBm-VE-OHa"; */
+"oBm-VE-OHa.normalTitle" = "سجل";
+

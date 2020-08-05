@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tNt-SY-505" customClass="allProductViewCell" customModule="Jazar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="423"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="423"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wa-fN-fl4" customClass="viewCosttom" customModule="Jazar" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="204" height="407"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 12" translatesAutoresizingMaskIntoConstraints="NO" id="Hmb-Kl-rBo" customClass="imageViewCostom" customModule="Jazar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="204" height="184"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCostom" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCostomTopLeftTopRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made Neoflam Korean made Neoflam Korean made Neoflam Korean made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Dhe-2c-8u0">
+                                <rect key="frame" x="1" y="184" width="202" height="30"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made Neoflam Korean made Neoflam Korean made Neoflam Korean made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="GnM-0O-q2u">
+                                <rect key="frame" x="1" y="214" width="202" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-zs-N9b">
+                                <rect key="frame" x="52.5" y="259" width="99" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enk-Ii-9e6">
+                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLp-1R-AQy">
+                                        <rect key="frame" x="53.5" y="2" width="45.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy4-Lw-oAp">
+                                <rect key="frame" x="154" y="314" width="42" height="42"/>
+                                <state key="normal" image="Group 238"/>
+                                <connections>
+                                    <action selector="cartBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="Sxd-6H-cAO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rod-uq-Rb4" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="29.5" y="291" width="145" height="15"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="NOstar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="(55555)"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut5-yR-w8d">
+                                <rect key="frame" x="8" y="314" width="42" height="42"/>
+                                <state key="normal" image="fav"/>
+                                <connections>
+                                    <action selector="favBtnAction:" destination="tNt-SY-505" eventType="touchUpInside" id="KGP-Ac-ne6"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtraction 4" translatesAutoresizingMaskIntoConstraints="NO" id="dEG-0E-n2S">
+                                <rect key="frame" x="8" y="0.0" width="31" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="5Fo-tG-6Zc"/>
+                                    <constraint firstAttribute="width" constant="31" id="mMc-1F-Xyh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-e4-wX2">
+                                <rect key="frame" x="23.5" y="0.0" width="0.0" height="130"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made Neoflam Korean made Neoflam Korean made Neoflam Korean made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Sh5-el-J6y">
+                                <rect key="frame" x="1" y="236.5" width="202" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dEG-0E-n2S" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" id="4Vh-LH-mQL"/>
+                            <constraint firstItem="Ut5-yR-w8d" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="8" id="4vA-Gh-Bjl"/>
+                            <constraint firstItem="ufk-zs-N9b" firstAttribute="centerX" secondItem="2wa-fN-fl4" secondAttribute="centerX" id="9VY-OT-zHC"/>
+                            <constraint firstItem="Sh5-el-J6y" firstAttribute="top" secondItem="GnM-0O-q2u" secondAttribute="bottom" id="D03-Ma-UCx"/>
+                            <constraint firstAttribute="trailing" secondItem="dy4-Lw-oAp" secondAttribute="trailing" constant="8" id="EKm-ZL-jxc"/>
+                            <constraint firstItem="Ch1-e4-wX2" firstAttribute="bottom" secondItem="dEG-0E-n2S" secondAttribute="bottom" id="G50-Yk-Anq"/>
+                            <constraint firstItem="Dhe-2c-8u0" firstAttribute="top" secondItem="Hmb-Kl-rBo" secondAttribute="bottom" id="GNn-G5-Zgw"/>
+                            <constraint firstAttribute="trailing" secondItem="Sh5-el-J6y" secondAttribute="trailing" constant="1" id="GeC-ts-qhE"/>
+                            <constraint firstItem="dEG-0E-n2S" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="8" id="JDc-Ie-6mx"/>
+                            <constraint firstItem="Hmb-Kl-rBo" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" id="Pxs-Yg-WeW"/>
+                            <constraint firstItem="Sh5-el-J6y" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="1" id="RQj-RU-6tA"/>
+                            <constraint firstItem="Rod-uq-Rb4" firstAttribute="centerX" secondItem="2wa-fN-fl4" secondAttribute="centerX" id="RQz-rn-bgC"/>
+                            <constraint firstItem="Ch1-e4-wX2" firstAttribute="top" secondItem="dEG-0E-n2S" secondAttribute="top" id="TDd-Eu-rS0"/>
+                            <constraint firstItem="Ut5-yR-w8d" firstAttribute="top" secondItem="Rod-uq-Rb4" secondAttribute="bottom" constant="8" id="U3k-qD-flD"/>
+                            <constraint firstItem="Hmb-Kl-rBo" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" id="YLT-kP-V8k"/>
+                            <constraint firstAttribute="trailing" secondItem="GnM-0O-q2u" secondAttribute="trailing" constant="1" id="b7F-1G-zd7"/>
+                            <constraint firstItem="Ch1-e4-wX2" firstAttribute="centerX" secondItem="dEG-0E-n2S" secondAttribute="centerX" id="bK7-9q-V23"/>
+                            <constraint firstItem="Rod-uq-Rb4" firstAttribute="top" secondItem="ufk-zs-N9b" secondAttribute="bottom" id="bzg-gg-qwg"/>
+                            <constraint firstItem="Hmb-Kl-rBo" firstAttribute="height" secondItem="2wa-fN-fl4" secondAttribute="height" multiplier="0.452604" id="gjW-NX-4JR"/>
+                            <constraint firstItem="Dhe-2c-8u0" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="1" id="hI1-oL-YQv"/>
+                            <constraint firstItem="ufk-zs-N9b" firstAttribute="top" secondItem="Sh5-el-J6y" secondAttribute="bottom" id="mWY-ho-Ajt"/>
+                            <constraint firstAttribute="trailing" secondItem="Dhe-2c-8u0" secondAttribute="trailing" constant="1" id="nua-mE-hd7"/>
+                            <constraint firstAttribute="trailing" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" id="pg3-YD-IHZ"/>
+                            <constraint firstItem="GnM-0O-q2u" firstAttribute="top" secondItem="Dhe-2c-8u0" secondAttribute="bottom" id="tH8-b8-gFj"/>
+                            <constraint firstItem="GnM-0O-q2u" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="1" id="tQc-e2-F8b"/>
+                            <constraint firstItem="dy4-Lw-oAp" firstAttribute="centerY" secondItem="Ut5-yR-w8d" secondAttribute="centerY" id="yzN-4g-3Nv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="2wa-fN-fl4" firstAttribute="leading" secondItem="tNt-SY-505" secondAttribute="leading" constant="8" id="7B7-5Y-5H9"/>
+                <constraint firstAttribute="trailing" secondItem="2wa-fN-fl4" secondAttribute="trailing" constant="8" id="AdR-O1-d3V"/>
+                <constraint firstAttribute="bottom" secondItem="2wa-fN-fl4" secondAttribute="bottom" constant="8" id="hG4-55-mxz"/>
+                <constraint firstItem="2wa-fN-fl4" firstAttribute="top" secondItem="tNt-SY-505" secondAttribute="top" constant="8" id="omS-MX-gYj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="dpV-bm-glk"/>
+            <size key="customSize" width="220" height="423"/>
+            <connections>
+                <outlet property="cartBtn" destination="dy4-Lw-oAp" id="YXf-ZY-b4z"/>
+                <outlet property="discountPrice" destination="aLp-1R-AQy" id="haI-o8-71Z"/>
+                <outlet property="favBtn" destination="Ut5-yR-w8d" id="LOA-pp-nUM"/>
+                <outlet property="nameProduct" destination="Dhe-2c-8u0" id="0be-1e-Dvm"/>
+                <outlet property="newPrice" destination="enk-Ii-9e6" id="5bf-be-NOz"/>
+                <outlet property="productImage" destination="Hmb-Kl-rBo" id="zai-fX-05F"/>
+                <outlet property="reviews" destination="Rod-uq-Rb4" id="0fc-GT-mFk"/>
+                <outlet property="shortDec" destination="GnM-0O-q2u" id="0VU-aN-F3y"/>
+                <outlet property="stockImage" destination="dEG-0E-n2S" id="wjk-Mf-32q"/>
+                <outlet property="stokeLb" destination="Ch1-e4-wX2" id="cVJ-NL-YPY"/>
+                <outlet property="type" destination="Sh5-el-J6y" id="IGC-4W-D8X"/>
+            </connections>
+            <point key="canvasLocation" x="256.52173913043481" y="134.26339285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Group 238" width="42" height="42"/>
+        <image name="Image 12" width="127" height="127"/>
+        <image name="NOstar" width="8.5" height="8"/>
+        <image name="Subtraction 4" width="13" height="55"/>
+        <image name="fav" width="42" height="42"/>
+        <image name="star" width="8.5" height="8"/>
+    </resources>
+</document>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupVC" customModule="Jazar" customModuleProvider="target">
+            <connections>
+                <outlet property="email" destination="fq9-Vw-3Tb" id="WNF-RD-yvm"/>
+                <outlet property="fullName" destination="5od-Mz-VuT" id="pnV-VK-1Ot"/>
+                <outlet property="password" destination="d16-9F-iAM" id="yeV-dG-InR"/>
+                <outlet property="phone" destination="nEy-d5-qln" id="heQ-Tm-Aq7"/>
+                <outlet property="privacy" destination="145-0z-ca8" id="5U3-rK-YKD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-Xw-8GQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-X4-R33">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rz-H6-HuL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="751.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="final copy" translatesAutoresizingMaskIntoConstraints="NO" id="D2l-Wb-See">
+                                    <rect key="frame" x="124" y="8" width="166" height="220.5"/>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-Vw-3Tb" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="438.5" width="382" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="Dl8-k4-WMl"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d16-9F-iAM" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="527.5" width="382" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="AIc-kM-cfM"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Union 6"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBm-VE-OHa" customClass="buttonView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="63" y="667.5" width="288" height="52"/>
+                                    <color key="backgroundColor" red="0.97647058819999999" green="0.50980392159999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="7JV-N5-IPq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <state key="normal" title="SIGN UP">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="signUpBTNAction:" destination="-1" eventType="touchUpInside" id="x8o-Ui-nEh"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5od-Mz-VuT" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="260.5" width="382" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="SOi-aI-LWQ"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Group 1494"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEy-d5-qln" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="349.5" width="382" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="1DC-xg-PG9"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phone"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uf2-v4-9f3">
+                                    <rect key="frame" x="16" y="316.5" width="382" height="1"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="s7u-rZ-Ttr"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddz-EN-mdh">
+                                    <rect key="frame" x="16" y="405.5" width="382" height="1"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="wNA-aF-omn"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pu-PD-bhA">
+                                    <rect key="frame" x="16" y="494.5" width="382" height="1"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="Gyk-pi-dO4"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-pt-cQj">
+                                    <rect key="frame" x="16" y="583.5" width="382" height="1"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="uVO-cW-fQa"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="145-0z-ca8">
+                                    <rect key="frame" x="16" y="600.5" width="39" height="39"/>
+                                    <state key="normal" image="NoGroup 1597"/>
+                                    <connections>
+                                        <action selector="privacyBtn:" destination="-1" eventType="touchUpInside" id="Z0v-a6-9SB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOR-IB-QxM">
+                                    <rect key="frame" x="55" y="600.5" width="246" height="35"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="12"/>
+                                    <state key="normal" title="Approve the privacy policy in the application view">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAction:" destination="-1" eventType="touchUpInside" id="ZE7-v2-2gT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="bKo-pt-cQj" firstAttribute="top" secondItem="d16-9F-iAM" secondAttribute="bottom" id="262-WC-cQD"/>
+                                <constraint firstItem="145-0z-ca8" firstAttribute="top" secondItem="bKo-pt-cQj" secondAttribute="bottom" constant="16" id="2UN-aE-4vu"/>
+                                <constraint firstItem="uf2-v4-9f3" firstAttribute="leading" secondItem="5od-Mz-VuT" secondAttribute="leading" id="32S-zh-7gt"/>
+                                <constraint firstItem="oBm-VE-OHa" firstAttribute="top" secondItem="EOR-IB-QxM" secondAttribute="bottom" constant="32" id="52L-x6-OEs"/>
+                                <constraint firstItem="145-0z-ca8" firstAttribute="leading" secondItem="5od-Mz-VuT" secondAttribute="leading" id="7l2-Qc-XNc"/>
+                                <constraint firstItem="EOR-IB-QxM" firstAttribute="leading" secondItem="145-0z-ca8" secondAttribute="trailing" id="AAB-OW-Bk7"/>
+                                <constraint firstItem="6pu-PD-bhA" firstAttribute="trailing" secondItem="fq9-Vw-3Tb" secondAttribute="trailing" id="CBM-pj-Guz"/>
+                                <constraint firstItem="bKo-pt-cQj" firstAttribute="leading" secondItem="d16-9F-iAM" secondAttribute="leading" id="EQb-7q-Od3"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="leading" secondItem="5od-Mz-VuT" secondAttribute="leading" id="FM8-zC-WIs"/>
+                                <constraint firstItem="5od-Mz-VuT" firstAttribute="top" secondItem="D2l-Wb-See" secondAttribute="bottom" constant="32" id="N5Q-A9-Rdg"/>
+                                <constraint firstAttribute="bottom" secondItem="oBm-VE-OHa" secondAttribute="bottom" constant="32" id="OgO-tl-NPc"/>
+                                <constraint firstAttribute="trailing" secondItem="5od-Mz-VuT" secondAttribute="trailing" constant="16" id="Qir-sl-9I9"/>
+                                <constraint firstItem="d16-9F-iAM" firstAttribute="top" secondItem="6pu-PD-bhA" secondAttribute="bottom" constant="32" id="R6F-id-Za4"/>
+                                <constraint firstItem="6pu-PD-bhA" firstAttribute="leading" secondItem="fq9-Vw-3Tb" secondAttribute="leading" id="S8F-vl-qs4"/>
+                                <constraint firstItem="oBm-VE-OHa" firstAttribute="centerX" secondItem="8rz-H6-HuL" secondAttribute="centerX" id="TPo-HK-Xib"/>
+                                <constraint firstItem="ddz-EN-mdh" firstAttribute="top" secondItem="nEy-d5-qln" secondAttribute="bottom" id="WsY-90-Khu"/>
+                                <constraint firstItem="uf2-v4-9f3" firstAttribute="top" secondItem="5od-Mz-VuT" secondAttribute="bottom" id="Y6h-Dp-FvB"/>
+                                <constraint firstItem="d16-9F-iAM" firstAttribute="leading" secondItem="5od-Mz-VuT" secondAttribute="leading" id="aAh-wT-itM"/>
+                                <constraint firstItem="ddz-EN-mdh" firstAttribute="trailing" secondItem="nEy-d5-qln" secondAttribute="trailing" id="cbC-Wp-n2V"/>
+                                <constraint firstItem="D2l-Wb-See" firstAttribute="top" secondItem="8rz-H6-HuL" secondAttribute="top" constant="8" id="eDh-Co-qr8"/>
+                                <constraint firstItem="d16-9F-iAM" firstAttribute="trailing" secondItem="5od-Mz-VuT" secondAttribute="trailing" id="eGo-eI-CkO"/>
+                                <constraint firstItem="bKo-pt-cQj" firstAttribute="trailing" secondItem="d16-9F-iAM" secondAttribute="trailing" id="gpJ-KI-89E"/>
+                                <constraint firstItem="ddz-EN-mdh" firstAttribute="leading" secondItem="nEy-d5-qln" secondAttribute="leading" id="iaz-u9-uPo"/>
+                                <constraint firstItem="uf2-v4-9f3" firstAttribute="trailing" secondItem="5od-Mz-VuT" secondAttribute="trailing" id="l36-bQ-gQa"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="top" secondItem="ddz-EN-mdh" secondAttribute="bottom" constant="32" id="ooa-51-9oN"/>
+                                <constraint firstItem="nEy-d5-qln" firstAttribute="trailing" secondItem="5od-Mz-VuT" secondAttribute="trailing" id="qhN-im-vYA"/>
+                                <constraint firstItem="EOR-IB-QxM" firstAttribute="centerY" secondItem="145-0z-ca8" secondAttribute="centerY" constant="-2" id="qjf-5a-b6L"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="trailing" secondItem="5od-Mz-VuT" secondAttribute="trailing" id="shK-b9-ULj"/>
+                                <constraint firstItem="fq9-Vw-3Tb" firstAttribute="trailing" secondItem="5od-Mz-VuT" secondAttribute="trailing" id="spe-VF-XLB"/>
+                                <constraint firstItem="6pu-PD-bhA" firstAttribute="top" secondItem="fq9-Vw-3Tb" secondAttribute="bottom" id="usH-Yw-epY"/>
+                                <constraint firstItem="5od-Mz-VuT" firstAttribute="leading" secondItem="8rz-H6-HuL" secondAttribute="leading" constant="16" id="vGw-Fy-Kcl"/>
+                                <constraint firstItem="D2l-Wb-See" firstAttribute="centerX" secondItem="8rz-H6-HuL" secondAttribute="centerX" id="w4P-wS-dJ2"/>
+                                <constraint firstItem="nEy-d5-qln" firstAttribute="leading" secondItem="5od-Mz-VuT" secondAttribute="leading" id="xJw-g4-B2i"/>
+                                <constraint firstItem="nEy-d5-qln" firstAttribute="top" secondItem="uf2-v4-9f3" secondAttribute="bottom" constant="32" id="yNL-yP-P5v"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="leading" secondItem="KjG-u4-lSm" secondAttribute="leading" id="B03-iH-vSQ"/>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="top" secondItem="KjG-u4-lSm" secondAttribute="top" id="Nul-HY-9v0"/>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="trailing" secondItem="KjG-u4-lSm" secondAttribute="trailing" id="hAh-QK-hKb"/>
+                        <constraint firstItem="qr1-L9-FTi" firstAttribute="width" secondItem="8rz-H6-HuL" secondAttribute="width" id="oFI-td-9tb"/>
+                        <constraint firstItem="8rz-H6-HuL" firstAttribute="bottom" secondItem="KjG-u4-lSm" secondAttribute="bottom" id="s1u-6n-VF6"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="KjG-u4-lSm"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="qr1-L9-FTi"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zmT-X4-R33" secondAttribute="bottom" id="1OF-qz-CkG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zmT-X4-R33" secondAttribute="trailing" id="3WT-PU-Hht"/>
+                <constraint firstItem="zmT-X4-R33" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Cf-rl-jdM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Co-Xw-8GQ" secondAttribute="trailing" id="CQX-CS-ql9"/>
+                <constraint firstItem="oBm-VE-OHa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.695652" id="Evc-J6-Nv4"/>
+                <constraint firstItem="zmT-X4-R33" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-44" id="OxV-ew-l1W"/>
+                <constraint firstItem="2Co-Xw-8GQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QmN-6g-hf7"/>
+                <constraint firstItem="D2l-Wb-See" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.246205" id="RCH-dv-Pcs"/>
+                <constraint firstItem="2Co-Xw-8GQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xk2-uC-Lhb"/>
+                <constraint firstAttribute="bottom" secondItem="2Co-Xw-8GQ" secondAttribute="bottom" id="aud-of-GRE"/>
+                <constraint firstItem="D2l-Wb-See" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.401932" id="ln1-vJ-WWy"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="0" width="375" height="812"/>
+        <image name="Group 1494" width="12" height="12"/>
+        <image name="NoGroup 1597" width="39" height="39"/>
+        <image name="Union 6" width="9" height="11.5"/>
+        <image name="email" width="12.5" height="9.5"/>
+        <image name="final copy" width="247" height="361"/>
+        <image name="phone" width="12.5" height="12.5"/>
+    </resources>
+</document>

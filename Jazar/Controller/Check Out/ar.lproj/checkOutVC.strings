@@ -1,0 +1,60 @@
+/* Class = "UILabel"; text = "Delivery Price"; ObjectID = "0bd-MR-5nA"; */
+"0bd-MR-5nA.text" = "سعر تسليم";
+
+/* Class = "UITextField"; placeholder = "Street"; ObjectID = "0Hc-5C-Zs3"; */
+"0Hc-5C-Zs3.placeholder" = "شارع";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "5GN-8L-6Px"; */
+"5GN-8L-6Px.placeholder" = "عنوان";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "6br-ej-bZo"; */
+"6br-ej-bZo.placeholder" = "هاتف";
+
+/* Class = "UITextField"; placeholder = "Have Promo Code?"; ObjectID = "80B-y6-Pbq"; */
+"80B-y6-Pbq.placeholder" = "هل لديك برمو كود؟";
+
+/* Class = "UITextField"; placeholder = "Delivery Time"; ObjectID = "Ehp-h1-nJs"; */
+"Ehp-h1-nJs.placeholder" = "موعد التسليم";
+
+/* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "gbd-4B-Hft"; */
+"gbd-4B-Hft.normalTitle" = "الدفع عند الاستلام";
+
+/* Class = "UILabel"; text = "Delivery"; ObjectID = "gON-lc-kUx"; */
+"gON-lc-kUx.text" = "توصيل";
+
+/* Class = "UITextField"; placeholder = "Floor Number"; ObjectID = "Kty-cg-0mf"; */
+"Kty-cg-0mf.placeholder" = "رقم الطابق";
+
+/* Class = "UIButton"; normalTitle = "Enter"; ObjectID = "oc8-GB-huM"; */
+"oc8-GB-huM.normalTitle" = "تطبيق";
+
+/* Class = "UILabel"; text = "Sub Total"; ObjectID = "OWA-RP-XUh"; */
+"OWA-RP-XUh.text" = "المجموع الفرعي";
+
+/* Class = "UITextField"; placeholder = "Delivery Type"; ObjectID = "P87-3i-c9j"; */
+"P87-3i-c9j.placeholder" = "نوع التوصيل";
+
+/* Class = "UITextField"; placeholder = "Home Number"; ObjectID = "U56-DA-hX0"; */
+"U56-DA-hX0.placeholder" = "رقم البيت";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "UBB-ak-BOC"; */
+"UBB-ak-BOC.placeholder" = "مدينة";
+
+/* Class = "UILabel"; text = "Total Price"; ObjectID = "VlS-0c-Wa1"; */
+"VlS-0c-Wa1.text" = "السعر الكلي";
+
+/* Class = "UITextField"; placeholder = "Region"; ObjectID = "vPe-tk-lQq"; */
+"vPe-tk-lQq.placeholder" = "منطقة";
+
+/* Class = "UILabel"; text = "Address Information"; ObjectID = "wUM-M3-xLv"; */
+"wUM-M3-xLv.text" = "معلومات العنوان";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wvC-jY-N8s"; */
+"wvC-jY-N8s.placeholder" = "الاسم الكامل";
+
+/* Class = "UILabel"; text = "Number Of Products"; ObjectID = "YHB-SA-QAr"; */
+"YHB-SA-QAr.text" = "عدد من المنتجات";
+
+/* Class = "UILabel"; text = "Promo Value"; ObjectID = "Zys-sf-YLl"; */
+"Zys-sf-YLl.text" = "القيمة الترويجية";
+

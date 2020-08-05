@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="homeVC" customModule="Jazar" customModuleProvider="target">
+            <connections>
+                <outlet property="bannerCollectionView" destination="TWz-By-Cwh" id="diQ-6Q-g4U"/>
+                <outlet property="bestSelingHight" destination="RDc-89-F7Q" id="W0y-3a-6a7"/>
+                <outlet property="bestSellingCollectionView" destination="2ew-hn-ONk" id="cVv-Kr-hc8"/>
+                <outlet property="catHight" destination="yBU-lM-a0Y" id="IJy-I0-0hr"/>
+                <outlet property="categoryCollectionView" destination="T0h-s4-89m" id="3FC-g2-zCI"/>
+                <outlet property="flashHight" destination="WV9-JB-4hc" id="liS-61-p1D"/>
+                <outlet property="flashLb" destination="DXf-JW-FV4" id="4dG-8f-bCS"/>
+                <outlet property="flashSellCollecetion" destination="2by-hJ-Csg" id="2jo-ie-IMP"/>
+                <outlet property="pageControlBanner" destination="a98-OY-AKd" id="AUh-4I-t8e"/>
+                <outlet property="scrollview" destination="0f2-yq-YKi" id="4Su-6k-cr2"/>
+                <outlet property="searchTF" destination="vBT-Pu-fgG" id="Upn-XG-qwa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-Tk-Kem">
+                    <rect key="frame" x="0.0" y="596" width="414" height="300"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="VEQ-rL-WmQ"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f2-yq-YKi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b95-OS-xNV">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="942"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLL-hG-LU9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search For product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-Pu-fgG" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="7.5" width="398" height="45"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="922-ob-nSV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="search"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="vBT-Pu-fgG" firstAttribute="centerY" secondItem="qLL-hG-LU9" secondAttribute="centerY" id="6po-2q-3kw"/>
+                                        <constraint firstItem="vBT-Pu-fgG" firstAttribute="centerX" secondItem="qLL-hG-LU9" secondAttribute="centerX" id="E5L-4j-dng"/>
+                                        <constraint firstAttribute="height" constant="60" id="JmR-lx-sg1"/>
+                                        <constraint firstAttribute="trailing" secondItem="vBT-Pu-fgG" secondAttribute="trailing" constant="8" id="Qcc-Xj-7Ho"/>
+                                        <constraint firstItem="vBT-Pu-fgG" firstAttribute="leading" secondItem="qLL-hG-LU9" secondAttribute="leading" constant="8" id="StZ-Wy-IxF"/>
+                                    </constraints>
+                                </view>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TWz-By-Cwh">
+                                    <rect key="frame" x="0.0" y="60" width="414" height="251"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BZ4-zd-Uim">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="a98-OY-AKd">
+                                    <rect key="frame" x="187.5" y="274" width="39" height="37"/>
+                                    <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="currentPageIndicatorTintColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </pageControl>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXf-JW-FV4">
+                                    <rect key="frame" x="8" y="311" width="398" height="36"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
+                                    <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2by-hJ-Csg">
+                                    <rect key="frame" x="0.0" y="347" width="414" height="5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5" id="WV9-JB-4hc"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nZ3-Ba-4T8">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-Tj-Z17">
+                                    <rect key="frame" x="8" y="360" width="398" height="36"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
+                                    <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T0h-s4-89m">
+                                    <rect key="frame" x="0.0" y="396" width="414" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="yBU-lM-a0Y"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="T3f-3c-dmg">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST SELLING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-xr-gzL">
+                                    <rect key="frame" x="8" y="604" width="398" height="36"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
+                                    <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-hn-ONk">
+                                    <rect key="frame" x="0.0" y="640" width="414" height="300"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" id="RDc-89-F7Q"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="FbE-CP-LVu">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S6-u9-UnV">
+                                    <rect key="frame" x="357" y="356" width="49" height="44"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <state key="normal" title="See All">
+                                        <color key="titleColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="catSeeAllBtn:" destination="-1" eventType="touchUpInside" id="yrD-CN-DdY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8T-Sd-A4l">
+                                    <rect key="frame" x="357" y="600" width="49" height="44"/>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <state key="normal" title="See All">
+                                        <color key="titleColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="bestSealingSeeAllBtn:" destination="-1" eventType="touchUpInside" id="2d9-6g-duj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="DAj-Tj-Z17" firstAttribute="top" secondItem="2by-hJ-Csg" secondAttribute="bottom" constant="8" id="02X-7f-aVG"/>
+                                <constraint firstItem="C7i-xr-gzL" firstAttribute="top" secondItem="T0h-s4-89m" secondAttribute="bottom" constant="8" id="1xD-np-Vif"/>
+                                <constraint firstItem="qLL-hG-LU9" firstAttribute="top" secondItem="b95-OS-xNV" secondAttribute="top" id="2MM-Cv-U7N"/>
+                                <constraint firstAttribute="trailing" secondItem="T0h-s4-89m" secondAttribute="trailing" id="2O6-da-eqv"/>
+                                <constraint firstItem="T0h-s4-89m" firstAttribute="top" secondItem="DAj-Tj-Z17" secondAttribute="bottom" id="2cw-4g-vvi"/>
+                                <constraint firstItem="TWz-By-Cwh" firstAttribute="top" secondItem="qLL-hG-LU9" secondAttribute="bottom" id="36a-Z3-mZF"/>
+                                <constraint firstAttribute="trailing" secondItem="P8T-Sd-A4l" secondAttribute="trailing" constant="8" id="5s1-iz-gxO"/>
+                                <constraint firstAttribute="bottom" secondItem="2ew-hn-ONk" secondAttribute="bottom" constant="2" id="7bx-oX-Th1"/>
+                                <constraint firstItem="T0h-s4-89m" firstAttribute="top" secondItem="DAj-Tj-Z17" secondAttribute="bottom" id="8b3-uJ-tDZ"/>
+                                <constraint firstItem="DAj-Tj-Z17" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" constant="8" id="9lr-uy-WeF"/>
+                                <constraint firstItem="T0h-s4-89m" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" id="CGw-Qv-ltZ"/>
+                                <constraint firstAttribute="trailing" secondItem="qLL-hG-LU9" secondAttribute="trailing" id="CuV-KH-70P"/>
+                                <constraint firstItem="P8T-Sd-A4l" firstAttribute="centerY" secondItem="C7i-xr-gzL" secondAttribute="centerY" id="Eum-cO-S6j"/>
+                                <constraint firstItem="a98-OY-AKd" firstAttribute="bottom" secondItem="TWz-By-Cwh" secondAttribute="bottom" id="Gr4-2F-5ev"/>
+                                <constraint firstItem="2ew-hn-ONk" firstAttribute="top" secondItem="C7i-xr-gzL" secondAttribute="bottom" id="JIW-Yx-s4e"/>
+                                <constraint firstAttribute="trailing" secondItem="DAj-Tj-Z17" secondAttribute="trailing" constant="8" id="PXA-o3-Oyp"/>
+                                <constraint firstItem="DXf-JW-FV4" firstAttribute="top" secondItem="TWz-By-Cwh" secondAttribute="bottom" id="QJb-Sp-suc"/>
+                                <constraint firstAttribute="trailing" secondItem="TWz-By-Cwh" secondAttribute="trailing" id="Sbl-7g-1yc"/>
+                                <constraint firstItem="2ew-hn-ONk" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" id="Ucd-cG-bFu"/>
+                                <constraint firstAttribute="trailing" secondItem="C7i-xr-gzL" secondAttribute="trailing" constant="8" id="XY7-Xv-V5y"/>
+                                <constraint firstItem="qLL-hG-LU9" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" id="Yq2-iR-fPZ"/>
+                                <constraint firstItem="C7i-xr-gzL" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" constant="8" id="Z0E-If-SXp"/>
+                                <constraint firstAttribute="trailing" secondItem="2by-hJ-Csg" secondAttribute="trailing" id="ZFp-yA-QmA"/>
+                                <constraint firstItem="2ew-hn-ONk" firstAttribute="top" secondItem="C7i-xr-gzL" secondAttribute="bottom" id="bCp-IL-6Pw"/>
+                                <constraint firstItem="2S6-u9-UnV" firstAttribute="centerY" secondItem="DAj-Tj-Z17" secondAttribute="centerY" id="cp5-JT-3fJ"/>
+                                <constraint firstItem="a98-OY-AKd" firstAttribute="centerX" secondItem="TWz-By-Cwh" secondAttribute="centerX" id="d4t-Yd-zO3"/>
+                                <constraint firstAttribute="trailing" secondItem="2ew-hn-ONk" secondAttribute="trailing" id="dyk-Ok-AyX"/>
+                                <constraint firstAttribute="trailing" secondItem="DXf-JW-FV4" secondAttribute="trailing" constant="8" id="kZO-uA-dF2"/>
+                                <constraint firstItem="DXf-JW-FV4" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" constant="8" id="lBB-hf-dUm"/>
+                                <constraint firstAttribute="trailing" secondItem="2S6-u9-UnV" secondAttribute="trailing" constant="8" id="oDB-aW-6L6"/>
+                                <constraint firstItem="2by-hJ-Csg" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" id="qND-3L-SS1"/>
+                                <constraint firstItem="2by-hJ-Csg" firstAttribute="top" secondItem="DXf-JW-FV4" secondAttribute="bottom" id="skW-mS-tOm"/>
+                                <constraint firstItem="TWz-By-Cwh" firstAttribute="leading" secondItem="b95-OS-xNV" secondAttribute="leading" id="thi-bW-crn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="b95-OS-xNV" firstAttribute="top" secondItem="Rma-Gg-WA7" secondAttribute="top" id="0f7-hy-vgX"/>
+                        <constraint firstItem="b95-OS-xNV" firstAttribute="leading" secondItem="Rma-Gg-WA7" secondAttribute="leading" id="Rjc-mr-GvT"/>
+                        <constraint firstItem="b95-OS-xNV" firstAttribute="trailing" secondItem="Rma-Gg-WA7" secondAttribute="trailing" id="e7U-tO-B1j"/>
+                        <constraint firstItem="wtS-9t-bLG" firstAttribute="width" secondItem="b95-OS-xNV" secondAttribute="width" id="k8E-Lf-9Vs"/>
+                        <constraint firstItem="b95-OS-xNV" firstAttribute="bottom" secondItem="Rma-Gg-WA7" secondAttribute="bottom" id="la4-R3-XBS"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Rma-Gg-WA7"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="wtS-9t-bLG"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XoX-Tk-Kem" secondAttribute="bottom" id="6Ws-Bj-PDo"/>
+                <constraint firstAttribute="bottom" secondItem="0f2-yq-YKi" secondAttribute="bottom" id="96Z-cv-7lf"/>
+                <constraint firstItem="0f2-yq-YKi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BXF-BE-olw"/>
+                <constraint firstItem="0f2-yq-YKi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lwr-l0-mk5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XoX-Tk-Kem" secondAttribute="trailing" id="hBt-zH-IMY"/>
+                <constraint firstItem="XoX-Tk-Kem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nhT-xF-z1r"/>
+                <constraint firstItem="TWz-By-Cwh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.280134" id="nmT-Q8-6tu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0f2-yq-YKi" secondAttribute="trailing" id="uk6-i4-6b4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="249" y="137"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="20.5" height="20.5"/>
+    </resources>
+</document>

@@ -1,0 +1,231 @@
+/* profuct list lang */
+"Add Cart" = "إضافة عربة";
+
+/* profuct list lang */
+"Added To Cart" = "أضيف إلى سلة التسوق";
+
+/* profuct list lang */
+"Added To Favorite" = "تمت الإضافة إلى المفضلة";
+
+/* profuct list lang */
+"Ahlan" = "أهلا";
+
+/* profuct list lang */
+"Ahlan! Nice to meet you" = "أهلا! تشرفت بمقابلتك";
+
+/* No comment provided by engineer. */
+"Cancel" = "الغاء";
+
+/* profuct list lang */
+"Cart" = "عربة التسوق";
+
+/* profuct list lang */
+"Change Password" = "غير كلمة السر";
+
+/* profuct list lang */
+"Check your network" = "تحقق من شبكتك";
+
+/* profuct list lang */
+"City:" = "مدينة:";
+
+/* profuct list lang */
+"Congratulations" = "تهانينا";
+
+/* profuct list lang */
+"Contact Us" = "اتصل بنا";
+
+/* profuct list lang */
+"Days" = "يوم";
+
+/* profuct list lang */
+"delivery" = "توصيل";
+
+/* profuct list lang */
+"Delivery Price:" = "سعر تسليم:";
+
+/* profuct list lang */
+"Edit Profile" = "تعديل الملف الشخصي";
+
+/* profuct list lang */
+"Email" = "البريد الإلكتروني";
+
+/* profuct list lang */
+"en" = "ar";
+
+/* hhhh */
+"enter your address" = "ادخل العنوان";
+
+/* hhhh */
+"enter your city" = "ادخل المدينه";
+
+/* hhhh */
+"enter your floor number" = "ادخل رقم الطابق";
+
+/* hhhh */
+"enter your home number" = "ادخل رقم المنزل";
+
+/* hhhh */
+"enter your Name" = "ادخل الاسم";
+
+/* hhhh */
+"enter your phone" = "ادخل رقم الهاتف";
+
+/* hhhh */
+"enter your region" = "ادخل المنطقه";
+
+/* hhhh */
+"enter your street name" = "ادحل اسم الشارع";
+
+/* profuct list lang */
+"Favorite" = "مفضله";
+
+/* profuct list lang */
+"Full Name" = "الاسم";
+
+/* profuct list lang */
+"Hrs" = "ساعه";
+
+/* profuct list lang */
+"In Stock:" = "في المخزن";
+
+/* profuct list lang */
+"Item" = "عناصر";
+
+/* profuct list lang */
+"LE" = "جنيه";
+
+/* profuct list lang */
+"Limited quantity" = "كميه محدوده";
+
+/* profuct list lang */
+"Login" = "تسجيل الدخول";
+
+/* profuct list lang */
+"Mins" = "دقيقه";
+
+/* profuct list lang */
+"New Password" = "كلمة سر جديدة";
+
+/* profuct list lang */
+"No Promo Code" = "لا برمو كود";
+
+/* profuct list lang */
+"Old Pssword" = "كلمة المرور القديمة";
+
+/* hhhh */
+"order" = "طلبات";
+
+/* profuct list lang */
+"Order" = "طلبات";
+
+/* profuct list lang */
+"Order Id:" = "رقم الطلب:";
+
+/* profuct list lang */
+"Order Price:" = "سعر الطلب:";
+
+/* profuct list lang */
+"Order Quantity:" = "كمية الطلب:";
+
+/* profuct list lang */
+"Out Of Stock" = "غير متوفر";
+
+/* profuct list lang */
+"Password Confirmation" = "تأكيد كلمة المرور";
+
+/* profuct list lang */
+"Password Eidt Faild" = "فشل تعديل كلمة المرور";
+
+/* profuct list lang */
+"Password Eidt Success" = "نجاح تعديل كلمة المرور";
+
+/* profuct list lang */
+"Phone" = "الهاتف";
+
+/* hhhh */
+"Please Approve the privacy policy in the application" = "يرجى الموافقة على سياسة الخصوصية في التطبيق";
+
+/* profuct list lang */
+"Price" = "السعر";
+
+/* profuct list lang */
+"Profile" = "الملف الشخصي";
+
+/* profuct list lang */
+"Promo" = "برمو";
+
+/* profuct list lang */
+"Promo Code" = "برمو كود";
+
+/* profuct list lang */
+"Promo Code Copy" = "تم نسخ البرمو كود";
+
+/* profuct list lang */
+"Promo Code:" = "برمو كود:";
+
+/* profuct list lang */
+"Promo Value:" = "قيمه البرمو كود:";
+
+/* profuct list lang */
+"Quantity" = "كمية";
+
+/* profuct list lang */
+"Receive Points:" = "مناطق الاستلام:";
+
+/* profuct list lang */
+"Region:" = "منطقة:";
+
+/* profuct list lang */
+"Remove from cart" = "إزالة من السلة";
+
+/* profuct list lang */
+"Remove From Favorite" = "إزالة من المفضلة";
+
+/* profuct list lang */
+"Removed From Cart" = "إزالة من السلة";
+
+/* profuct list lang */
+"Save" = "حفظ";
+
+/* profuct list lang */
+"Select Language" = "اختار اللغة";
+
+/* profuct list lang */
+"send success" = "تم الارسال بنجاح";
+
+/* hhhh */
+"Sign Up" = "سجل";
+
+/* profuct list lang */
+"stock" = "مخزن";
+
+/* profuct list lang */
+"Sub Total Price:" = "السعر الإجمالي الفرعي:";
+
+/* profuct list lang */
+"Success Eidt Profile" = "تم تعديل الملف بنجاح";
+
+/* profuct list lang */
+"Thanks For Your Order" = "شكرا لطلبك";
+
+/* profuct list lang */
+"The region's favourite online marketplace" = "سوق الإنترنت المفضل في المنطقة";
+
+/* profuct list lang */
+"Total Price" = "السعر الكلي";
+
+/* profuct list lang */
+"Total Price:" = "السعر الكلي";
+
+/* profuct list lang */
+"Type Delivery:" = "نوع التوصيل:";
+
+/* profuct list lang */
+"Unit Price:" = "سعر المنتج:";
+
+/* profuct list lang */
+"You are get Gift" = "ستحصل على هدية";
+
+/* profuct list lang */
+"You have Discount" = "لديك خصم";
+

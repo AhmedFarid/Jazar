@@ -1,0 +1,21 @@
+/* Class = "UIButton"; normalTitle = "See All"; ObjectID = "2S6-u9-UnV"; */
+"2S6-u9-UnV.normalTitle" = "اظهار الكل";
+
+/* Class = "UILabel"; text = "BEST SELLING"; ObjectID = "C7i-xr-gzL"; */
+"C7i-xr-gzL.text" = "أفضل مبيعات";
+
+/* Class = "UILabel"; text = "Category selection"; ObjectID = "DAj-Tj-Z17"; */
+"DAj-Tj-Z17.text" = "اختيار الفئة";
+
+/* Class = "UILabel"; text = "Flash Sale"; ObjectID = "DXf-JW-FV4"; */
+"DXf-JW-FV4.text" = "الساعات السعيدة";
+
+/* Class = "UIButton"; normalTitle = "See All"; ObjectID = "P8T-Sd-A4l"; */
+"P8T-Sd-A4l.normalTitle" = "اظهار الكل";
+
+/* Class = "UITextField"; placeholder = "Search For product"; ObjectID = "vBT-Pu-fgG"; */
+"vBT-Pu-fgG.placeholder" = "ابحث عن منتج";
+
+/* Class = "UILabel"; text = "Daily Dish"; ObjectID = "ZJo-ez-Zf4"; */
+"ZJo-ez-Zf4.text" = "طبق اليوم";
+
