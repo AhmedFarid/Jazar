@@ -14,14 +14,16 @@ class allProductViewCell: UICollectionViewCell {
     @IBOutlet weak var stockImage: UIImageView!
     @IBOutlet weak var stokeLb: UILabel!
     @IBOutlet weak var reviews: CosmosView!
-        @IBOutlet weak var newPrice: UILabel!
-        @IBOutlet weak var productImage: imageViewCostom!
-        @IBOutlet weak var discountPrice: UILabel!
-        @IBOutlet weak var cartBtn: UIButton!
-        @IBOutlet weak var favBtn: UIButton!
-        @IBOutlet weak var nameProduct: UILabel!
-        @IBOutlet weak var shortDec: UILabel!
+    @IBOutlet weak var newPrice: UILabel!
+    @IBOutlet weak var productImage: imageViewCostom!
+    @IBOutlet weak var discountPrice: UILabel!
+    @IBOutlet weak var cartBtn: UIButton!
+    @IBOutlet weak var favBtn: UIButton!
+    @IBOutlet weak var nameProduct: UILabel!
+    @IBOutlet weak var shortDec: UILabel!
     @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var discountPrcent: UILabel!
+    @IBOutlet weak var discoutImage: UIImageView!
     
         var addFav: (()->())?
     var addCart: (()->())?
@@ -45,16 +47,21 @@ class allProductViewCell: UICollectionViewCell {
                 stockImage.isHidden = true
                 stokeLb.text = ""
             }
+            discountPrcent.text = "\(products.discount ?? 0)\n\(products.currency ?? "")"
             type.text = "\(products.unitValue ?? 0) \(products.unit ?? "")"
             nameProduct.text = products.name
             shortDec.text = products.shortDescription
             reviews.rating = Double(products.totalRate ?? 0)
             reviews.text = "(\(products.totalNumberReview ?? 0))"
             
-            if products.salePrice == 0 {
+            if products.salePrice == products.total {
                 discountPrice.isHidden = true
+                discountPrcent.isHidden = true
+                discoutImage.isHidden = true
             }else {
                 discountPrice.isHidden = false
+                discountPrcent.isHidden = false
+                discoutImage.isHidden = false
             }
             newPrice.text = "\(products.total ?? 0) \(products.currency ?? "")"
             discountPrice.text = "\(products.salePrice ?? 0) \(products.currency ?? "")"

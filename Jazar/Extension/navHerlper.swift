@@ -9,10 +9,10 @@ import UIKit
 import SideMenu
 
 extension UIViewController {
-
+    
     
     func refesHcart() {
-        homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: 0,name: ""){ (error,success,products) in
+        homeApi.productsApi(url: URLs.carts, pageName: 1,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
             if products?.success == true {
                 if products?.data?.data?.count == 0 {
                     if let tabItems = self.tabBarController?.tabBar.items {
@@ -47,9 +47,16 @@ extension UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
         refesHcart()
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "-e-Shape 8"), style: .done, target: self, action: #selector(notfiaction))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
-   
+    @objc func notfiaction() {
+        
+    }
+    
+    
 }
 
 extension AppDelegate {

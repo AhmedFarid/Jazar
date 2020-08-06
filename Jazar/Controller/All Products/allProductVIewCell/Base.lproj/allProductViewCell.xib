@@ -34,6 +34,21 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="cornerCostomTopLeftTopRight" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="-e-Vector Smart Object2 copy" translatesAutoresizingMaskIntoConstraints="NO" id="lxJ-Cm-0Kh">
+                                <rect key="frame" x="0.0" y="-4" width="48" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="X5U-rM-FGR"/>
+                                    <constraint firstAttribute="height" constant="63" id="qpu-zM-RJR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAc-xv-L7w">
+                                <rect key="frame" x="9" y="9.5" width="22.5" height="36"/>
+                                <string key="text">50 
+%</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neoflam Korean made Neoflam Korean made Neoflam Korean made Neoflam Korean made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Dhe-2c-8u0">
                                 <rect key="frame" x="1" y="184" width="202" height="30"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
@@ -91,14 +106,14 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtraction 4" translatesAutoresizingMaskIntoConstraints="NO" id="dEG-0E-n2S">
-                                <rect key="frame" x="8" y="0.0" width="31" height="130"/>
+                                <rect key="frame" x="165" y="0.0" width="31" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="5Fo-tG-6Zc"/>
                                     <constraint firstAttribute="width" constant="31" id="mMc-1F-Xyh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-e4-wX2">
-                                <rect key="frame" x="23.5" y="0.0" width="0.0" height="130"/>
+                                <rect key="frame" x="180.5" y="0.0" width="0.0" height="130"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -114,13 +129,15 @@
                         <constraints>
                             <constraint firstItem="dEG-0E-n2S" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" id="4Vh-LH-mQL"/>
                             <constraint firstItem="Ut5-yR-w8d" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="8" id="4vA-Gh-Bjl"/>
+                            <constraint firstItem="lxJ-Cm-0Kh" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" id="6TO-TE-dtv"/>
+                            <constraint firstItem="qAc-xv-L7w" firstAttribute="centerX" secondItem="lxJ-Cm-0Kh" secondAttribute="centerX" constant="-4" id="8Hz-mt-gA6"/>
                             <constraint firstItem="ufk-zs-N9b" firstAttribute="centerX" secondItem="2wa-fN-fl4" secondAttribute="centerX" id="9VY-OT-zHC"/>
                             <constraint firstItem="Sh5-el-J6y" firstAttribute="top" secondItem="GnM-0O-q2u" secondAttribute="bottom" id="D03-Ma-UCx"/>
                             <constraint firstAttribute="trailing" secondItem="dy4-Lw-oAp" secondAttribute="trailing" constant="8" id="EKm-ZL-jxc"/>
                             <constraint firstItem="Ch1-e4-wX2" firstAttribute="bottom" secondItem="dEG-0E-n2S" secondAttribute="bottom" id="G50-Yk-Anq"/>
                             <constraint firstItem="Dhe-2c-8u0" firstAttribute="top" secondItem="Hmb-Kl-rBo" secondAttribute="bottom" id="GNn-G5-Zgw"/>
                             <constraint firstAttribute="trailing" secondItem="Sh5-el-J6y" secondAttribute="trailing" constant="1" id="GeC-ts-qhE"/>
-                            <constraint firstItem="dEG-0E-n2S" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="8" id="JDc-Ie-6mx"/>
+                            <constraint firstItem="qAc-xv-L7w" firstAttribute="centerY" secondItem="lxJ-Cm-0Kh" secondAttribute="centerY" id="KCK-lB-gvo"/>
                             <constraint firstItem="Hmb-Kl-rBo" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" id="Pxs-Yg-WeW"/>
                             <constraint firstItem="Sh5-el-J6y" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="1" id="RQj-RU-6tA"/>
                             <constraint firstItem="Rod-uq-Rb4" firstAttribute="centerX" secondItem="2wa-fN-fl4" secondAttribute="centerX" id="RQz-rn-bgC"/>
@@ -130,6 +147,7 @@
                             <constraint firstAttribute="trailing" secondItem="GnM-0O-q2u" secondAttribute="trailing" constant="1" id="b7F-1G-zd7"/>
                             <constraint firstItem="Ch1-e4-wX2" firstAttribute="centerX" secondItem="dEG-0E-n2S" secondAttribute="centerX" id="bK7-9q-V23"/>
                             <constraint firstItem="Rod-uq-Rb4" firstAttribute="top" secondItem="ufk-zs-N9b" secondAttribute="bottom" id="bzg-gg-qwg"/>
+                            <constraint firstItem="lxJ-Cm-0Kh" firstAttribute="top" secondItem="2wa-fN-fl4" secondAttribute="top" constant="-4" id="dqg-Sa-Qty"/>
                             <constraint firstItem="Hmb-Kl-rBo" firstAttribute="height" secondItem="2wa-fN-fl4" secondAttribute="height" multiplier="0.452604" id="gjW-NX-4JR"/>
                             <constraint firstItem="Dhe-2c-8u0" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="1" id="hI1-oL-YQv"/>
                             <constraint firstItem="ufk-zs-N9b" firstAttribute="top" secondItem="Sh5-el-J6y" secondAttribute="bottom" id="mWY-ho-Ajt"/>
@@ -137,6 +155,7 @@
                             <constraint firstAttribute="trailing" secondItem="Hmb-Kl-rBo" secondAttribute="trailing" id="pg3-YD-IHZ"/>
                             <constraint firstItem="GnM-0O-q2u" firstAttribute="top" secondItem="Dhe-2c-8u0" secondAttribute="bottom" id="tH8-b8-gFj"/>
                             <constraint firstItem="GnM-0O-q2u" firstAttribute="leading" secondItem="2wa-fN-fl4" secondAttribute="leading" constant="1" id="tQc-e2-F8b"/>
+                            <constraint firstAttribute="trailing" secondItem="dEG-0E-n2S" secondAttribute="trailing" constant="8" id="tkG-tK-HGb"/>
                             <constraint firstItem="dy4-Lw-oAp" firstAttribute="centerY" secondItem="Ut5-yR-w8d" secondAttribute="centerY" id="yzN-4g-3Nv"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -166,7 +185,9 @@
             <size key="customSize" width="220" height="423"/>
             <connections>
                 <outlet property="cartBtn" destination="dy4-Lw-oAp" id="YXf-ZY-b4z"/>
+                <outlet property="discountPrcent" destination="qAc-xv-L7w" id="bdA-7J-3ZV"/>
                 <outlet property="discountPrice" destination="aLp-1R-AQy" id="haI-o8-71Z"/>
+                <outlet property="discoutImage" destination="lxJ-Cm-0Kh" id="dpT-CL-0mc"/>
                 <outlet property="favBtn" destination="Ut5-yR-w8d" id="LOA-pp-nUM"/>
                 <outlet property="nameProduct" destination="Dhe-2c-8u0" id="0be-1e-Dvm"/>
                 <outlet property="newPrice" destination="enk-Ii-9e6" id="5bf-be-NOz"/>
@@ -181,6 +202,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="-e-Vector Smart Object2 copy" width="28" height="39"/>
         <image name="Group 238" width="42" height="42"/>
         <image name="Image 12" width="127" height="127"/>
         <image name="NOstar" width="8.5" height="8"/>

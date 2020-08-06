@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="allProductCollectionView" destination="Gub-LQ-GSS" id="SPc-F3-rSh"/>
                 <outlet property="searchTF" destination="lXh-Mr-EcU" id="lnd-oG-rEC"/>
+                <outlet property="searchTFHight" destination="rLb-xL-iGT" id="Mk5-nQ-W0Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-LQ-GSS">
-                    <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                    <rect key="frame" x="0.0" y="93" width="414" height="803"/>
                     <color key="backgroundColor" red="0.9137254901960784" green="0.92156862745098034" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ky1-39-27Q">
                         <size key="itemSize" width="128" height="128"/>
@@ -35,7 +36,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search For product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXh-Mr-EcU" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
-                    <rect key="frame" x="8" y="60" width="398" height="45"/>
+                    <rect key="frame" x="8" y="48" width="398" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="rLb-xL-iGT"/>
@@ -53,12 +54,12 @@
             <color key="backgroundColor" red="0.91372549020000005" green="0.92156862750000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Gub-LQ-GSS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0zM-Jk-WOU"/>
-                <constraint firstItem="Gub-LQ-GSS" firstAttribute="top" secondItem="lXh-Mr-EcU" secondAttribute="bottom" constant="8" id="FWp-8Q-dSj"/>
+                <constraint firstItem="Gub-LQ-GSS" firstAttribute="top" secondItem="lXh-Mr-EcU" secondAttribute="bottom" id="FWp-8Q-dSj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lXh-Mr-EcU" secondAttribute="trailing" constant="8" id="d5C-bC-Fgz"/>
                 <constraint firstAttribute="bottom" secondItem="Gub-LQ-GSS" secondAttribute="bottom" id="iWb-oO-d9r"/>
                 <constraint firstItem="lXh-Mr-EcU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="rUt-Td-GIF"/>
                 <constraint firstItem="Gub-LQ-GSS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uNJ-fD-86a"/>
-                <constraint firstItem="lXh-Mr-EcU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="wCi-Ad-CGj"/>
+                <constraint firstItem="lXh-Mr-EcU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="wCi-Ad-CGj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>

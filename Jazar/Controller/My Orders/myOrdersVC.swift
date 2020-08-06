@@ -35,6 +35,7 @@ class myOrdersVC: UIViewController,NVActivityIndicatorViewable {
                 self.myOrdersCollectionVIew.reloadData()
                 self.stopAnimating()
             }
+            self.stopAnimating()
         }
     }
 
