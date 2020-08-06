@@ -50,5 +50,6 @@ struct URLs {
     static let receivepoints = main + "receivepoints"
     static let blogs = main + "blogs"
     static let offers = main + "offers"
+    static let similarProducts = main + "similarProducts"
     
 }

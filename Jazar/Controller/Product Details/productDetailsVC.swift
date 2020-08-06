@@ -9,6 +9,7 @@
 import UIKit
 import Cosmos
 import NVActivityIndicatorView
+import MOLH
 
 class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -37,6 +38,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var stokeNum: UILabel!
     @IBOutlet weak var stokeStatus: UILabel!
     @IBOutlet weak var typeUnit: UILabel!
+    @IBOutlet weak var bestSellingCollectionView: UICollectionView!
     
     var timer : Timer?
     var currentIndex = 0
@@ -47,17 +49,39 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     var qty = 1
     var selected = Int()
     var index = Int()
+    var products = [productsDataArray]()
     let window = UIApplication.shared.keyWindow
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(false)
-        
+        handelApiBestSealing()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setupView()		
+    }
+    
+    func handelApiBestSealing() {
+        self.bestSellingCollectionView.register(UINib.init(nibName: "allProductViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        bestSellingCollectionView.delegate = self
+        bestSellingCollectionView.dataSource = self
+        
+        loaderHelper()
+        homeApi.productsApi(url: URLs.similarProducts, pageName: 0, product_id: singleItem?.id ?? 0,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
+            if let products = products{
+                self.products = products.data?.data ?? []
+                print(products)
+                if MOLHLanguage.currentAppleLanguage() == "ar"{
+                    self.products.reverse()
+                    
+                }
+                self.bestSellingCollectionView.reloadData()
+                self.stopAnimating()
+            }
+            self.stopAnimating()
+        }
     }
     
     func setupView() {
@@ -220,7 +244,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                             }))
                             self.present(alert, animated: true, completion: nil)		
                         }else {
-                           self.showAlert(title: "Cart", message: "Added To Cart")
+                            self.showAlert(title: "Cart", message: "Added To Cart")
                         }
                         
                     }else if url == URLs.removeFromCart {
@@ -259,12 +283,69 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    func cart(url: String,id: String) {
+        loaderHelper()
+        cartApi.cartOption(url: url, product_id: id, qty: "\(1)") { (error, success, message,errorStoke,x) in
+            if success {
+                if message?.success == true {
+                    if url == URLs.addToCart {
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Cart", message: "Added To Cart")
+                    }else if url == URLs.removeFromCart {
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Cart", message: "Removed From Cart")
+                    }
+                    self.stopAnimating()
+                }else {
+                    self.showAlert(title: "Cart", message: "Out Of Stock")
+                    self.stopAnimating()
+                }
+            }else {
+                self.showAlert(title: "Cart", message: "Check your network")
+                self.stopAnimating()
+            }
+            
+            if errorStoke?.success == false {
+                self.showAlert(title: "stock", message: "Out Of Stock")
+                self.stopAnimating()
+            }else {
+                self.showAlert(title: "Cart", message: "Check your network")
+                self.stopAnimating()
+            }
+        }
+    }
+    
+    
+    func fav(url: String,id: String) {
+        loaderHelper()
+        favoriteApi.favoriteOption(url: url, product_id: id) { (error, success, message) in
+            if success {
+                if message?.success == true {
+                    if url == URLs.addFavorite {
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Favorite", message: "Added To Favorite")
+                    }else if url == URLs.removeFavorite {
+                        self.handelApiBestSealing()
+                        self.showAlert(title: "Favorite", message: "Remove From Favorite")
+                    }
+                    self.stopAnimating()
+                }else {
+                    self.showAlert(title: "Favorite", message: "")
+                    self.stopAnimating()
+                }
+            }else {
+                self.showAlert(title: "Favorite", message: "Check your network")
+                self.stopAnimating()
+            }
+        }
+    }
+    
     @IBAction func shareBtnAction(_ sender: Any) {
         let textToShare = [ singleItem?.productLink ?? "" ]
-               let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-               activityViewController.popoverPresentationController?.sourceView = self.view
-               activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
-               self.present(activityViewController, animated: true, completion: nil)
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func reviewsBtnAction(_ sender: Any) {
@@ -295,7 +376,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         qty = qty + 1
         //self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
         //self.discountPrice2.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
-
+        
         self.genralPrice.text = "\((self.singleItem?.total ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
         //self.genralPrice2.text = "\((self.singleItem?.total ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
         //self.genralPrice3.text = "\((self.singleItem?.total ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
@@ -340,9 +421,9 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
             }else if isCart == 0 {
                 cart(url: URLs.addToCart, type: "BuyNowAddToCart")
                 if singleItem?.stock == 0 {
-                     	
+                    
                 }else {
-                
+                    
                 }
                 self.refesHcart()
             }
@@ -370,13 +451,21 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
 
 extension productDetailsVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = productViewImagesVC(nibName: "productViewImagesVC", bundle: nil)
-        self.index = indexPath.item
-        self.selected = 1
-        vc.selected = self.selected
-        vc.index = self.index
-        vc.images = self.images
-        self.navigationController!.pushViewController(vc, animated: true)
+        if collectionView == imageCollactionView {
+            let vc = productViewImagesVC(nibName: "productViewImagesVC", bundle: nil)
+            self.index = indexPath.item
+            self.selected = 1
+            vc.selected = self.selected
+            vc.index = self.index
+            vc.images = self.images
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
+        else if collectionView == bestSellingCollectionView {
+            let vc = productDetailsVC(nibName: "productDetailsVC", bundle: nil)
+            vc.singleItem = products[indexPath.row]
+            vc.images = products[indexPath.row].productImages ?? []
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -384,21 +473,64 @@ extension productDetailsVC: UICollectionViewDelegate,UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == imageCollactionView {
+            return images.count
+        }else {
+            return products.count
+        }
         
-        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = imageCollactionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? bannerCell {
-            cell.configureCellProducts(images: images[indexPath.row])
-            return cell
+        if collectionView == imageCollactionView {
+            if let cell = imageCollactionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? bannerCell {
+                cell.configureCellProducts(images: images[indexPath.row])
+                return cell
+            }else {
+                return bannerCell()
+            }
         }else {
-            return bannerCell()
+            if let cell = bestSellingCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? allProductViewCell {
+                cell.configureCell(products: products[indexPath.row])
+                cell.addCart = {
+                    if self.products[indexPath.row].productInCart == 1 {
+                        self.cart(url: URLs.removeFromCart, id: "\(self.products[indexPath.row].id ?? 0)")
+                        self.refesHcart()
+                    }else if self.products[indexPath.row].productInCart == 0 {
+                        self.cart(url: URLs.addToCart, id: "\(self.products[indexPath.row].id ?? 0)")
+                        self.refesHcart()
+                    }
+                }
+                
+                cell.addFav = {
+                    if self.products[indexPath.row].isProductFavoirte == 1 {
+                        self.fav(url: URLs.removeFavorite, id: "\(self.products[indexPath.row].id ?? 0)")
+                    }else if self.products[indexPath.row].isProductFavoirte == 0 {
+                        self.fav(url: URLs.addFavorite,id: "\(self.products[indexPath.row].id ?? 0)")
+                    }
+                    
+                }
+                
+                if MOLHLanguage.currentAppleLanguage() == "ar"{
+                    collectionView.transform = CGAffineTransform(scaleX:-1,y: 1);
+                    cell.transform = CGAffineTransform(scaleX:-1,y: 1);
+                    
+                }
+                return cell
+            }else {
+                return allProductViewCell()
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: imageCollactionView.frame.size.width, height: imageCollactionView.frame.size.height)
+        if collectionView == imageCollactionView {
+            return CGSize(width: imageCollactionView.frame.size.width, height: imageCollactionView.frame.size.height)
+        }else {
+            
+            return CGSize(width: bestSellingCollectionView.frame.size.width / 1.5, height: bestSellingCollectionView.frame.size.height - 10)
+            
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

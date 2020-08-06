@@ -112,7 +112,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         bestSellingCollectionView.dataSource = self
         
         loaderHelper()
-        homeApi.productsApi(url: URLs.bestSelling, pageName: 1,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
+        homeApi.productsApi(url: URLs.bestSelling, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
             if let products = products{
                 self.products = products.data?.data ?? []
                 print(products)
@@ -133,7 +133,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         flashSellCollecetion.dataSource = self
         
         loaderHelper()
-        homeApi.productsApi(url: URLs.hotDeal, pageName: 1,category_id: "", subcategory_id: "",name: ""){ (error,success,hotDeal) in
+        homeApi.productsApi(url: URLs.hotDeal, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,hotDeal) in
             if hotDeal?.success == true {
                 if let hotDeal = hotDeal{
                     self.hotDeal = hotDeal.data?.data ?? []
