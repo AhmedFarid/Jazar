@@ -17,6 +17,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var totalView: viewCosttom!
     @IBOutlet weak var totalQty: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var cartHight: NSLayoutConstraint!
     
     var products = [productsDataArray]()
     var toalPrice = 0
@@ -42,7 +43,6 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
         homeApi.productsApi(url: URLs.carts, pageName: 1, product_id: 0,category_id: "", subcategory_id: "",name: ""){ (error,success,products) in
             if let products = products{
                 self.products = products.data?.data ?? []
-                
                 print("xx \(products)")
                 self.toalPrice = 0
                 for i in self.products {
@@ -53,6 +53,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                 self.totalQty.text = "\(self.products.count) \(Item)"
                 self.totalPrice.text = "\(self.toalPrice) \(self.curancy)"
                 print(products)
+                self.cartHight.constant = CGFloat(self.products.count * 178)
 //                if self.products.count == 0{
 //                    let imgView = UIImageView(image: UIImage(named: "Group 437"))
 //                    imgView.contentMode = UIView.ContentMode.scaleAspectFit

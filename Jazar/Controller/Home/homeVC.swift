@@ -423,7 +423,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == bestSellingCollectionView{
             return CGSize(width: bestSellingCollectionView.frame.size.width / 1.5, height: bestSellingCollectionView.frame.size.height - 10)
         }else if collectionView == categoryCollectionView {
-            return CGSize(width: categoryCollectionView.frame.size.width / 3, height: categoryCollectionView.frame.size.width / 3)
+            return CGSize(width: categoryCollectionView.frame.size.width / 2, height: categoryCollectionView.frame.size.width / 2.1)
         }else {
             return CGSize(width: dailyDishCollectionView.frame.size.width / 1.5, height: dailyDishCollectionView.frame.size.height - 10)
         }
@@ -450,4 +450,16 @@ extension homeVC: UITextFieldDelegate {
         vc.url = URLs.searchProduct
         self.navigationController!.pushViewController(vc, animated: true)
     }
+}
+
+
+extension UITextField {
+  open override func awakeFromNib() {
+    super.awakeFromNib()
+    if MOLHLanguage.currentAppleLanguage() == "ar" {
+        if textAlignment == .natural {
+            self.textAlignment = .right
+        }
+    }
+}
 }

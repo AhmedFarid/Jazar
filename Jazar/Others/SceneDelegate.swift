@@ -56,6 +56,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,MOLHResetable {
         guard let _ = (scene as? UIWindowScene) else { return }
         MOLH.shared.activate(true)
         MOLH.shared.specialKeyWords = ["Cancel","Done"]
+        MOLH.setLanguageTo("ar")
         
     }
     
