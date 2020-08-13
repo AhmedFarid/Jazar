@@ -28,7 +28,7 @@ class promoFirndVC: UIViewController {
     }
     
     @IBAction func shareBtn(_ sender: Any) {
-        let textToShare = [ Promo ]
+        let textToShare = [ Promo,NSLocalizedString("Share promo code with friends and family", comment: "profuct list lang"),"https://apps.apple.com/us/app/id1525254401"]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]

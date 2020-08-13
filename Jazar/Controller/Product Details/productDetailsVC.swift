@@ -10,6 +10,7 @@ import UIKit
 import Cosmos
 import NVActivityIndicatorView
 import MOLH
+import AVFoundation
 
 class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     
@@ -51,6 +52,9 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     var index = Int()
     var products = [productsDataArray]()
     let window = UIApplication.shared.keyWindow
+    
+    let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "12", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -228,6 +232,12 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
+                    do {
+                        self.audioPlayer = try AVAudioPlayer(contentsOf: self.pianoSound)
+                        self.audioPlayer.play()
+                    } catch {
+                       // couldn't load file :(
+                    } 
                     if url == URLs.addToCart {
                         self.isCart = 1
                         self.cartBtn.setImage(UIImage(named: "onCart"), for: .normal)
@@ -236,6 +246,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.buyNowBtn.isHidden = true
                         self.plusBTN.isHidden = true
                         self.minBtm.isHidden = true
+                        
                         if type == "BuyNowAddToCart" {
                             let alert = UIAlertController(title: "Order", message: "Add To Cart You will moved to Cart", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in

@@ -454,12 +454,16 @@ extension homeVC: UITextFieldDelegate {
 
 
 extension UITextField {
-  open override func awakeFromNib() {
-    super.awakeFromNib()
-    if MOLHLanguage.currentAppleLanguage() == "ar" {
-        if textAlignment == .natural {
-            self.textAlignment = .right
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        if MOLHLanguage.currentAppleLanguage() == "ar" {
+            if textAlignment == .natural {
+                self.textAlignment = .right
+            }
+        }else {
+            if textAlignment == .natural {
+                self.textAlignment = .left
+            }
         }
     }
-}
 }

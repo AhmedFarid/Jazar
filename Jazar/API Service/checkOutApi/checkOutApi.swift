@@ -187,13 +187,14 @@ class checkOutApi: NSObject {
         }
     }
     
-    class func getReceivepoints(city_id: Int,completion: @escaping(_ error: Error?,_ success: Bool,_ cart: TimingCity?)-> Void){
+    class func getReceivepoints(city_id: Int,state_id: Int,completion: @escaping(_ error: Error?,_ success: Bool,_ cart: TimingCity?)-> Void){
         
         let url = URLs.receivepoints
         print(url)
         
         let parametars = [
-            "city_id": city_id
+            "city_id": city_id,
+            "state_id": state_id
         ]
         
         let headers: HTTPHeaders = [

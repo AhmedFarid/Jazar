@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class myOrderDitalsVC: UIViewController {
     
@@ -38,7 +39,7 @@ class myOrderDitalsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavColore(false)
-        self.hightConst.constant = CGFloat(self.products.count * 316)
+        self.hightConst.constant = CGFloat(self.products.count * 320)
         setUpData()
     }
     
@@ -51,6 +52,15 @@ class myOrderDitalsVC: UIViewController {
         
         let typeDelivery = NSLocalizedString("Type Delivery:", comment: "profuct list lang")
         typreOrder.text = "\(typeDelivery) \(singelItem?.typeDelivery ?? "")"
+        if singelItem?.typeDelivery == "Schedule" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                typreOrder.text = "\(typeDelivery) مجدول"
+            }
+        }else {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                typreOrder.text = "\(typeDelivery) حالا"
+            }
+        }
         let City = NSLocalizedString("City:", comment: "profuct list lang")
         cityDelviery.text = "\(City) \(singelItem?.city ?? "")"
         let Region = NSLocalizedString("Region:", comment: "profuct list lang")
@@ -69,6 +79,32 @@ class myOrderDitalsVC: UIViewController {
         
         orderStatus.text = singelItem?.status ?? ""
         
+        if singelItem?.status == "pendding"{
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "قيد الانتظار"
+            }
+        }else if singelItem?.status == "inShipment" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "في الطريق"
+            }
+        }else if singelItem?.status == "onDelivery" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "قيد التحضير"
+            }
+        }else if singelItem?.status == "completed" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "تم التواصل"
+            }
+        }else if singelItem?.status == "canceled" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "ألغيت"
+            }
+        }else if singelItem?.status == "paymentDone" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "تم الدفع"
+            }
+        }
+        
         if singelItem?.promocodeValue == 0{
             let noPromoCode = NSLocalizedString("No Promo Code", comment: "profuct list lang")
             promoCodeLabel.text = noPromoCode
@@ -85,12 +121,18 @@ class myOrderDitalsVC: UIViewController {
         phone.text = singelItem?.customerPhone ?? ""
         addressLabel.text = singelItem?.customerAddress ?? ""
         
-        if singelItem?.status == "pendding" || singelItem?.status == "inShipment" {
-            imageStatus.image = UIImage(named: "Group 1590")
-        }else if singelItem?.status == "onDelivery" || singelItem?.status == "On arrival" {
-            imageStatus.image = UIImage(named: "Group 15950")
+        if singelItem?.status == "pendding"  {
+            imageStatus.image = UIImage(named: "pendding")
+        }else if singelItem?.status == "inShipment" {
+            imageStatus.image = UIImage(named: "inShipment")
+        }else if singelItem?.status == "onDelivery" {
+            imageStatus.image = UIImage(named: "onDelivery")
         }else if singelItem?.status == "completed" {
-            imageStatus.image = UIImage(named: "Group 159500")
+            imageStatus.image = UIImage(named: "completed")
+        }else if singelItem?.status == "canceled" {
+            imageStatus.image = UIImage(named: "canceld")
+        }else if singelItem?.status == "paymentDone" {
+            imageStatus.image = UIImage(named: "completed")
         }
     }
     
@@ -135,7 +177,7 @@ extension myOrderDitalsVC: UICollectionViewDelegate,UICollectionViewDataSource,U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        return CGSize(width: procutesCollectionView.frame.size.width, height: 300)
+        return CGSize(width: procutesCollectionView.frame.size.width, height: 320)
         
     }
 }

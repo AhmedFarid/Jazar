@@ -54,14 +54,14 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     func setupData() {
-        typeTF.text = type
+        typeTF.text = "\(type) \(NSLocalizedString("Cash On Delivery", comment: "profuct list lang"))"
         addressTF.text = "\(address)"
         floorNumberTF.text = "\(floorNumber)"
         homeNumberTF.text = "\(homeNumber)"
         streetTF.text = "\(street)"
         regionTF.text = "\(region)"
         let delivery = NSLocalizedString("delivery", comment: "profuct list lang")
-        deliveryTF.text = "\(delivery_type) \(delivery)"
+        deliveryTF.text = "\(delivery) \(delivery_type)"
         cityTF.text = "\(cityName)"
         phoneTF.text = "\(phone)"
         fullNameTF.text = "\(fullName)"

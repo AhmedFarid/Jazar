@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class myOrdersCell: UICollectionViewCell {
 
@@ -31,6 +32,32 @@ class myOrdersCell: UICollectionViewCell {
         orderQntyLabel.text = "\(orderQuantity) \(products.orderDetails?.count ?? 0)"
         orderDateLabel.text = products.createdAt
         orderStatusLabel.text = products.status
+        
+        if products.status == "pendding"{
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "قيد الانتظار"
+            }
+        }else if products.status == "inShipment" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "في الطريق"
+            }
+        }else if products.status == "onDelivery" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "قيد التحضير"
+            }
+        }else if products.status == "completed" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "تم التواصل"
+            }
+        }else if products.status == "canceled" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "ألغيت"
+            }
+        }else if products.status == "paymentDone" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "تم الدفع"
+            }
+        }
     }
     
 }

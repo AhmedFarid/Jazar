@@ -57,6 +57,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     var promoNext = ""
     var deliveryPrices = 0
     var ciytDrvly = 0
+    var stateId = 0
     
     let cityPicker = UIPickerView()
     let delviryStatePicker = UIPickerView()
@@ -100,16 +101,18 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         }
     }
     
-    func timingPikerFunc() {
+    func timingPikerFunc(id: Int) {
         timingPicker.delegate = self
         timingPicker.dataSource = self
         timingTF.inputView = timingPicker
         loaderHelper()
-        checkOutApi.getReceivepoints(city_id: 0){ (error,success,points) in
+        checkOutApi.getReceivepoints(city_id: 0, state_id: id){ (error,success,points) in
             if let points = points{
                 self.points = points.data ?? []
                 print(points)
+                if self.points.count != 0 {
                 self.timingTF.isEnabled = true
+                }
                 self.timingPicker.reloadAllComponents()
                 self.stopAnimating()
             }
@@ -270,7 +273,7 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
         vc.fullName = name
         vc.promoCode = promoNext
         vc.giftId = ""
-        vc.delivery_type = delvertyTypes
+        vc.delivery_type = delviryType.text ?? ""
         vc.cityName = citys
         vc.regionId = regionId
         vc.receivePointsId = receivePointsId
@@ -370,10 +373,13 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
             regionTF.text = status[row].name
             regionId = status[row].id ?? 0
             self.deliveryPrices = status[row].price ?? 0
+            
             if typeDelivery == "Immediately" {
                 self.deliveryPrices = status[row].price ?? 0
                 self.deliveryPrice.text = "\(deliveryPrices) LE"
                 self.allTotalPrice.text = "\(totlaPrice + (status[row].price ?? 0)  - self.promo) LE"
+            }else {
+                timingPikerFunc(id: status[row].id ?? 0)
             }
             
             
@@ -384,7 +390,7 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
                 timinImage.isHidden = false
                 timingVIew.isHidden = false
                 timingTF.text = ""
-                timingPikerFunc()
+                
                 typeDelivery = "Schedule"
                 self.deliveryPrice.text = "\(0)"
                 regionTF.text = ""
