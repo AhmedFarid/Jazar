@@ -20,8 +20,9 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var cartHight: NSLayoutConstraint!
     
     var products = [productsDataArray]()
-    var toalPrice = 0
+    var toalPrice = 0.0
     var curancy = ""
+    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
     
     
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
     override func viewWillAppear(_ animated: Bool) {
         setUpNavColore(false)
         handelApiflashSale()
+        self.label.text = NSLocalizedString("", comment: "profuct list lang")
     }
     
     @objc func handelApiflashSale() {
@@ -46,7 +48,7 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                 print("xx \(products)")
                 self.toalPrice = 0
                 for i in self.products {
-                    self.toalPrice = self.toalPrice + (i.productInCartTotal ?? 0)
+                    self.toalPrice = self.toalPrice + (i.productInCartTotal ?? 0.0)
                     self.curancy = i.currency ?? ""
                 }
                 let Item = NSLocalizedString("Item", comment: "profuct list lang")
@@ -54,18 +56,20 @@ class cartVC: UIViewController,NVActivityIndicatorViewable {
                 self.totalPrice.text = "\(self.toalPrice) \(self.curancy)"
                 print(products)
                 self.cartHight.constant = CGFloat(self.products.count * 178)
-//                if self.products.count == 0{
-//                    let imgView = UIImageView(image: UIImage(named: "Group 437"))
-//                    imgView.contentMode = UIView.ContentMode.scaleAspectFit
-//                    imgView.layer.frame = CGRect(x: self.cartCollectionView.frame.midX, y: self.cartCollectionView.frame.midY, width: self.cartCollectionView.frame.width/2, height: self.cartCollectionView.frame.width/2)
-//                    let tableViewBackgroundView = UIView()
-//                    tableViewBackgroundView.addSubview(imgView)
-//                    self.cartCollectionView.backgroundView = tableViewBackgroundView
-//
-//                }else {
-//                    self.cartCollectionView.backgroundView = nil
-//                    self.stopAnimating()
-//                }
+                self.label.font = UIFont.preferredFont(forTextStyle: .title1)
+                self.label.textColor = #colorLiteral(red: 0.9764705882, green: 0.5098039216, blue: 0.06274509804, alpha: 1)
+                self.label.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
+                self.label.textAlignment = .center
+                if self.products.count == 0 {
+                    self.label.text = NSLocalizedString("No Product Found", comment: "profuct list lang")
+                    self.label.font = UIFont(name: "Cairo-SemiBold", size: 20)
+                    
+                    self.view.addSubview(self.label)
+                }else {
+                    self.label.text = NSLocalizedString("", comment: "profuct list lang")
+                    self.view.addSubview(self.label)
+                }
+                
                 self.cartCollectionView.reloadData()
                 self.stopAnimating()
             }else {

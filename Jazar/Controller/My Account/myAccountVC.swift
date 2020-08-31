@@ -25,11 +25,10 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var lgoOutBtn: UIStackView!
     
     var promo = ""
+    var fllname = ""
+    var points = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-                
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,12 +62,37 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
                 if success {
                     let Ahlan = NSLocalizedString("Ahlan", comment: "profuct list lang")
                     self.topTitleLabel.text = "\(Ahlan) \(profile?.data?.fullName ?? "")"
-                    self.secondeTitleLabel.text = "\(profile?.data?.email ?? "")"
+                    self.secondeTitleLabel.text = NSLocalizedString("The region's favourite online marketplace", comment: "profuct list lang")
                     self.promo = profile?.data?.promocode ?? ""
+                    self.fllname = profile?.data?.fullName ?? ""
+                    self.points = profile?.data?.totalWallet ?? ""
                     self.stopAnimating()
                 }
                 self.stopAnimating()
             }
+        }
+    }
+    @IBAction func myPointsBTN(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
+            let vc = myPointsVC(nibName: "myPointsVC", bundle: nil)
+            vc.points = points
+            self.navigationController!.pushViewController(vc, animated: true)
+        }
+    }
+    @IBAction func adreessBtn(_ sender: Any) {
+        if helperAuth.getAPIToken() == nil {
+            let vc = loginVC(nibName: "loginVC", bundle: nil)
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }else {
+            let vc = addressProfileVC(nibName: "addressProfileVC", bundle: nil)
+            self.navigationController!.pushViewController(vc, animated: true)
         }
     }
     
@@ -106,6 +130,7 @@ class myAccountVC: UIViewController,NVActivityIndicatorViewable {
         }else {
             let vc = promoFirndVC(nibName: "promoFirndVC", bundle: nil)
             vc.Promo = promo
+            vc.promoProfile = fllname
             self.navigationController!.pushViewController(vc, animated: true)
         }
     }

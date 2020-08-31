@@ -12,8 +12,8 @@ import UIKit
 
 struct URLs {
     
-    static let main = "https://jzar1.com/api/"
-    static let mainImage = "https://jzar1.com"
+    static let main = "https://jazarweb.com/api/"
+    static let mainImage = "https://jazarweb.com"
     
     static var mainLang = NSLocalizedString("en", comment: "profuct list lang")
     
@@ -51,5 +51,6 @@ struct URLs {
     static let blogs = main + "blogs"
     static let offers = main + "offers"
     static let similarProducts = main + "similarProducts"
+    static let allNotificaitons = main + "all_notificaitons"
     
 }

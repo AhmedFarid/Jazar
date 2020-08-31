@@ -40,6 +40,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var stokeStatus: UILabel!
     @IBOutlet weak var typeUnit: UILabel!
     @IBOutlet weak var bestSellingCollectionView: UICollectionView!
+    @IBOutlet weak var saveViewCostom: viewCosttom!
     
     var timer : Timer?
     var currentIndex = 0
@@ -54,13 +55,15 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     let window = UIApplication.shared.keyWindow
     
     let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "12", ofType: "mp3")!)
+    let favourit = URL(fileURLWithPath: Bundle.main.path(forResource: "favourit", ofType: "mp3")!)
     var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavColore(false)
         handelApiBestSealing()
-        
+     
+        startTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +95,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         self.imageCollactionView.register(UINib.init(nibName: "bannerCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         imageCollactionView.delegate = self
         imageCollactionView.dataSource = self
-        
+        self.imageCollactionView.semanticContentAttribute = .forceLeftToRight
         self.pageControlBanner.numberOfPages = images.count //self.slider.count
         self.pageControlBanner.currentPage = 0
         let inStock = NSLocalizedString("In Stock:", comment: "profuct list lang")
@@ -129,12 +132,16 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         self.isCart = singleItem?.productInCart ?? 0
         
         
-        if singleItem?.salePrice == 0 {
+        if singleItem?.salePrice == singleItem?.total {
+            discountPrice.text =  ""
+            discountPrice2.text = ""
             discountPrice.isHidden = true
             discountPrice2.isHidden = true
+            saveViewCostom.isHidden = true
         }else {
             discountPrice.isHidden = false
             discountPrice2.isHidden = false
+            saveViewCostom.isHidden = false
         }
         
         if helperAuth.getAPIToken() == nil {
@@ -209,9 +216,21 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.isFav = 1
                         self.favBtn.setImage(UIImage(named: "Group 1503"), for: .normal)
                         self.showAlert(title: "Favorite", message: "Added To Favorite")
+                        do {
+                            self.audioPlayer = try AVAudioPlayer(contentsOf: self.pianoSound)
+                            self.audioPlayer.play()
+                        } catch {
+                           // couldn't load file :(
+                        }
                     }else if url == URLs.removeFavorite {
                         self.isFav = 0
                         self.favBtn.setImage(UIImage(named: "NoFave"), for: .normal)
+                        do {
+                            self.audioPlayer = try AVAudioPlayer(contentsOf: self.favourit)
+                            self.audioPlayer.play()
+                        } catch {
+                           // couldn't load file :(
+                        }
                         self.showAlert(title: "Favorite", message: "Remove From Favorite")
                     }
                     self.stopAnimating()
@@ -232,13 +251,13 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
-                    do {
-                        self.audioPlayer = try AVAudioPlayer(contentsOf: self.pianoSound)
-                        self.audioPlayer.play()
-                    } catch {
-                       // couldn't load file :(
-                    } 
                     if url == URLs.addToCart {
+                        do {
+                            self.audioPlayer = try AVAudioPlayer(contentsOf: self.pianoSound)
+                            self.audioPlayer.play()
+                        } catch {
+                           // couldn't load file :(
+                        }
                         self.isCart = 1
                         self.cartBtn.setImage(UIImage(named: "onCart"), for: .normal)
                         let removeFromCart = NSLocalizedString("Remove from cart", comment: "profuct list lang")
@@ -272,6 +291,12 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.genralPrice3.text = "\((self.singleItem?.total  ?? 0) * self.qty) \(self.singleItem?.currency ?? "")"
                         self.qtnText.text = "1"
                         self.plusBTN.isHidden = false
+                        do {
+                            self.audioPlayer = try AVAudioPlayer(contentsOf: self.favourit)
+                            self.audioPlayer.play()
+                        } catch {
+                           // couldn't load file :(
+                        }
                         self.showAlert(title: "Cart", message: "Removed From Cart")
                     }
                     self.stopAnimating()

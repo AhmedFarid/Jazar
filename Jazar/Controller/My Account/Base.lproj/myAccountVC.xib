@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -43,7 +43,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-lD-fGe">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="617"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp6-cp-8Q6">
                                     <rect key="frame" x="16" y="16" width="0.0" height="0.0"/>
@@ -174,7 +174,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x4-Cg-KxO" customClass="viewCosttom" customModule="Jazar" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="194" width="414" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="331" width="414" height="179.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reach Out To Us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO6-fl-P3K">
                                             <rect key="frame" x="8" y="8" width="97" height="26.5"/>
@@ -255,7 +255,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xq5-Fg-2OC" customClass="viewCosttom" customModule="Jazar" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="405.5" width="414" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="542.5" width="414" height="179.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAX-0O-eTt">
                                             <rect key="frame" x="8" y="8" width="43.5" height="26.5"/>
@@ -314,14 +314,86 @@
                                         <constraint firstItem="CAX-0O-eTt" firstAttribute="top" secondItem="xq5-Fg-2OC" secondAttribute="top" constant="8" id="854-Bz-2dS"/>
                                         <constraint firstItem="fzj-Lc-GGb" firstAttribute="top" secondItem="suT-K6-3mF" secondAttribute="bottom" constant="16" id="9bk-wJ-iFx"/>
                                         <constraint firstItem="CAX-0O-eTt" firstAttribute="leading" secondItem="xq5-Fg-2OC" secondAttribute="leading" constant="8" id="Aqq-ce-epE"/>
-                                        <constraint firstItem="rQs-zN-sjg" firstAttribute="top" secondItem="CAX-0O-eTt" secondAttribute="bottom" constant="16" id="CYm-uc-TUE"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CAX-0O-eTt" secondAttribute="trailing" constant="20" symbolic="YES" id="DIk-Pa-Om4"/>
                                         <constraint firstItem="rQs-zN-sjg" firstAttribute="leading" secondItem="xq5-Fg-2OC" secondAttribute="leading" constant="8" id="H4O-7r-Eob"/>
+                                        <constraint firstItem="rQs-zN-sjg" firstAttribute="top" secondItem="CAX-0O-eTt" secondAttribute="bottom" constant="16" id="JJf-1x-ay4"/>
                                         <constraint firstItem="suT-K6-3mF" firstAttribute="leading" secondItem="xq5-Fg-2OC" secondAttribute="leading" constant="8" id="KlV-Ey-HNu"/>
                                         <constraint firstAttribute="trailing" secondItem="suT-K6-3mF" secondAttribute="trailing" constant="8" id="KwZ-xz-YKZ"/>
                                         <constraint firstAttribute="bottom" secondItem="fzj-Lc-GGb" secondAttribute="bottom" constant="16" id="meC-Eb-Geg"/>
                                         <constraint firstItem="fzj-Lc-GGb" firstAttribute="leading" secondItem="xq5-Fg-2OC" secondAttribute="leading" constant="8" id="qWq-1m-EhU"/>
                                         <constraint firstItem="suT-K6-3mF" firstAttribute="top" secondItem="rQs-zN-sjg" secondAttribute="bottom" constant="8" id="tEN-jF-Q6C"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.10000000000000001"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-2q-vaw" customClass="viewCosttom" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="178" width="414" height="137"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="z7F-xF-ZcF">
+                                            <rect key="frame" x="8" y="8" width="129.5" height="44"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-BL-dsP">
+                                                    <rect key="frame" x="0.0" y="8.5" width="27.5" height="27.5"/>
+                                                    <state key="normal" image="Group 436"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFY-vo-Yr5">
+                                                    <rect key="frame" x="43.5" y="0.0" width="86" height="44"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                                    <state key="normal" title="My Adddres">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="adreessBtn:" destination="-1" eventType="touchUpInside" id="Obh-8c-UXj"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLw-ZY-nHb">
+                                            <rect key="frame" x="8" y="60" width="398" height="1"/>
+                                            <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="gMc-Cf-0iQ"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="n9K-uv-9sN">
+                                            <rect key="frame" x="8" y="77" width="115.5" height="44"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY4-c1-cSA">
+                                                    <rect key="frame" x="0.0" y="8.5" width="27.5" height="27.5"/>
+                                                    <state key="normal" image="Group 442"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHU-Bb-FhD">
+                                                    <rect key="frame" x="43.5" y="0.0" width="72" height="44"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                                    <state key="normal" title="My Points">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="myPointsBTN:" destination="-1" eventType="touchUpInside" id="WPY-8C-EpF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="JLw-ZY-nHb" firstAttribute="leading" secondItem="lT5-2q-vaw" secondAttribute="leading" constant="8" id="0HQ-S5-z3R"/>
+                                        <constraint firstItem="n9K-uv-9sN" firstAttribute="top" secondItem="JLw-ZY-nHb" secondAttribute="bottom" constant="16" id="EgL-Y8-LGJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="n9K-uv-9sN" secondAttribute="bottom" constant="16" id="VZb-bd-6ih"/>
+                                        <constraint firstItem="JLw-ZY-nHb" firstAttribute="top" secondItem="z7F-xF-ZcF" secondAttribute="bottom" constant="8" id="hIp-3T-URk"/>
+                                        <constraint firstItem="z7F-xF-ZcF" firstAttribute="leading" secondItem="lT5-2q-vaw" secondAttribute="leading" constant="8" id="kd2-yd-7Kh"/>
+                                        <constraint firstAttribute="trailing" secondItem="JLw-ZY-nHb" secondAttribute="trailing" constant="8" id="nks-Tu-CFX"/>
+                                        <constraint firstItem="z7F-xF-ZcF" firstAttribute="top" secondItem="lT5-2q-vaw" secondAttribute="top" constant="8" id="ufD-c6-2Nc"/>
+                                        <constraint firstItem="n9K-uv-9sN" firstAttribute="leading" secondItem="lT5-2q-vaw" secondAttribute="leading" constant="8" id="vUH-JA-a5c"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -341,7 +413,8 @@
                                 <constraint firstAttribute="bottom" secondItem="xq5-Fg-2OC" secondAttribute="bottom" constant="32" id="5Fr-N8-bKj"/>
                                 <constraint firstAttribute="trailing" secondItem="2x4-Cg-KxO" secondAttribute="trailing" id="5pH-QJ-OY5"/>
                                 <constraint firstItem="Xp6-cp-8Q6" firstAttribute="leading" secondItem="fdN-lD-fGe" secondAttribute="leading" constant="16" id="6SH-vW-3qU"/>
-                                <constraint firstItem="2x4-Cg-KxO" firstAttribute="top" secondItem="I9q-tD-OTz" secondAttribute="bottom" constant="32" id="B4V-Aw-cy1"/>
+                                <constraint firstItem="lT5-2q-vaw" firstAttribute="top" secondItem="I9q-tD-OTz" secondAttribute="bottom" constant="16" id="75Z-rm-g5c"/>
+                                <constraint firstItem="lT5-2q-vaw" firstAttribute="leading" secondItem="fdN-lD-fGe" secondAttribute="leading" id="B1e-ke-6VG"/>
                                 <constraint firstItem="xq5-Fg-2OC" firstAttribute="leading" secondItem="fdN-lD-fGe" secondAttribute="leading" id="Ic0-Ta-sA4"/>
                                 <constraint firstAttribute="trailing" secondItem="I9q-tD-OTz" secondAttribute="trailing" id="TlU-7M-QlQ"/>
                                 <constraint firstItem="ZuH-hk-Q9G" firstAttribute="leading" secondItem="fdN-lD-fGe" secondAttribute="leading" constant="16" id="V6x-67-M2w"/>
@@ -349,10 +422,12 @@
                                 <constraint firstItem="I9q-tD-OTz" firstAttribute="leading" secondItem="fdN-lD-fGe" secondAttribute="leading" id="fJ3-Gb-Emm"/>
                                 <constraint firstItem="2x4-Cg-KxO" firstAttribute="leading" secondItem="fdN-lD-fGe" secondAttribute="leading" id="fNs-8q-L68"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZuH-hk-Q9G" secondAttribute="trailing" constant="20" symbolic="YES" id="hHQ-vn-I9e"/>
+                                <constraint firstAttribute="trailing" secondItem="lT5-2q-vaw" secondAttribute="trailing" id="pib-Rf-HE5"/>
                                 <constraint firstItem="I9q-tD-OTz" firstAttribute="top" secondItem="ZuH-hk-Q9G" secondAttribute="bottom" constant="16" id="qVF-6c-QxK"/>
                                 <constraint firstAttribute="trailing" secondItem="xq5-Fg-2OC" secondAttribute="trailing" id="qXm-js-c4I"/>
                                 <constraint firstItem="ZuH-hk-Q9G" firstAttribute="top" secondItem="Xp6-cp-8Q6" secondAttribute="bottom" id="sdT-DC-H6g"/>
                                 <constraint firstItem="xq5-Fg-2OC" firstAttribute="top" secondItem="2x4-Cg-KxO" secondAttribute="bottom" constant="32" id="shT-lV-aSJ"/>
+                                <constraint firstItem="2x4-Cg-KxO" firstAttribute="top" secondItem="lT5-2q-vaw" secondAttribute="bottom" constant="16" id="usu-iO-KzF"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xp6-cp-8Q6" secondAttribute="trailing" constant="20" symbolic="YES" id="wsl-9R-amq"/>
                             </constraints>
                         </view>
@@ -385,6 +460,8 @@
         <image name="Group 433" width="50" height="50"/>
         <image name="Group 434" width="50" height="50"/>
         <image name="Group 435" width="27.5" height="27.5"/>
+        <image name="Group 436" width="27.5" height="27.5"/>
+        <image name="Group 442" width="27.5" height="27.5"/>
         <image name="global" width="26" height="26"/>
         <image name="question" width="27.5" height="27.5"/>
         <image name="turn-off" width="28" height="28"/>

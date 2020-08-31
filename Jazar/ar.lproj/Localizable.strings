@@ -8,7 +8,7 @@
 "Added To Favorite" = "تمت الإضافة إلى المفضلة";
 
 /* profuct list lang */
-"Ahlan" = "أهلا";
+"Ahlan" = "مرحبا";
 
 /* profuct list lang */
 "Ahlan! Nice to meet you" = "أهلا! تشرفت بمقابلتك";
@@ -41,7 +41,7 @@
 "delivery" = "توصيل";
 
 /* profuct list lang */
-"Delivery Price:" = "سعر تسليم:";
+"Delivery Price:" = "خدمه توصيل:";
 
 /* profuct list lang */
 "Edit Profile" = "تعديل الملف الشخصي";
@@ -86,13 +86,13 @@
 "Hrs" = "ساعه";
 
 /* profuct list lang */
-"Immediatelu Delivery within 30 minutes" = "حالا خلال نصف ساعه";
+"Immediatelu Delivery within 30 minutes" = "توصيل سريع";
 
 /* profuct list lang */
 "In Stock:" = "في المخزن";
 
 /* profuct list lang */
-"Item" = "عناصر";
+"Item" = "منتج";
 
 /* profuct list lang */
 "LE" = "جنيه";
@@ -110,7 +110,7 @@
 "New Password" = "كلمة سر جديدة";
 
 /* profuct list lang */
-"No Promo Code" = "لا برمو كود";
+"No Promo Code" = "لا  كود الخصم";
 
 /* profuct list lang */
 "Old Pssword" = "كلمة المرور القديمة";
@@ -125,10 +125,10 @@
 "Order Id:" = "رقم الطلب:";
 
 /* profuct list lang */
-"Order Price:" = "سعر الطلب:";
+"Order Price:" = "اجمالي الفاتورة:";
 
 /* profuct list lang */
-"Order Quantity:" = "كمية الطلب:";
+"Order Quantity:" = "عدد المنتجات:";
 
 /* profuct list lang */
 "Out Of Stock" = "غير متوفر";
@@ -155,19 +155,19 @@
 "Profile" = "الملف الشخصي";
 
 /* profuct list lang */
-"Promo" = "برمو";
+"Promo" = "كود الخصم";
 
 /* profuct list lang */
-"Promo Code" = "برمو كود";
+"Promo Code" = "كود الخصم";
 
 /* profuct list lang */
-"Promo Code Copy" = "تم نسخ البرمو كود";
+"Promo Code Copy" = "تم نسخ  كود الخصم";
 
 /* profuct list lang */
-"Promo Code:" = "برمو كود:";
+"Promo Code:" = "كود الخصم:";
 
 /* profuct list lang */
-"Promo Value:" = "قيمه البرمو كود:";
+"Promo Value:" = "قيمه الخصم:";
 
 /* profuct list lang */
 "Quantity" = "كمية";
@@ -188,10 +188,10 @@
 "Removed From Cart" = "إزالة من السلة";
 
 /* profuct list lang */
-"Save" = "حفظ";
+"Save" = "توفير";
 
 /* profuct list lang */
-"Schedule" = "مجدول";
+"Schedule" = "توصيل مجمع يوميا";
 
 /* profuct list lang */
 "Select Language" = "اختار اللغة";
@@ -206,22 +206,22 @@
 "stock" = "مخزن";
 
 /* profuct list lang */
-"Sub Total Price:" = "السعر الإجمالي الفرعي:";
+"Sub Total Price:" = "اجمالي السعر:";
 
 /* profuct list lang */
 "Success Eidt Profile" = "تم تعديل الملف بنجاح";
 
 /* profuct list lang */
-"Thanks For Your Order" = "شكرا لطلبك";
+"Thanks For Your Order" = "تم الطلب بنجاح\n يمكنمك متابعه حاله الطلب من حسابك";
 
 /* profuct list lang */
-"The region's favourite online marketplace" = "سوق الإنترنت المفضل في المنطقة";
+"The region's favourite online marketplace" = "تطبيق جزر #طلباتك اوامر";
 
 /* profuct list lang */
-"Total Price" = "السعر الكلي";
+"Total Price" = "الاجمالي";
 
 /* profuct list lang */
-"Total Price:" = "السعر الكلي";
+"Total Price:" = "الاجمالي";
 
 /* profuct list lang */
 "Type Delivery:" = "نوع التوصيل:";
@@ -235,6 +235,23 @@
 /* profuct list lang */
 "You have Discount" = "لديك خصم";
 
-"Share promo code with friends and family" = "مشاركة البرمو كود مع الأصدقاء والعائلة";
+"Share promo code with friends and family" = "مشاركة كود الخصم مع الأصدقاء والعائلة";
 
 "Cash On Delivery" = "الدفع عند الاستلام";
+
+"Note" = "عشان نخدمك بشكل افضل يرجي ادخال اي معلومات خاصه ب المنتج او العنوان";
+
+
+"Delivery Fees:" = "خدمه التوصيل";
+
+"Jazar" = "جزر";
+
+"Home" = "الرئيسية";
+
+"New Offers" = "ما يغلاش عليك";
+
+"Categories" = "الأقسام";
+
+"My Account" = "حسابي";
+
+"No Product Found" = "لا يوجد منتجات في السله";

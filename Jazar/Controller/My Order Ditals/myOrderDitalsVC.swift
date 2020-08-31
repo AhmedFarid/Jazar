@@ -8,6 +8,7 @@
 
 import UIKit
 import MOLH
+import MapKit
 
 class myOrderDitalsVC: UIViewController {
     
@@ -15,26 +16,25 @@ class myOrderDitalsVC: UIViewController {
     @IBOutlet weak var orderDateLabel: UILabel!
     @IBOutlet weak var orderQuntetyLabel: UILabel!
     @IBOutlet weak var orderTotalLabel: UILabel!
-    @IBOutlet weak var promoCodeLabel: UILabel!
     @IBOutlet weak var promoValus: UILabel!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var orderStatus: UILabel!
     @IBOutlet weak var procutesCollectionView: UICollectionView!
     @IBOutlet weak var hightConst: NSLayoutConstraint!
     @IBOutlet weak var imageStatus: UIImageView!
     @IBOutlet weak var cityDelviery: UILabel!
     @IBOutlet weak var statusDelviery: UILabel!
-    @IBOutlet weak var pointsCity: UILabel!
-    @IBOutlet weak var delvieyPrice: UILabel!
     @IBOutlet weak var typreOrder: UILabel!
+    @IBOutlet var mapView: MKMapView!
+    
     
     var singelItem: myOrdersData?
     var products = [productsDataArray]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.showsUserLocation = true
+        centerMapOnLocation(location: homeLocation)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +43,15 @@ class myOrderDitalsVC: UIViewController {
         setUpData()
     }
     
+    
+    let homeLocation = CLLocation(latitude: 31.210370, longitude: 31.634919)
+    let regionRadius: CLLocationDistance = 200
+    func centerMapOnLocation(location: CLLocation)
+    {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
     
     
     func setUpData() {
@@ -54,21 +63,21 @@ class myOrderDitalsVC: UIViewController {
         typreOrder.text = "\(typeDelivery) \(singelItem?.typeDelivery ?? "")"
         if singelItem?.typeDelivery == "Schedule" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                typreOrder.text = "\(typeDelivery) مجدول"
+                typreOrder.text = "\(typeDelivery) مجمع"
             }
         }else {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                typreOrder.text = "\(typeDelivery) حالا"
+                typreOrder.text = "\(typeDelivery) سريع"
             }
         }
         let City = NSLocalizedString("City:", comment: "profuct list lang")
         cityDelviery.text = "\(City) \(singelItem?.city ?? "")"
         let Region = NSLocalizedString("Region:", comment: "profuct list lang")
         statusDelviery.text = "\(Region) \(singelItem?.customerRegion ?? "")"
-        let receivePoints = NSLocalizedString("Receive Points:", comment: "profuct list lang")
-        pointsCity.text = "\(receivePoints) \(singelItem?.receivePoints ?? "")"
-        let deliveryFees = NSLocalizedString("Receive Points:", comment: "profuct list lang")
-        delvieyPrice.text = "\(deliveryFees) \(singelItem?.deliveryFees ?? 0)"
+        //let receivePoints = NSLocalizedString("Receive Points:", comment: "profuct list lang")
+        //pointsCity.text = "\(receivePoints) \(singelItem?.receivePoints ?? "")"
+        //let deliveryFees = NSLocalizedString("Delivery Fees:", comment: "profuct list lang")
+        //delvieyPrice.text = "\(deliveryFees) \(singelItem?.deliveryFees ?? 0)"
         let orderId = NSLocalizedString("Order Id:", comment: "profuct list lang")
         orderIdLabel.text = "\(orderId) \(singelItem?.id ?? 0)"
         let orderQuantity = NSLocalizedString("Order Quantity:", comment: "profuct list lang")
@@ -81,23 +90,28 @@ class myOrderDitalsVC: UIViewController {
         
         if singelItem?.status == "pendding"{
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatus.text = "قيد الانتظار"
+                orderStatus.text = "تحت الطلب"
             }
         }else if singelItem?.status == "inShipment" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatus.text = "في الطريق"
+                orderStatus.text = "جاري التحضير"
             }
         }else if singelItem?.status == "onDelivery" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatus.text = "قيد التحضير"
+                orderStatus.text = "في الطريق"
             }
-        }else if singelItem?.status == "completed" {
+        }else if singelItem?.status == "On arrival" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatus.text = "تم التواصل"
+                orderStatus.text = "علي وشك الوصول"
+            }
+        }
+        else if singelItem?.status == "completed" {
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatus.text = "تم الاستلام"
             }
         }else if singelItem?.status == "canceled" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatus.text = "ألغيت"
+                orderStatus.text = "تم الغاء الطلب"
             }
         }else if singelItem?.status == "paymentDone" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
@@ -106,33 +120,35 @@ class myOrderDitalsVC: UIViewController {
         }
         
         if singelItem?.promocodeValue == 0{
-            let noPromoCode = NSLocalizedString("No Promo Code", comment: "profuct list lang")
-            promoCodeLabel.text = noPromoCode
+            //let noPromoCode = NSLocalizedString("No Promo Code", comment: "profuct list lang")
+            //promoCodeLabel.text = noPromoCode
             let promoValue = NSLocalizedString("Promo Value:", comment: "profuct list lang")
             promoValus.text = "\(promoValue) 0\(singelItem?.orderDetails?.first?.currency ?? "")"
         }else {
-            let promoCode = NSLocalizedString("Promo Code:", comment: "profuct list lang")
-            promoCodeLabel.text = "\(promoCode) \(singelItem?.promocode ?? "")"
+            //let promoCode = NSLocalizedString("Promo Code:", comment: "profuct list lang")
+            //promoCodeLabel.text = "\(promoCode) \(singelItem?.promocode ?? "")"
             let promoValue = NSLocalizedString("Promo Value:", comment: "profuct list lang")
             promoValus.text = "\(promoValue) \(singelItem?.promocodeValue ?? 0) \(singelItem?.orderDetails?.first?.currency ?? "")"
         }
         
         name.text = singelItem?.customerName ?? ""
-        phone.text = singelItem?.customerPhone ?? ""
-        addressLabel.text = singelItem?.customerAddress ?? ""
-        
+//        phone.text = singelItem?.customerPhone ?? ""
+//        addressLabel.text = singelItem?.customerAddress ?? ""
+//        
         if singelItem?.status == "pendding"  {
-            imageStatus.image = UIImage(named: "pendding")
+            imageStatus.image = UIImage(named: "Group 1646")
         }else if singelItem?.status == "inShipment" {
-            imageStatus.image = UIImage(named: "inShipment")
+            imageStatus.image = UIImage(named: "Group 1647")
+        }else if singelItem?.status == "On arrival" {
+            imageStatus.image = UIImage(named: "Group 1649")
         }else if singelItem?.status == "onDelivery" {
-            imageStatus.image = UIImage(named: "onDelivery")
+            imageStatus.image = UIImage(named: "Group 1648")
         }else if singelItem?.status == "completed" {
-            imageStatus.image = UIImage(named: "completed")
+            imageStatus.image = UIImage(named: "Group 1650")
         }else if singelItem?.status == "canceled" {
             imageStatus.image = UIImage(named: "canceld")
         }else if singelItem?.status == "paymentDone" {
-            imageStatus.image = UIImage(named: "completed")
+            imageStatus.image = UIImage(named: "Group 1650")
         }
     }
     

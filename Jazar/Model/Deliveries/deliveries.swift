@@ -14,6 +14,7 @@ struct city: Codable {
     let success: Bool?
     let data: [cityData]?
     let message: String?
+    
 }
 
 
@@ -21,7 +22,23 @@ struct cityData: Codable {
     let id: Int?
     let name: String?
     let price: Int?
+    let info_receive_point: String
 }
+
+struct states: Codable {
+    let success: Bool?
+    let data: [statesData]?
+    let message: String?
+    
+}
+
+
+struct statesData: Codable {
+    let id: Int?
+    let name: String?
+    let price: Int?
+}
+
 
 
 struct TimingCity: Codable {

@@ -152,7 +152,7 @@ class checkOutApi: NSObject {
         }
     }
     
-    class func getStates(city_id: Int,completion: @escaping(_ error: Error?,_ success: Bool,_ cart: city?)-> Void){
+    class func getStates(city_id: Int,completion: @escaping(_ error: Error?,_ success: Bool,_ cart: states?)-> Void){
         
         let url = URLs.states
         print(url)
@@ -174,7 +174,7 @@ class checkOutApi: NSObject {
             case .success:
                 do{
                     print(response)
-                    let cart = try JSONDecoder().decode(city.self, from: response.data!)
+                    let cart = try JSONDecoder().decode(states.self, from: response.data!)
                     if cart.success == true {
                         completion(nil,true,cart)
                     }else {

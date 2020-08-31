@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Cairo-Bold.ttf">
+            <string>Cairo-Bold</string>
+        </array>
         <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
         </array>
@@ -40,19 +43,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-n8-yfu">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="727"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="815"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwW-xl-agh" customClass="viewCosttom" customModule="Jazar" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="8" width="398" height="289"/>
+                                    <rect key="frame" x="8" y="8" width="398" height="377"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZX-iN-Fk1">
-                                            <rect key="frame" x="8" y="254.5" width="382" height="26.5"/>
-                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                            <rect key="frame" x="8" y="342.5" width="382" height="26.5"/>
+                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pkj-zU-PWY">
-                                            <rect key="frame" x="8" y="8" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="78.5" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysn-Lm-yFH">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -60,19 +63,19 @@
                                                         <constraint firstAttribute="width" constant="120" id="W8W-dI-wao"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBL-A1-bBZ">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83N-xB-iiF">
-                                            <rect key="frame" x="8" y="34.5" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="105" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oe-yX-tVN">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -80,19 +83,19 @@
                                                         <constraint firstAttribute="width" constant="120" id="ksE-AQ-izh"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0n-ZY-c8I">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wed-6g-cd9">
-                                            <rect key="frame" x="8" y="61" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="131.5" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-t3-VEr">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -100,19 +103,19 @@
                                                         <constraint firstAttribute="width" constant="120" id="9pf-Cg-fdM"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQR-ml-Imp">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZs-N2-vg6">
-                                            <rect key="frame" x="8" y="87.5" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="52" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Type:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4F-5B-12m">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -120,19 +123,19 @@
                                                         <constraint firstAttribute="width" constant="120" id="GvK-fb-glT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Type" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfD-44-SRD">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-1y-Zgp">
-                                            <rect key="frame" x="8" y="114" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="158" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w9-Yc-p8E">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -140,19 +143,19 @@
                                                         <constraint firstAttribute="width" constant="120" id="kCc-pf-dSN"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR0-mh-4kq">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wg1-TP-zlW">
-                                            <rect key="frame" x="8" y="140.5" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="184.5" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hz-wT-kZQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -160,59 +163,64 @@
                                                         <constraint firstAttribute="width" constant="120" id="4mj-Z1-ANE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxL-Wx-5mK">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxg-Ta-tUl">
-                                            <rect key="frame" x="8" y="167" width="382" height="26.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QLE-Cv-SqR">
+                                            <rect key="frame" x="8" y="211" width="382" height="52.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Number:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYK-wb-hba">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="T8n-rJ-zcp"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Number" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYM-c3-7Fr">
-                                                    <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0L-BT-0Pe">
-                                            <rect key="frame" x="8" y="193.5" width="382" height="26.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floor Number:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-3H-FBX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="lBS-Ot-ud9"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floor Number" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1y-Wt-kcK">
-                                                    <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxg-Ta-tUl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="52.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Number:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYK-wb-hba">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="52.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="T8n-rJ-zcp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
+                                                            <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Number" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYM-c3-7Fr">
+                                                            <rect key="frame" x="120" y="0.0" width="67" height="52.5"/>
+                                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0L-BT-0Pe">
+                                                    <rect key="frame" x="195" y="0.0" width="187" height="52.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floor Number:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-3H-FBX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="52.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="lBS-Ot-ud9"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
+                                                            <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floor Number" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1y-Wt-kcK">
+                                                            <rect key="frame" x="100" y="0.0" width="87" height="52.5"/>
+                                                            <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjH-BI-Q4V">
-                                            <rect key="frame" x="8" y="220" width="382" height="26.5"/>
+                                            <rect key="frame" x="8" y="263.5" width="382" height="26.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-F2-e5j">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
@@ -220,51 +228,76 @@
                                                         <constraint firstAttribute="width" constant="120" id="PwK-qm-T9M"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjj-5R-VEm">
                                                     <rect key="frame" x="120" y="0.0" width="262" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="14"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Info" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wye-Ne-FDc">
+                                            <rect key="frame" x="8" y="16" width="382" height="36"/>
+                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="19"/>
+                                            <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jazar Receipt" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkZ-7i-SVt">
+                                            <rect key="frame" x="8" y="306.5" width="382" height="36"/>
+                                            <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="19"/>
+                                            <color key="textColor" red="0.404399544" green="0.68514531850000004" blue="0.28871530290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoU-Mr-icE">
+                                            <rect key="frame" x="0.0" y="298" width="398" height="0.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="7Hh-xo-Okk"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="Wxg-Ta-tUl" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="0Qd-ma-XCf"/>
                                         <constraint firstAttribute="trailing" secondItem="UZs-N2-vg6" secondAttribute="trailing" constant="8" id="0UC-kf-0ea"/>
-                                        <constraint firstAttribute="trailing" secondItem="Wxg-Ta-tUl" secondAttribute="trailing" constant="8" id="0aG-My-O5C"/>
+                                        <constraint firstItem="ZoU-Mr-icE" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" id="0tg-dd-FAR"/>
+                                        <constraint firstAttribute="trailing" secondItem="wye-Ne-FDc" secondAttribute="trailing" constant="8" id="4Ku-KT-j4z"/>
+                                        <constraint firstItem="wye-Ne-FDc" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="5QB-dR-lsh"/>
+                                        <constraint firstItem="pkj-zU-PWY" firstAttribute="top" secondItem="UZs-N2-vg6" secondAttribute="bottom" id="B5C-8e-Tva"/>
                                         <constraint firstAttribute="trailing" secondItem="mDZ-1y-Zgp" secondAttribute="trailing" constant="8" id="E3a-Rm-LaW"/>
-                                        <constraint firstAttribute="trailing" secondItem="A0L-BT-0Pe" secondAttribute="trailing" constant="8" id="GC7-bW-OTf"/>
+                                        <constraint firstItem="QLE-Cv-SqR" firstAttribute="top" secondItem="Wg1-TP-zlW" secondAttribute="bottom" id="HIM-Cc-5ON"/>
                                         <constraint firstItem="UZs-N2-vg6" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="IAT-8D-3E3"/>
+                                        <constraint firstItem="UZs-N2-vg6" firstAttribute="top" secondItem="wye-Ne-FDc" secondAttribute="bottom" id="ISM-3V-rsE"/>
+                                        <constraint firstItem="wye-Ne-FDc" firstAttribute="top" secondItem="rwW-xl-agh" secondAttribute="top" constant="16" id="Kmx-as-aTb"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZoU-Mr-icE" secondAttribute="trailing" id="Kuc-hK-Pob"/>
                                         <constraint firstAttribute="trailing" secondItem="pkj-zU-PWY" secondAttribute="trailing" constant="8" id="KwX-N7-CKs"/>
                                         <constraint firstItem="Wg1-TP-zlW" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="N9N-Co-hZZ"/>
                                         <constraint firstItem="wed-6g-cd9" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="RR6-UX-8PH"/>
                                         <constraint firstItem="SjH-BI-Q4V" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="U6R-kU-Hs9"/>
-                                        <constraint firstItem="A0L-BT-0Pe" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="W96-xN-zTA"/>
+                                        <constraint firstAttribute="trailing" secondItem="QLE-Cv-SqR" secondAttribute="trailing" constant="8" id="Xpm-hi-K3A"/>
                                         <constraint firstAttribute="trailing" secondItem="SjH-BI-Q4V" secondAttribute="trailing" constant="8" id="Y4W-i8-M3Y"/>
                                         <constraint firstItem="83N-xB-iiF" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="YSn-AT-SWE"/>
                                         <constraint firstItem="Wg1-TP-zlW" firstAttribute="top" secondItem="mDZ-1y-Zgp" secondAttribute="bottom" id="brd-qM-jAr"/>
+                                        <constraint firstItem="AkZ-7i-SVt" firstAttribute="top" secondItem="ZoU-Mr-icE" secondAttribute="bottom" constant="8" id="bwQ-dw-be2"/>
                                         <constraint firstAttribute="trailing" secondItem="83N-xB-iiF" secondAttribute="trailing" constant="8" id="ceM-j4-Yqt"/>
+                                        <constraint firstItem="AkZ-7i-SVt" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="dDA-2h-eMz"/>
+                                        <constraint firstAttribute="trailing" secondItem="AkZ-7i-SVt" secondAttribute="trailing" constant="8" id="dOB-2M-Ts3"/>
+                                        <constraint firstItem="hZX-iN-Fk1" firstAttribute="top" secondItem="AkZ-7i-SVt" secondAttribute="bottom" id="dt6-lk-c6v"/>
                                         <constraint firstItem="wed-6g-cd9" firstAttribute="top" secondItem="83N-xB-iiF" secondAttribute="bottom" id="eic-t6-0Qa"/>
-                                        <constraint firstItem="hZX-iN-Fk1" firstAttribute="top" secondItem="SjH-BI-Q4V" secondAttribute="bottom" constant="8" symbolic="YES" id="f3Z-b3-fX7"/>
                                         <constraint firstItem="83N-xB-iiF" firstAttribute="top" secondItem="pkj-zU-PWY" secondAttribute="bottom" id="fBI-sV-WcR"/>
+                                        <constraint firstItem="ZoU-Mr-icE" firstAttribute="top" secondItem="SjH-BI-Q4V" secondAttribute="bottom" constant="8" id="gDs-5S-wxA"/>
+                                        <constraint firstItem="SjH-BI-Q4V" firstAttribute="top" secondItem="QLE-Cv-SqR" secondAttribute="bottom" id="gFi-ks-Mv0"/>
                                         <constraint firstAttribute="trailing" secondItem="Wg1-TP-zlW" secondAttribute="trailing" constant="8" id="gNM-tH-tnz"/>
-                                        <constraint firstItem="mDZ-1y-Zgp" firstAttribute="top" secondItem="UZs-N2-vg6" secondAttribute="bottom" id="i3n-Uw-Xat"/>
-                                        <constraint firstItem="A0L-BT-0Pe" firstAttribute="top" secondItem="Wxg-Ta-tUl" secondAttribute="bottom" id="jsd-jP-zGe"/>
-                                        <constraint firstItem="Wxg-Ta-tUl" firstAttribute="top" secondItem="Wg1-TP-zlW" secondAttribute="bottom" id="ldD-vr-JlR"/>
                                         <constraint firstItem="pkj-zU-PWY" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="mGT-dh-NN0"/>
-                                        <constraint firstItem="pkj-zU-PWY" firstAttribute="top" secondItem="rwW-xl-agh" secondAttribute="top" constant="8" id="mru-Kr-X28"/>
+                                        <constraint firstItem="QLE-Cv-SqR" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="mVw-79-5sv"/>
                                         <constraint firstItem="hZX-iN-Fk1" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="qSU-Gh-EzZ"/>
-                                        <constraint firstItem="SjH-BI-Q4V" firstAttribute="top" secondItem="A0L-BT-0Pe" secondAttribute="bottom" id="rCC-zt-931"/>
                                         <constraint firstItem="mDZ-1y-Zgp" firstAttribute="leading" secondItem="rwW-xl-agh" secondAttribute="leading" constant="8" id="rG3-6r-TbE"/>
                                         <constraint firstAttribute="trailing" secondItem="hZX-iN-Fk1" secondAttribute="trailing" constant="8" id="tIE-WH-ww6"/>
                                         <constraint firstAttribute="bottom" secondItem="hZX-iN-Fk1" secondAttribute="bottom" constant="8" id="wUn-G1-OI4"/>
-                                        <constraint firstItem="UZs-N2-vg6" firstAttribute="top" secondItem="wed-6g-cd9" secondAttribute="bottom" id="wce-ST-Fwk"/>
                                         <constraint firstAttribute="trailing" secondItem="wed-6g-cd9" secondAttribute="trailing" constant="8" id="xGd-2r-9vV"/>
+                                        <constraint firstItem="mDZ-1y-Zgp" firstAttribute="top" secondItem="wed-6g-cd9" secondAttribute="bottom" id="zaY-9k-Mc9"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
@@ -279,20 +312,20 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUj-zn-H0M">
-                                    <rect key="frame" x="8" y="305" width="398" height="30"/>
+                                    <rect key="frame" x="8" y="393" width="398" height="30"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZuD-br-EYc">
-                                    <rect key="frame" x="8" y="343" width="398" height="300"/>
+                                    <rect key="frame" x="8" y="431" width="398" height="300"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="KmM-KH-xtk"/>
                                     </constraints>
                                 </tableView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xq0-vZ-SeV" customClass="buttonView" customModule="Jazar" customModuleProvider="target">
-                                    <rect key="frame" x="58.5" y="659" width="297" height="52"/>
+                                    <rect key="frame" x="58.5" y="747" width="297" height="52"/>
                                     <color key="backgroundColor" red="0.97647058819999999" green="0.50980392159999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="52" id="Jhx-Sg-pWf"/>

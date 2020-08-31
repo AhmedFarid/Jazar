@@ -35,27 +35,31 @@ class myOrdersCell: UICollectionViewCell {
         
         if products.status == "pendding"{
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatusLabel.text = "قيد الانتظار"
+                orderStatusLabel.text = "تحت الطلب"
             }
         }else if products.status == "inShipment" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatusLabel.text = "في الطريق"
+                orderStatusLabel.text = "جاري التحضير"
             }
         }else if products.status == "onDelivery" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatusLabel.text = "قيد التحضير"
+                orderStatusLabel.text = "في الطريق"
             }
         }else if products.status == "completed" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatusLabel.text = "تم التواصل"
+                orderStatusLabel.text = "تم الاستلام"
             }
         }else if products.status == "canceled" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
-                orderStatusLabel.text = "ألغيت"
+                orderStatusLabel.text = "تم الغاء الطلب"
             }
         }else if products.status == "paymentDone" {
             if MOLHLanguage.currentAppleLanguage() == "ar" {
                 orderStatusLabel.text = "تم الدفع"
+            }
+        }else if products.status == "On arrival"{
+            if MOLHLanguage.currentAppleLanguage() == "ar" {
+                orderStatusLabel.text = "علي وشك الوصول"
             }
         }
     }

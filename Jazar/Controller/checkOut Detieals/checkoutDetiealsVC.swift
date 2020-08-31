@@ -41,6 +41,7 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     var regionId = 0
     var receivePointsId = "0"
     var typeDelivery = ""
+    var noteTF = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +55,14 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
     }
     
     func setupData() {
-        typeTF.text = "\(type) \(NSLocalizedString("Cash On Delivery", comment: "profuct list lang"))"
+        typeTF.text = "\(type)"
         addressTF.text = "\(address)"
         floorNumberTF.text = "\(floorNumber)"
         homeNumberTF.text = "\(homeNumber)"
         streetTF.text = "\(street)"
         regionTF.text = "\(region)"
-        let delivery = NSLocalizedString("delivery", comment: "profuct list lang")
-        deliveryTF.text = "\(delivery) \(delivery_type)"
+        //let delivery = NSLocalizedString("delivery", comment: "profuct list lang")
+        deliveryTF.text = "\(delivery_type)"
         cityTF.text = "\(cityName)"
         phoneTF.text = "\(phone)"
         fullNameTF.text = "\(fullName)"
@@ -83,13 +84,9 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
                     if success {
                         if message?.success == true {
                             self.stopAnimating()
-                            let title = NSLocalizedString("Order", comment: "profuct list lang")
-                            let message = NSLocalizedString("Thanks For Your Order", comment: "profuct list lang")
-                            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
-                                helperAuth.restartApp()
-                            }))
-                            self.present(alert, animated: true, completion: nil)
+                            let vc = orderVC(nibName: "orderVC", bundle: nil)
+                            vc.modalPresentationStyle = .custom
+                            self.present(vc,animated: true)
                         }else {
                             let title = NSLocalizedString("Order", comment: "profuct list lang")
                             self.showAlert(title: title, message: message?.message ?? "")

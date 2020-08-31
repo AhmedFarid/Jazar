@@ -44,13 +44,12 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         
         setUpNavColore(false)
         
-        
+        handelApiBanner()
         giftsGet()
         self.searchTF.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        handelApiBanner()
         handelApiflashSale()
         handelApiCategory()
         handelApiBestSealing()
@@ -341,7 +340,6 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         if collectionView == bannerCollectionView {
             if let cell = bannerCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? bannerCell {
                 cell.configureCell(images: slider[indexPath.row])
-                
                 return cell
             }else {
                 return bannerCell()
@@ -423,7 +421,7 @@ extension homeVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollecti
         }else if collectionView == bestSellingCollectionView{
             return CGSize(width: bestSellingCollectionView.frame.size.width / 1.5, height: bestSellingCollectionView.frame.size.height - 10)
         }else if collectionView == categoryCollectionView {
-            return CGSize(width: categoryCollectionView.frame.size.width / 2, height: categoryCollectionView.frame.size.width / 2.1)
+            return CGSize(width: categoryCollectionView.frame.size.width / 2, height: categoryCollectionView.frame.size.height / 2)
         }else {
             return CGSize(width: dailyDishCollectionView.frame.size.width / 1.5, height: dailyDishCollectionView.frame.size.height - 10)
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -48,23 +48,20 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b95-OS-xNV">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="1412"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLL-hG-LU9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search For product" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-Pu-fgG" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="7.5" width="398" height="45"/>
+                                            <rect key="frame" x="16" y="4" width="382" height="40"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="45" id="922-ob-nSV"/>
+                                                <constraint firstAttribute="height" constant="40" id="922-ob-nSV"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
-                                                    <real key="value" value="1"/>
-                                                </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="search"/>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -72,13 +69,13 @@
                                     <color key="backgroundColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="vBT-Pu-fgG" firstAttribute="centerY" secondItem="qLL-hG-LU9" secondAttribute="centerY" id="6po-2q-3kw"/>
-                                        <constraint firstAttribute="trailing" secondItem="vBT-Pu-fgG" secondAttribute="trailing" constant="8" id="G1h-vn-PF1"/>
-                                        <constraint firstAttribute="height" constant="60" id="JmR-lx-sg1"/>
-                                        <constraint firstItem="vBT-Pu-fgG" firstAttribute="leading" secondItem="qLL-hG-LU9" secondAttribute="leading" constant="8" id="qJ3-tQ-wmO"/>
+                                        <constraint firstAttribute="trailing" secondItem="vBT-Pu-fgG" secondAttribute="trailing" constant="16" id="G1h-vn-PF1"/>
+                                        <constraint firstAttribute="height" constant="48" id="JmR-lx-sg1"/>
+                                        <constraint firstItem="vBT-Pu-fgG" firstAttribute="leading" secondItem="qLL-hG-LU9" secondAttribute="leading" constant="16" id="qJ3-tQ-wmO"/>
                                     </constraints>
                                 </view>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TWz-By-Cwh">
-                                    <rect key="frame" x="0.0" y="60" width="414" height="251"/>
+                                    <rect key="frame" x="0.0" y="48" width="414" height="251"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BZ4-zd-Uim">
                                         <size key="itemSize" width="128" height="128"/>
@@ -88,18 +85,18 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="a98-OY-AKd">
-                                    <rect key="frame" x="187.5" y="274" width="39" height="37"/>
+                                    <rect key="frame" x="187.5" y="262" width="39" height="37"/>
                                     <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="currentPageIndicatorTintColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </pageControl>
                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXf-JW-FV4">
-                                    <rect key="frame" x="8" y="311" width="398" height="36"/>
+                                    <rect key="frame" x="8" y="299" width="398" height="36"/>
                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
                                     <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2by-hJ-Csg">
-                                    <rect key="frame" x="0.0" y="347" width="414" height="5"/>
+                                    <rect key="frame" x="0.0" y="335" width="414" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="WV9-JB-4hc"/>
@@ -112,18 +109,18 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-Tj-Z17">
-                                    <rect key="frame" x="8" y="360" width="398" height="36"/>
+                                    <rect key="frame" x="8" y="348" width="398" height="36"/>
                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
                                     <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T0h-s4-89m">
-                                    <rect key="frame" x="0.0" y="396" width="414" height="380"/>
+                                    <rect key="frame" x="0.0" y="384" width="414" height="380"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="380" id="yBU-lM-a0Y"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="T3f-3c-dmg">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="T3f-3c-dmg">
                                         <size key="itemSize" width="128" height="128"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -131,13 +128,13 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST SELLING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7i-xr-gzL">
-                                    <rect key="frame" x="8" y="784" width="398" height="36"/>
+                                    <rect key="frame" x="8" y="772" width="398" height="36"/>
                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
                                     <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-hn-ONk">
-                                    <rect key="frame" x="0.0" y="820" width="414" height="340"/>
+                                    <rect key="frame" x="0.0" y="808" width="414" height="340"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="340" id="RDc-89-F7Q"/>
@@ -150,7 +147,7 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S6-u9-UnV">
-                                    <rect key="frame" x="357" y="356" width="49" height="44"/>
+                                    <rect key="frame" x="357" y="344" width="49" height="44"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                     <state key="normal" title="See All">
                                         <color key="titleColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -160,7 +157,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8T-Sd-A4l">
-                                    <rect key="frame" x="357" y="780" width="49" height="44"/>
+                                    <rect key="frame" x="357" y="768" width="49" height="44"/>
                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                     <state key="normal" title="See All">
                                         <color key="titleColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -170,13 +167,13 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Dish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJo-ez-Zf4">
-                                    <rect key="frame" x="8" y="1168" width="398" height="36"/>
+                                    <rect key="frame" x="8" y="1156" width="398" height="36"/>
                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
                                     <color key="textColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="m39-8j-pHu">
-                                    <rect key="frame" x="0.0" y="1204" width="414" height="200"/>
+                                    <rect key="frame" x="0.0" y="1192" width="414" height="200"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="QgF-6h-HDi"/>

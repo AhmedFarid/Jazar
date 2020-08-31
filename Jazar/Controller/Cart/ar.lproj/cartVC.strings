@@ -1,9 +1,9 @@
 /* Class = "UILabel"; text = "Number of products"; ObjectID = "hfl-tZ-QAw"; */
-"hfl-tZ-QAw.text" = "عدد من المنتجات";
+"hfl-tZ-QAw.text" = "عدد المنتجات";
 
 /* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "jt5-Bk-9Kh"; */
 "jt5-Bk-9Kh.normalTitle" = "استكمال الطلب";
 
 /* Class = "UILabel"; text = "Total Price"; ObjectID = "WYN-LR-c49"; */
-"WYN-LR-c49.text" = "السعر الكلي";
+"WYN-LR-c49.text" = "الاجمالي";
 

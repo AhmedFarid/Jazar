@@ -8,13 +8,13 @@
 "CAX-0O-eTt.text" = "ضبط";
 
 /* Class = "UILabel"; text = "Orders"; ObjectID = "fA2-Xe-UaH"; */
-"fA2-Xe-UaH.text" = "طلبات";
+"fA2-Xe-UaH.text" = "طلباتي";
 
 /* Class = "UILabel"; text = "Wishlist"; ObjectID = "ggC-0j-fgy"; */
 "ggC-0j-fgy.text" = "المفضلة";
 
 /* Class = "UILabel"; text = "Promo"; ObjectID = "Gt8-OB-dEy"; */
-"Gt8-OB-dEy.text" = "برمو";
+"Gt8-OB-dEy.text" = "كود الخصم";
 
 /* Class = "UIButton"; normalTitle = "Contact Us"; ObjectID = "iA9-Zk-bCb"; */
 "iA9-Zk-bCb.normalTitle" = "اتصل بنا";
@@ -27,4 +27,8 @@
 
 /* Class = "UIButton"; normalTitle = "Language"; ObjectID = "zP7-Zl-I9s"; */
 "zP7-Zl-I9s.normalTitle" = "لغة";
+
+"xFY-vo-Yr5.normalTitle" = "عنواني";
+
+"FHU-Bb-FhD.normalTitle" = "محفظتي";
 

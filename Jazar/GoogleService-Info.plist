@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>CLIENT_ID</key>
-        <string>203439563024-j4evgjjie62isr3h4tspqderbnp20mj3.apps.googleusercontent.com</string>
-        <key>REVERSED_CLIENT_ID</key>
-        <string>com.googleusercontent.apps.203439563024-j4evgjjie62isr3h4tspqderbnp20mj3</string>
-        <key>PLIST_VERSION</key>
-        <string>1</string>
-        <key>BUNDLE_ID</key>
-        <string>com.FaridEbaker.Jazar</string>
-    </dict>
+<dict>
+    <key>CLIENT_ID</key>
+    <string>380648255940-rjdj5vblfpmrqvm5dhpgorl5jfdncf3m.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.380648255940-rjdj5vblfpmrqvm5dhpgorl5jfdncf3m</string>
+    <key>ANDROID_CLIENT_ID</key>
+    <string>380648255940-582cjrussieg3tj9cb7qdko5pu7dtgi5.apps.googleusercontent.com</string>
+    <key>API_KEY</key>
+    <string>AIzaSyAbt008yZ-8QJzAhQl_7dhUYosGsBI_yKo</string>
+    <key>GCM_SENDER_ID</key>
+    <string>380648255940</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>com.FaridEbaker.Jazar</string>
+    <key>PROJECT_ID</key>
+    <string>jazarweb</string>
+    <key>STORAGE_BUCKET</key>
+    <string>jazarweb.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false></false>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_APP_ID</key>
+    <string>1:380648255940:ios:c414f64155a079dc333491</string>
+    <key>DATABASE_URL</key>
+    <string>https://jazarweb.firebaseio.com</string>
+</dict>
 </plist>

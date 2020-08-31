@@ -12,7 +12,7 @@ class cartCells: UITableViewCell {
 
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var qtnLB: UILabel!
-    @IBOutlet weak var unitProduct: UILabel!
+    //@IBOutlet weak var unitProduct: UILabel!
     @IBOutlet weak var totalPirce: UILabel!
     
     override func awakeFromNib() {
@@ -26,8 +26,8 @@ class cartCells: UITableViewCell {
         qtnLB.text = "\(Quantity) \(products.productInCartQty ?? 0)"
         let totalPrice = NSLocalizedString("Total Price", comment: "profuct list lang")
         totalPirce.text = "\(totalPrice) \(products.productInCartTotal ?? 0) \(products.currency ?? "")"
-        let Price = NSLocalizedString("Price", comment: "profuct list lang")
-        unitProduct.text = "\(Price) \(products.total ?? 0) \(products.currency ?? "")"
+//        let Price = NSLocalizedString("Price", comment: "profuct list lang")
+////        unitProduct.text = "\(Price) \(products.total ?? 0) \(products.currency ?? "")"
     }
     
 }

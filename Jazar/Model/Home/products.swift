@@ -23,26 +23,28 @@ struct productsData: Codable {
 
 
 struct productsDataArray: Codable {
-     let id: Int?
-       let status: String?
-       let featured, trending, isNew, bestSeller: Bool?
-       let off50, onSale, hotDeal: Bool?
-       let hotDealPrice: Int?
-       let expireDateHotDeal, productCode, porductSkuCode, productSerialNumber: String?
-       let linkYoutube: String?
-       let stock, stockLimitAlert, countSolid, numberViews: Int?
-       let numberClicks: Int?
-       let totalRate: Double?
-       let totalNumberReview: Int?
-       let reviews: [Review]?
-       let salePrice, discount, total,unitValue: Int?
-       let totalWithCurrency: String?
-       let image,productLink: String?
-       let category, subcategory, brand, createdBy: String?
-       let updatedBy, name, shortDescription, datumDescription: String?
-       let productImages: [ProductImage]?
-       let productInCart, productInCartQty, productInCartTotal, isProductFavoirte: Int?
-       let currency,unit: String?
+      let id: Int?
+        let status: String?
+        let featured, trending, isNew, bestSeller: Bool?
+        let off50, onSale, hotDeal: Bool?
+        let hotDealPrice: Int?
+        let expireDateHotDeal, productCode, porductSkuCode, productSerialNumber: String?
+        let productLink, linkYoutube: String?
+        let stock, stockLimitAlert, countSolid, numberViews: Int?
+        let numberClicks, totalRate, totalNumberReview: Int?
+        let reviews: [Review]?
+        let salePrice, discount, total: Int?
+        let totalWithCurrency: String?
+        let image: String?
+        let category, subcategory, brand, createdBy: String?
+        let updatedBy, unit: String?
+        let unitValue: Int?
+        let name, shortDescription, datumDescription: String?
+        let productImages: [ProductImage]?
+        let productInCart, productInCartQty: Int?
+        let productInCartTotal: Double?
+        let isProductFavoirte: Int?
+        let currency: String?
     
     
     enum CodingKeys: String, CodingKey {

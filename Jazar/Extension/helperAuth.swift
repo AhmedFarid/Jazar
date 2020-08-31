@@ -21,19 +21,21 @@ class helperAuth: NSObject {
         let cartTabVC = cartVC(nibName:"cartVC",bundle: nil)
         let myAcoutnTabVC = myAccountVC(nibName: "myAccountVC",bundle: nil)
 
-        homeTabVC.tabBarItem = UITabBarItem(title: "",image: UIImage(named: "browser"), selectedImage: UIImage(named: "OnBrowser"))
-        newOffersTabVC.tabBarItem = UITabBarItem(title: "",image:UIImage(named: "-e-Shape 4"),selectedImage: UIImage(named: "ON-e-Shape 4"))
-        deliveryTabVC.tabBarItem = UITabBarItem(title: "",image: UIImage(named: "-e-Shape 6"),selectedImage: UIImage(named: "ON-e-Shape 6"))
-        cartTabVC.tabBarItem = UITabBarItem(title: "",image:UIImage(named: "-e-Shape 5") ,selectedImage: UIImage(named: "On-e-Shape 5"))
-        myAcoutnTabVC.tabBarItem = UITabBarItem(title: "",image:UIImage(named: "-e-Shape 7") ,selectedImage: UIImage(named: "-e-Shape 7ON"))
+        homeTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Home", comment: "profuct list lang"),image: UIImage(named: "123"), selectedImage: UIImage(named: "final copy-1"))
+        newOffersTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("New Offers", comment: "profuct list lang"),image:UIImage(named: "sale-1"),selectedImage: UIImage(named: "sale"))
+        deliveryTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Categories", comment: "profuct list lang"),image: UIImage(named: "fruit-3"),selectedImage: UIImage(named: "fruit-2"))
+        cartTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Cart", comment: "profuct list lang"),image:UIImage(named: "Group 1656") ,selectedImage: UIImage(named: "Group 1654"))
+        myAcoutnTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("My Account", comment: "profuct list lang"),image:UIImage(named: "person") ,selectedImage: UIImage(named: "Group 1657"))
         let controllers = [homeTabVC,newOffersTabVC,cartTabVC,deliveryTabVC,myAcoutnTabVC].map {
             UINavigationController(rootViewController: $0)
 
         }
         tabBarController.tabBar.tintColor = #colorLiteral(red: 0.2235294118, green: 0.6705882353, blue: 0.3215686275, alpha: 1)
         tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.9137254902, green: 0.9215686275, blue: 0.9333333333, alpha: 1)
+        tabBarController.tabBar.unselectedItemTintColor = UIColor.black
         tabBarController.viewControllers = controllers
-        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 10)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cairo-SemiBold", size: 10)!], for: .selected)
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
 
@@ -45,19 +47,21 @@ class helperAuth: NSObject {
         let cartTabVC = cartVC(nibName:"cartVC",bundle: nil)
         let myAcoutnTabVC = myAccountVC(nibName: "myAccountVC",bundle: nil)
 
-        homeTabVC.tabBarItem = UITabBarItem(title: "",image: UIImage(named: "browser"), selectedImage: UIImage(named: "OnBrowser"))
-        newOffersTabVC.tabBarItem = UITabBarItem(title: "",image:UIImage(named: "-e-Shape 4"),selectedImage: UIImage(named: "ON-e-Shape 4"))
-        deliveryTabVC.tabBarItem = UITabBarItem(title: "",image: UIImage(named: "-e-Shape 6"),selectedImage: UIImage(named: "ON-e-Shape 6"))
-        cartTabVC.tabBarItem = UITabBarItem(title: "",image:UIImage(named: "-e-Shape 5") ,selectedImage: UIImage(named: "On-e-Shape 5"))
-        myAcoutnTabVC.tabBarItem = UITabBarItem(title: "",image:UIImage(named: "-e-Shape 7") ,selectedImage: UIImage(named: "-e-Shape 7ON"))
+       homeTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Home", comment: "profuct list lang"),image: UIImage(named: "123"), selectedImage: UIImage(named: "final copy-1"))
+        newOffersTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("New Offers", comment: "profuct list lang"),image:UIImage(named: "sale-1"),selectedImage: UIImage(named: "sale"))
+        deliveryTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Categories", comment: "profuct list lang"),image: UIImage(named: "fruit-3"),selectedImage: UIImage(named: "fruit-2"))
+        cartTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Cart", comment: "profuct list lang"),image:UIImage(named: "Group 1656") ,selectedImage: UIImage(named: "Group 1654"))
+        myAcoutnTabVC.tabBarItem = UITabBarItem(title: NSLocalizedString("My Account", comment: "profuct list lang"),image:UIImage(named: "person") ,selectedImage: UIImage(named: "Group 1657"))
         let controllers = [homeTabVC,newOffersTabVC,cartTabVC,deliveryTabVC,myAcoutnTabVC].map {
             UINavigationController(rootViewController: $0)
 
         }
         tabBarController.tabBar.tintColor = #colorLiteral(red: 0.2235294118, green: 0.6705882353, blue: 0.3215686275, alpha: 1)
         tabBarController.tabBar.barTintColor = #colorLiteral(red: 0.9137254902, green: 0.9215686275, blue: 0.9333333333, alpha: 1)
+        tabBarController.tabBar.unselectedItemTintColor = UIColor.black
         tabBarController.viewControllers = controllers
-        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 10)!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Cairo-SemiBold", size: 10)!], for: .selected)
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }

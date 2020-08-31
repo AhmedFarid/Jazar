@@ -1,5 +1,5 @@
 /* Class = "UILabel"; text = "Delivery Price"; ObjectID = "0bd-MR-5nA"; */
-"0bd-MR-5nA.text" = "سعر تسليم";
+"0bd-MR-5nA.text" = "خدمة توصيل";
 
 /* Class = "UITextField"; placeholder = "Street"; ObjectID = "0Hc-5C-Zs3"; */
 "0Hc-5C-Zs3.placeholder" = "شارع";
@@ -11,10 +11,10 @@
 "6br-ej-bZo.placeholder" = "هاتف";
 
 /* Class = "UITextField"; placeholder = "Have Promo Code?"; ObjectID = "80B-y6-Pbq"; */
-"80B-y6-Pbq.placeholder" = "هل لديك برمو كود؟";
+"80B-y6-Pbq.placeholder" = "هل لديك كود خصم؟";
 
 /* Class = "UITextField"; placeholder = "Delivery Time"; ObjectID = "Ehp-h1-nJs"; */
-"Ehp-h1-nJs.placeholder" = "موعد التسليم";
+"Ehp-h1-nJs.placeholder" = "قائمة التوصيل المجمع";
 
 /* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "gbd-4B-Hft"; */
 "gbd-4B-Hft.normalTitle" = "استكمال الطلب";
@@ -26,10 +26,10 @@
 "Kty-cg-0mf.placeholder" = "رقم الطابق";
 
 /* Class = "UIButton"; normalTitle = "Enter"; ObjectID = "oc8-GB-huM"; */
-"oc8-GB-huM.normalTitle" = "تطبيق";
+"oc8-GB-huM.normalTitle" = "تفعيل";
 
 /* Class = "UILabel"; text = "Sub Total"; ObjectID = "OWA-RP-XUh"; */
-"OWA-RP-XUh.text" = "المجموع الفرعي";
+"OWA-RP-XUh.text" = "السعر الاجمالي";
 
 /* Class = "UITextField"; placeholder = "Delivery Type"; ObjectID = "P87-3i-c9j"; */
 "P87-3i-c9j.placeholder" = "نوع التوصيل";
@@ -41,7 +41,7 @@
 "UBB-ak-BOC.placeholder" = "مدينة";
 
 /* Class = "UILabel"; text = "Total Price"; ObjectID = "VlS-0c-Wa1"; */
-"VlS-0c-Wa1.text" = "السعر الكلي";
+"VlS-0c-Wa1.text" = "اجمالي الفاتورة";
 
 /* Class = "UITextField"; placeholder = "Region"; ObjectID = "vPe-tk-lQq"; */
 "vPe-tk-lQq.placeholder" = "منطقة";
@@ -53,8 +53,13 @@
 "wvC-jY-N8s.placeholder" = "الاسم الكامل";
 
 /* Class = "UILabel"; text = "Number Of Products"; ObjectID = "YHB-SA-QAr"; */
-"YHB-SA-QAr.text" = "عدد من المنتجات";
+"YHB-SA-QAr.text" = "عدد المنتجات";
 
 /* Class = "UILabel"; text = "Promo Value"; ObjectID = "Zys-sf-YLl"; */
-"Zys-sf-YLl.text" = "قيمه البرومو";
+"Zys-sf-YLl.text" = "قيمه كود الخصم";
 
+"I1J-fF-yaH.text" = "اي ملاحظات خاصه بالمنتجات والعنوان";
+
+"kkw-k4-WhD.text" = "الدفع عند الاستلام";
+
+"BGV-d3-MHP.text" = "طريقة الدفع";
