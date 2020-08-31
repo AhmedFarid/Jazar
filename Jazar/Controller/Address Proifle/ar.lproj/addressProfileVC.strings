@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "Home Number"; ObjectID = "Ig4-8g-acy"; */
+"Ig4-8g-acy.placeholder" = "رقم المنزل";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "KDr-qD-rTD"; */
+"KDr-qD-rTD.normalTitle" = "تعديل";
+
+/* Class = "UITextField"; placeholder = "Street"; ObjectID = "OU2-82-YG5"; */
+"OU2-82-YG5.placeholder" = "الشارع";
+
+/* Class = "UITextField"; placeholder = "Floor Number"; ObjectID = "QIu-rV-7su"; */
+"QIu-rV-7su.placeholder" = "رقم الدور";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "Sew-TY-HS6"; */
+"Sew-TY-HS6.placeholder" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "Region"; ObjectID = "hOZ-AR-pZb"; */
+"hOZ-AR-pZb.placeholder" = "المنطقه";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "uG0-Sa-J4g"; */
+"uG0-Sa-J4g.placeholder" = "المدينه";

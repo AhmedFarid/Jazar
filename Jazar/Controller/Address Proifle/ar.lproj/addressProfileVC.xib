@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="addressProfileVC" customModule="Jazar" customModuleProvider="target">
+            <connections>
+                <outlet property="addressTF" destination="Sew-TY-HS6" id="UMf-M4-aBf"/>
+                <outlet property="citytf" destination="uG0-Sa-J4g" id="wXl-sm-ncZ"/>
+                <outlet property="floorNumTF" destination="QIu-rV-7su" id="Bh2-yX-Qsn"/>
+                <outlet property="homeNumTF" destination="Ig4-8g-acy" id="5RA-m2-FyM"/>
+                <outlet property="regionTF" destination="hOZ-AR-pZb" id="iDE-Wl-mK0"/>
+                <outlet property="streetTF" destination="OU2-82-YG5" id="cfr-vC-52y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bX-fF-zl3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYN-vS-hhe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDr-qD-rTD" customClass="buttonView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="110.5" y="380" width="193" height="52"/>
+                                    <color key="backgroundColor" red="0.97647058819999999" green="0.50980392159999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="R70-Fq-EhV"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <state key="normal" title="Edit">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="editAddress:" destination="-1" eventType="touchUpInside" id="gwZ-Qx-74i"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Region" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOZ-AR-pZb" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="89" width="382" height="56"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="A5w-uL-5JG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-vm-MXt">
+                                    <rect key="frame" x="16" y="291" width="183" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="nJp-gu-9sh"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OU2-82-YG5" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="162" width="382" height="56"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="gZC-Xd-cIu"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nfr-m7-vPa">
+                                    <rect key="frame" x="16" y="235" width="382" height="56"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="DE5-GA-Nhb">
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig4-8g-acy" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="04u-sy-2pp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5eG-Hm-ljH">
+                                            <rect key="frame" x="199" y="0.0" width="183" height="56"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Floor Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIu-rV-7su" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="183" height="56"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="JMF-jm-9gM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sew-TY-HS6" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="307" width="382" height="56"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="cAV-Aq-WaZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vB-i9-jp6">
+                                    <rect key="frame" x="16" y="145" width="382" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="GbH-cb-bDd"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-Hd-3bu">
+                                    <rect key="frame" x="16" y="218" width="382" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="HuV-bp-MFf"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Iw-pD-8ya">
+                                    <rect key="frame" x="16" y="363" width="382" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="TBw-rD-ab6"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLE-Kq-xuy">
+                                    <rect key="frame" x="16" y="72" width="382" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="9Y9-4k-DqT"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uG0-Sa-J4g" customClass="textFieldView" customModule="Jazar" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="16" width="382" height="56"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="D8T-4i-kLK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuscostom">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.27429027290000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPaddingPointss">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTQ-l6-4Vz">
+                                    <rect key="frame" x="215" y="291" width="183" height="1"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="fOy-FA-3kc"/>
+                                    </constraints>
+                                </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1524" translatesAutoresizingMaskIntoConstraints="NO" id="ajH-sy-nMK">
+                                    <rect key="frame" x="375" y="44.5" width="15" height="15"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="IqJ-Zp-IMd"/>
+                                        <constraint firstAttribute="width" constant="15" id="MEE-mK-buO"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1524" translatesAutoresizingMaskIntoConstraints="NO" id="jV5-9w-8HD">
+                                    <rect key="frame" x="375" y="115" width="15" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="69P-j2-efQ"/>
+                                        <constraint firstAttribute="width" constant="15" id="9yG-xh-MAe"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="Sew-TY-HS6" firstAttribute="top" secondItem="nfr-m7-vPa" secondAttribute="bottom" constant="16" id="0AJ-uc-CJV"/>
+                                <constraint firstAttribute="bottom" secondItem="KDr-qD-rTD" secondAttribute="bottom" constant="16" id="1QY-Sw-QAX"/>
+                                <constraint firstItem="pTQ-l6-4Vz" firstAttribute="leading" secondItem="QIu-rV-7su" secondAttribute="leading" id="58p-iq-YG7"/>
+                                <constraint firstItem="hOZ-AR-pZb" firstAttribute="top" secondItem="YLE-Kq-xuy" secondAttribute="bottom" constant="16" id="7Iw-yB-dbn"/>
+                                <constraint firstItem="hOZ-AR-pZb" firstAttribute="trailing" secondItem="jV5-9w-8HD" secondAttribute="trailing" constant="8" id="7t2-Zy-ZT5"/>
+                                <constraint firstItem="OU2-82-YG5" firstAttribute="top" secondItem="0vB-i9-jp6" secondAttribute="bottom" constant="16" id="9hd-47-Fz6"/>
+                                <constraint firstItem="Sew-TY-HS6" firstAttribute="leading" secondItem="uG0-Sa-J4g" secondAttribute="leading" id="AC0-eW-OOL"/>
+                                <constraint firstItem="ajH-sy-nMK" firstAttribute="centerY" secondItem="uG0-Sa-J4g" secondAttribute="centerY" constant="8" id="DCm-YE-9zT"/>
+                                <constraint firstItem="bL5-vm-MXt" firstAttribute="trailing" secondItem="Ig4-8g-acy" secondAttribute="trailing" id="E8W-wV-Rfk"/>
+                                <constraint firstItem="YLE-Kq-xuy" firstAttribute="top" secondItem="uG0-Sa-J4g" secondAttribute="bottom" id="ET0-Ud-v62"/>
+                                <constraint firstItem="bL5-vm-MXt" firstAttribute="leading" secondItem="Ig4-8g-acy" secondAttribute="leading" id="F16-uE-uNM"/>
+                                <constraint firstItem="hOZ-AR-pZb" firstAttribute="trailing" secondItem="uG0-Sa-J4g" secondAttribute="trailing" id="F1R-5m-zWT"/>
+                                <constraint firstItem="pTQ-l6-4Vz" firstAttribute="top" secondItem="nfr-m7-vPa" secondAttribute="bottom" id="Gsw-Ih-Ofm"/>
+                                <constraint firstItem="bL5-vm-MXt" firstAttribute="top" secondItem="nfr-m7-vPa" secondAttribute="bottom" id="IFp-Zy-suj"/>
+                                <constraint firstItem="U7h-Hd-3bu" firstAttribute="top" secondItem="OU2-82-YG5" secondAttribute="bottom" id="JAH-rz-xD2"/>
+                                <constraint firstItem="Sew-TY-HS6" firstAttribute="trailing" secondItem="uG0-Sa-J4g" secondAttribute="trailing" id="KEY-Oi-LKK"/>
+                                <constraint firstItem="jV5-9w-8HD" firstAttribute="centerY" secondItem="hOZ-AR-pZb" secondAttribute="centerY" constant="8" id="McM-3b-pdQ"/>
+                                <constraint firstItem="U7h-Hd-3bu" firstAttribute="trailing" secondItem="OU2-82-YG5" secondAttribute="trailing" id="NCr-x5-ezH"/>
+                                <constraint firstItem="OU2-82-YG5" firstAttribute="trailing" secondItem="uG0-Sa-J4g" secondAttribute="trailing" id="NdA-1z-lE0"/>
+                                <constraint firstItem="U7h-Hd-3bu" firstAttribute="leading" secondItem="OU2-82-YG5" secondAttribute="leading" id="Nmd-ku-O16"/>
+                                <constraint firstItem="YLE-Kq-xuy" firstAttribute="leading" secondItem="uG0-Sa-J4g" secondAttribute="leading" id="PYr-Va-jeg"/>
+                                <constraint firstItem="0vB-i9-jp6" firstAttribute="leading" secondItem="hOZ-AR-pZb" secondAttribute="leading" id="PhB-fu-NtA"/>
+                                <constraint firstItem="KDr-qD-rTD" firstAttribute="top" secondItem="0Iw-pD-8ya" secondAttribute="bottom" constant="16" id="TRr-js-68Y"/>
+                                <constraint firstItem="YLE-Kq-xuy" firstAttribute="trailing" secondItem="uG0-Sa-J4g" secondAttribute="trailing" id="VVv-5F-Kap"/>
+                                <constraint firstAttribute="trailing" secondItem="uG0-Sa-J4g" secondAttribute="trailing" constant="16" id="Vbk-Er-Xfj"/>
+                                <constraint firstItem="nfr-m7-vPa" firstAttribute="leading" secondItem="uG0-Sa-J4g" secondAttribute="leading" id="ZEf-Yh-A8p"/>
+                                <constraint firstItem="0Iw-pD-8ya" firstAttribute="leading" secondItem="Sew-TY-HS6" secondAttribute="leading" id="a1u-4h-sCd"/>
+                                <constraint firstItem="KDr-qD-rTD" firstAttribute="centerX" secondItem="tYN-vS-hhe" secondAttribute="centerX" id="b6g-VO-NZP"/>
+                                <constraint firstItem="nfr-m7-vPa" firstAttribute="top" secondItem="U7h-Hd-3bu" secondAttribute="bottom" constant="16" id="bq3-Wk-S8G"/>
+                                <constraint firstItem="uG0-Sa-J4g" firstAttribute="top" secondItem="tYN-vS-hhe" secondAttribute="top" constant="16" id="cJo-G3-ctu"/>
+                                <constraint firstItem="OU2-82-YG5" firstAttribute="leading" secondItem="uG0-Sa-J4g" secondAttribute="leading" id="ga9-6Y-kXV"/>
+                                <constraint firstItem="0vB-i9-jp6" firstAttribute="trailing" secondItem="hOZ-AR-pZb" secondAttribute="trailing" id="gcG-gX-3Ak"/>
+                                <constraint firstItem="hOZ-AR-pZb" firstAttribute="leading" secondItem="uG0-Sa-J4g" secondAttribute="leading" id="gfp-NF-mOv"/>
+                                <constraint firstItem="0vB-i9-jp6" firstAttribute="top" secondItem="hOZ-AR-pZb" secondAttribute="bottom" id="hXJ-Ta-f94"/>
+                                <constraint firstItem="nfr-m7-vPa" firstAttribute="trailing" secondItem="uG0-Sa-J4g" secondAttribute="trailing" id="iiT-kF-90Y"/>
+                                <constraint firstItem="0Iw-pD-8ya" firstAttribute="top" secondItem="Sew-TY-HS6" secondAttribute="bottom" id="ivC-zY-gyG"/>
+                                <constraint firstItem="pTQ-l6-4Vz" firstAttribute="trailing" secondItem="QIu-rV-7su" secondAttribute="trailing" id="kNs-zJ-5jS"/>
+                                <constraint firstItem="uG0-Sa-J4g" firstAttribute="trailing" secondItem="ajH-sy-nMK" secondAttribute="trailing" constant="8" id="qmF-ye-pvB"/>
+                                <constraint firstItem="uG0-Sa-J4g" firstAttribute="leading" secondItem="tYN-vS-hhe" secondAttribute="leading" constant="16" id="v7E-Ih-lXB"/>
+                                <constraint firstItem="0Iw-pD-8ya" firstAttribute="trailing" secondItem="Sew-TY-HS6" secondAttribute="trailing" id="wjA-wx-kTA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tYN-vS-hhe" firstAttribute="trailing" secondItem="BwF-Du-ywo" secondAttribute="trailing" id="Fah-h2-J8L"/>
+                        <constraint firstItem="tYN-vS-hhe" firstAttribute="top" secondItem="BwF-Du-ywo" secondAttribute="top" id="RwF-d7-HKS"/>
+                        <constraint firstItem="tYN-vS-hhe" firstAttribute="bottom" secondItem="BwF-Du-ywo" secondAttribute="bottom" id="TGh-pI-4Rz"/>
+                        <constraint firstItem="tYN-vS-hhe" firstAttribute="leading" secondItem="BwF-Du-ywo" secondAttribute="leading" id="kz5-AN-tsg"/>
+                        <constraint firstItem="JRL-8v-GPK" firstAttribute="width" secondItem="tYN-vS-hhe" secondAttribute="width" id="zMU-tu-spk"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="BwF-Du-ywo"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="JRL-8v-GPK"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6bX-fF-zl3" secondAttribute="bottom" id="Dz1-Hf-OqM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6bX-fF-zl3" secondAttribute="trailing" id="HOS-qa-Isy"/>
+                <constraint firstItem="6bX-fF-zl3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Iks-JH-Rni"/>
+                <constraint firstItem="6bX-fF-zl3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c6f-HE-eMy"/>
+                <constraint firstItem="KDr-qD-rTD" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.466184" id="izh-Hm-NEP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Group 1524" width="12.5" height="7.5"/>
+    </resources>
+</document>
