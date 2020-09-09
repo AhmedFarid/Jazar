@@ -54,3 +54,17 @@ struct sotkeMessageData: Codable {
         case productid = "product_id"
     }
 }
+
+
+struct orderMessage: Codable {
+    let success: Bool?
+    let data: orderMessageData?
+    let message: String?
+}
+struct orderMessageData: Codable {
+    let orderid: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case orderid = "order_id"
+    }
+}

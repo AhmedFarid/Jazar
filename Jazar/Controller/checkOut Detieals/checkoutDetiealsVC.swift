@@ -85,6 +85,7 @@ class checkoutDetiealsVC: UIViewController,NVActivityIndicatorViewable {
                         if message?.success == true {
                             self.stopAnimating()
                             let vc = orderVC(nibName: "orderVC", bundle: nil)
+                            vc.orderId = message?.data?.orderid ?? 0
                             vc.modalPresentationStyle = .custom
                             self.present(vc,animated: true)
                         }else {

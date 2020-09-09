@@ -85,6 +85,54 @@ class homeApi: NSObject {
         
     }
     
+    
+    class func filterApi(pageName: Int,max: String,min: String,is_new: String,best_seller: String,is_limit: String,is_favoirt: String,is_cart: String,completion: @escaping(_ error: Error?,_ success: Bool,_ product: products?)-> Void){
+        
+        let parameters = [
+            "max": max,
+            "min": min,
+            "is_new": is_new,
+            "best_seller": best_seller,
+            "is_limit": is_limit,
+            "is_favoirt": is_favoirt,
+            "is_cart": is_cart,
+            "page": pageName
+            ] as [String : Any]
+        
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "Authorization": "Bearer \(helperAuth.getAPIToken() ?? "")",
+            "X-localization": URLs.mainLang
+        ]
+        let url = URLs.filterSearchProduct
+        print(url)
+        print("ccc\(parameters)")
+        print(headers)
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.queryString, headers: headers).responseJSON{ (response) in
+            switch response.result
+            {
+            case .failure(let error):
+                completion(error, false,nil)
+                print(error)
+            case .success:
+                do{
+                    print(response)
+                    let product = try JSONDecoder().decode(products.self, from: response.data!)
+                    if product.success == true {
+                        completion(nil,true,product)
+                    }else {
+                        completion(nil,true,product)
+                    }
+                }catch{
+                    completion(nil,true,nil)
+                    print("error")
+                }
+            }
+        }
+        
+    }
+    
     class func categorieApi(page: Int,completion: @escaping(_ error: Error?,_ success: Bool,_ categorie: categories?)-> Void){
         
         let url = URLs.categories

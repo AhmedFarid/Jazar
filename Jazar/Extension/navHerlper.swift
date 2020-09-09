@@ -42,7 +42,11 @@ extension UIViewController {
         self.navigationController?.navigationBar.isTranslucent = isTranslucent
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2248471975, green: 0.6689562201, blue: 0.3207116127, alpha: 1)
-        self.navigationItem.title = NSLocalizedString("Jazar", comment: "hhhh")
+        let nvImageTitle = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        nvImageTitle.contentMode = .scaleAspectFit
+        let imageName = UIImage(named: "Mask Group 3")
+        nvImageTitle.image = imageName
+        navigationItem.titleView = nvImageTitle
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let textAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 18)!] as [NSAttributedString.Key : Any]
         

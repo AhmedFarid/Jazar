@@ -48,7 +48,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     var images = [ProductImage]()
     var isFav = 0
     var isCart = 0
-    var qty = 1
+    var qty = 1.0
     var selected = Int()
     var index = Int()
     var products = [productsDataArray]()
@@ -158,12 +158,12 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                 bigCartBtn.setTitle(removeFromCart, for: .normal)
                 buyNowBtn.isHidden = true
                 qtnText.text = "\(singleItem?.productInCartQty ?? 0)"
-                qty = singleItem?.productInCartQty ?? 0
+                qty = Double(singleItem?.productInCartQty ?? 0)
                 self.discountPrice.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
                 self.discountPrice2.text = "\((singleItem?.salePrice ?? 0) * self.qty) \(singleItem?.currency ?? "")"
-                self.genralPrice.text = "\((Int((singleItem?.total ?? 0))) * self.qty) \(singleItem?.currency ?? "")"
-                genralPrice2.text = "\((Int((singleItem?.total ?? 0))) * self.qty) \(singleItem?.currency ?? "")"
-                genralPrice3.text = "\((Int((singleItem?.total ?? 0))) * self.qty) \(singleItem?.currency ?? "")"
+                self.genralPrice.text = "\((singleItem?.total ?? 0.0) * self.qty) \(singleItem?.currency ?? "")"
+                genralPrice2.text = "\((singleItem?.total ?? 0.0) * self.qty) \(singleItem?.currency ?? "")"
+                genralPrice3.text = "\((singleItem?.total ?? 0.0) * self.qty) \(singleItem?.currency ?? "")"
                 plusBTN.isHidden = true
             }else {
                 cartBtn.setImage(UIImage(named: "NoCart"), for: .normal)
@@ -248,16 +248,10 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
     
     func cart(url: String,type: String) {
         loaderHelper()
-        cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(qty)") { (error, success, message,errorStoke,x) in
+        cartApi.cartOption(url: url, product_id: "\(singleItem?.id ?? 0)", qty: "\(Int(qty))") { (error, success, message,errorStoke,x) in
             if success {
                 if message?.success == true {
                     if url == URLs.addToCart {
-                        do {
-                            self.audioPlayer = try AVAudioPlayer(contentsOf: self.pianoSound)
-                            self.audioPlayer.play()
-                        } catch {
-                           // couldn't load file :(
-                        }
                         self.isCart = 1
                         self.cartBtn.setImage(UIImage(named: "onCart"), for: .normal)
                         let removeFromCart = NSLocalizedString("Remove from cart", comment: "profuct list lang")
@@ -265,7 +259,11 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         self.buyNowBtn.isHidden = true
                         self.plusBTN.isHidden = true
                         self.minBtm.isHidden = true
-                        
+                        do {
+                            self.audioPlayer = try AVAudioPlayer(contentsOf: self.pianoSound)
+                            self.audioPlayer.play()
+                        } catch {
+                        }
                         if type == "BuyNowAddToCart" {
                             let alert = UIAlertController(title: "Order", message: "Add To Cart You will moved to Cart", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) in
@@ -276,7 +274,6 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                         }else {
                             self.showAlert(title: "Cart", message: "Added To Cart")
                         }
-                        
                     }else if url == URLs.removeFromCart {
                         self.isCart = 0
                         self.cartBtn.setImage(UIImage(named: "NoCart"), for: .normal)
@@ -295,7 +292,6 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
                             self.audioPlayer = try AVAudioPlayer(contentsOf: self.favourit)
                             self.audioPlayer.play()
                         } catch {
-                           // couldn't load file :(
                         }
                         self.showAlert(title: "Cart", message: "Removed From Cart")
                     }
@@ -429,7 +425,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         if isCart == 1 {
             cart(url: URLs.removeFromCart, type: "normalAddToCart")
             self.refesHcart()
-        }else if isCart == 0 {
+        }else  {
             cart(url: URLs.addToCart, type: "normalAddToCart")
             self.refesHcart()
         }
@@ -439,7 +435,6 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
         if isFav == 1 {
             fav(url: URLs.removeFavorite)
         }else if isFav == 0 {
-            
             fav(url: URLs.addFavorite)
         }
     }
@@ -476,7 +471,7 @@ class productDetailsVC: UIViewController, NVActivityIndicatorViewable {
             if isCart == 1 {
                 cart(url: URLs.removeFromCart, type: "normalAddToCart")
                 self.refesHcart()
-            }else if isCart == 0 {
+            }else{
                 cart(url: URLs.addToCart, type: "normalAddToCart")
                 self.refesHcart()
             }

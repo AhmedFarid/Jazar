@@ -52,5 +52,7 @@ struct URLs {
     static let offers = main + "offers"
     static let similarProducts = main + "similarProducts"
     static let allNotificaitons = main + "all_notificaitons"
+    static let websiteInfo = main + "website_info"
+    static let filterSearchProduct = main + "filterSearchProduct"
     
 }

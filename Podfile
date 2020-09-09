@@ -20,6 +20,6 @@ target 'Jazar' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
-  
+  pod 'Floaty'
   
 end

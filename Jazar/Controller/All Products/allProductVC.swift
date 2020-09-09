@@ -32,16 +32,29 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
         //handelApiflashSale(name: name)
         
         searchTF.delegate = self
+        
+        
+        let liftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "Group 366"), style: .done, target: self, action: #selector(filter))
+        self.navigationItem.rightBarButtonItem = liftBarButtonItem
+        
+        handelApiflashSale(name: name)
+               if url == URLs.searchProduct {
+                   searchTF.isHidden = false
+               }else {
+                   searchTF.isHidden = true
+                   searchTFHight.constant = 0
+               }
+    }
+    
+    @objc func filter() {
+        let vc = filterVC(nibName: "filterVC", bundle: nil)
+        vc.modalPresentationStyle = .custom
+        vc.delegate = self
+        self.present(vc,animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        handelApiflashSale(name: name)
-        if url == URLs.searchProduct {
-            searchTF.isHidden = false
-        }else {
-            searchTF.isHidden = true
-            searchTFHight.constant = 0
-        }
+       
     }
     
     func SetupSearch() {
@@ -81,13 +94,36 @@ class allProductVC: UIViewController,NVActivityIndicatorViewable {
         guard !isLoading else {return}
         guard current_page < last_page else {return}
         isLoading = true
-        homeApi.productsApi(url: url, pageName: current_page+1, product_id: 0,category_id: "\(singleItme?.id ?? 0)", subcategory_id: "",name: name){ (error,success,products) in
+        homeApi.productsApi(url: url, pageName: current_page+1, product_id: 0,category_id: "\(singleItme?.id ?? singleItmeSub?.categoryid ?? 0)", subcategory_id: "\(singleItmeSub?.id ?? 0)",name: name){ (error,success,products) in
             self.isLoading = false
             if let products = products{
                 self.products.append(contentsOf: products.data?.data ?? [])
                 print(products)
                 self.allProductCollectionView.reloadData()
                 self.current_page += 1
+                self.last_page = products.data?.meta?.lastPage ?? 0
+                self.stopAnimating()
+            }
+            self.stopAnimating()
+        }
+    }
+    
+    
+    @objc func handelApiFilter(pageName: Int,max: String,min: String,is_new: String,best_seller: String,is_limit: String,is_favoirt: String,is_cart: String) {
+        self.allProductCollectionView.register(UINib.init(nibName: "allProductViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        allProductCollectionView.delegate = self
+        allProductCollectionView.dataSource = self
+        guard !isLoading else { return }
+        isLoading = true
+        loaderHelper()
+        print(url)
+        homeApi.filterApi(pageName: pageName,max: max,min: min,is_new: is_new,best_seller: best_seller,is_limit: is_limit,is_favoirt: is_favoirt,is_cart: is_cart){ (error,success,products) in
+            self.isLoading = false
+            if let products = products{
+                self.products = products.data?.data ?? []
+                print(products)
+                self.allProductCollectionView.reloadData()
+                self.current_page = 1
                 self.last_page = products.data?.meta?.lastPage ?? 0
                 self.stopAnimating()
             }
@@ -225,5 +261,12 @@ extension allProductVC: UITextFieldDelegate {
     
     func performAction() {
         handelApiflashSale(name: searchTF.text ?? "")
+    }
+}
+
+extension allProductVC :getFilter {
+    func getFilterData(highestPrice: String, lowestPrice: String, inCart: String, inFav: String, linitedQty: String, new: String, Best: String) {
+        print("xxx")
+        handelApiFilter(pageName: 1,max: highestPrice,min: lowestPrice,is_new: new,best_seller: Best,is_limit: linitedQty,is_favoirt: inFav,is_cart: inCart)
     }
 }

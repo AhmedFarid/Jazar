@@ -1,8 +1,9 @@
-/* Class = "UILabel"; text = "Delivery Price"; ObjectID = "0bd-MR-5nA"; */
-"0bd-MR-5nA.text" = "خدمة توصيل";
 
 /* Class = "UITextField"; placeholder = "Street"; ObjectID = "0Hc-5C-Zs3"; */
 "0Hc-5C-Zs3.placeholder" = "شارع";
+
+/* Class = "UILabel"; text = "Delivery Price"; ObjectID = "0bd-MR-5nA"; */
+"0bd-MR-5nA.text" = "خدمة توصيل";
 
 /* Class = "UITextField"; placeholder = "Address"; ObjectID = "5GN-8L-6Px"; */
 "5GN-8L-6Px.placeholder" = "عنوان";
@@ -11,22 +12,16 @@
 "6br-ej-bZo.placeholder" = "هاتف";
 
 /* Class = "UITextField"; placeholder = "Have Promo Code?"; ObjectID = "80B-y6-Pbq"; */
-"80B-y6-Pbq.placeholder" = "هل لديك كود خصم؟";
+"80B-y6-Pbq.placeholder" = "عندك كود خصم؟";
+
+/* Class = "UILabel"; text = "Payment Method"; ObjectID = "BGV-d3-MHP"; */
+"BGV-d3-MHP.text" = "طريقة الدفع";
 
 /* Class = "UITextField"; placeholder = "Delivery Time"; ObjectID = "Ehp-h1-nJs"; */
-"Ehp-h1-nJs.placeholder" = "قائمة التوصيل المجمع";
-
-/* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "gbd-4B-Hft"; */
-"gbd-4B-Hft.normalTitle" = "استكمال الطلب";
-
-/* Class = "UILabel"; text = "Delivery"; ObjectID = "gON-lc-kUx"; */
-"gON-lc-kUx.text" = "توصيل";
+"Ehp-h1-nJs.placeholder" = "وقت التوصيل";
 
 /* Class = "UITextField"; placeholder = "Floor Number"; ObjectID = "Kty-cg-0mf"; */
-"Kty-cg-0mf.placeholder" = "رقم الطابق";
-
-/* Class = "UIButton"; normalTitle = "Enter"; ObjectID = "oc8-GB-huM"; */
-"oc8-GB-huM.normalTitle" = "تفعيل";
+"Kty-cg-0mf.placeholder" = "رقم الدور";
 
 /* Class = "UILabel"; text = "Sub Total"; ObjectID = "OWA-RP-XUh"; */
 "OWA-RP-XUh.text" = "السعر الاجمالي";
@@ -34,23 +29,17 @@
 /* Class = "UITextField"; placeholder = "Delivery Type"; ObjectID = "P87-3i-c9j"; */
 "P87-3i-c9j.placeholder" = "نوع التوصيل";
 
+/* Class = "UILabel"; text = "ff"; ObjectID = "Rlk-wJ-d5m"; */
+"Rlk-wJ-d5m.text" = "ff";
+
 /* Class = "UITextField"; placeholder = "Home Number"; ObjectID = "U56-DA-hX0"; */
-"U56-DA-hX0.placeholder" = "رقم البيت";
+"U56-DA-hX0.placeholder" = "رقم المنزل";
 
 /* Class = "UITextField"; placeholder = "City"; ObjectID = "UBB-ak-BOC"; */
-"UBB-ak-BOC.placeholder" = "مدينة";
+"UBB-ak-BOC.placeholder" = "مدينه";
 
 /* Class = "UILabel"; text = "Total Price"; ObjectID = "VlS-0c-Wa1"; */
-"VlS-0c-Wa1.text" = "اجمالي الفاتورة";
-
-/* Class = "UITextField"; placeholder = "Region"; ObjectID = "vPe-tk-lQq"; */
-"vPe-tk-lQq.placeholder" = "منطقة";
-
-/* Class = "UILabel"; text = "Address Information"; ObjectID = "wUM-M3-xLv"; */
-"wUM-M3-xLv.text" = "العنوان";
-
-/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wvC-jY-N8s"; */
-"wvC-jY-N8s.placeholder" = "الاسم الكامل";
+"VlS-0c-Wa1.text" = "إجمالي الفاتورة";
 
 /* Class = "UILabel"; text = "Number Of Products"; ObjectID = "YHB-SA-QAr"; */
 "YHB-SA-QAr.text" = "عدد المنتجات";
@@ -58,8 +47,23 @@
 /* Class = "UILabel"; text = "Promo Value"; ObjectID = "Zys-sf-YLl"; */
 "Zys-sf-YLl.text" = "قيمه كود الخصم";
 
-"I1J-fF-yaH.text" = "اي ملاحظات خاصه بالمنتجات والعنوان";
+/* Class = "UILabel"; text = "Delivery"; ObjectID = "gON-lc-kUx"; */
+"gON-lc-kUx.text" = "التوصيل";
 
+/* Class = "UIButton"; normalTitle = "Check Out"; ObjectID = "gbd-4B-Hft"; */
+"gbd-4B-Hft.normalTitle" = "اكمال الطلب";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "kkw-k4-WhD"; */
 "kkw-k4-WhD.text" = "الدفع عند الاستلام";
 
-"BGV-d3-MHP.text" = "طريقة الدفع";
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "oc8-GB-huM"; */
+"oc8-GB-huM.normalTitle" = "تفعيل";
+
+/* Class = "UITextField"; placeholder = "Region"; ObjectID = "vPe-tk-lQq"; */
+"vPe-tk-lQq.placeholder" = "منطقة";
+
+/* Class = "UILabel"; text = "Address Information"; ObjectID = "wUM-M3-xLv"; */
+"wUM-M3-xLv.text" = "معلومات العنوان";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wvC-jY-N8s"; */
+"wvC-jY-N8s.placeholder" = "الاسم كامل";

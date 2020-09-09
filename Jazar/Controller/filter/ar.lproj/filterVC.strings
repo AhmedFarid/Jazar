@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Lowest Price"; ObjectID = "5xB-1i-9z3"; */
+"5xB-1i-9z3.text" = "الاقل سعر";
+
+/* Class = "UILabel"; text = "Highest Price"; ObjectID = "Ayk-cE-G5D"; */
+"Ayk-cE-G5D.text" = "الأعلى سعر";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "I6h-sk-dLL"; */
+"I6h-sk-dLL.normalTitle" = "فلترة";
+
+/* Class = "UILabel"; text = "In Cart"; ObjectID = "WD7-kG-TOC"; */
+"WD7-kG-TOC.text" = "في السله";
+
+/* Class = "UILabel"; text = "Limited Quantity"; ObjectID = "WGB-DO-PdO"; */
+"WGB-DO-PdO.text" = "كمية محدودة";
+
+/* Class = "UILabel"; text = "Best seller"; ObjectID = "Wek-2E-Rz6"; */
+"Wek-2E-Rz6.text" = "افضل المبيعات";
+
+/* Class = "UILabel"; text = "New Product"; ObjectID = "Xop-4Z-cee"; */
+"Xop-4Z-cee.text" = "منتجات جديدة";
+
+/* Class = "UILabel"; text = "In Favourite"; ObjectID = "zFf-06-ZsX"; */
+"zFf-06-ZsX.text" = "المفضلة";

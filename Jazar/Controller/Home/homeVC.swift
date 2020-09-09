@@ -10,6 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import SideMenu
 import MOLH
+import Floaty
 
 class homeVC: UIViewController,NVActivityIndicatorViewable {
     
@@ -25,6 +26,7 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var catHight: NSLayoutConstraint!
     @IBOutlet weak var flashLb: UILabel!
     @IBOutlet weak var dailyDishCollectionView: UICollectionView!
+    @IBOutlet weak var itemBtnLeft: Floaty!
     
     var timer : Timer?
     var currentIndex = 0
@@ -33,6 +35,10 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
     var categorie = [dataCategoriesArray]()
     var hotDeal = [productsDataArray]()
     var blogs = [blogsData]()
+    var phone = ""
+    var whatsapp = ""
+    var facebook = ""
+    
     
     var refreshControl = UIRefreshControl()
     
@@ -47,6 +53,92 @@ class homeVC: UIViewController,NVActivityIndicatorViewable {
         handelApiBanner()
         giftsGet()
         self.searchTF.delegate = self
+        flatyBtn()
+        getWebsiteInfo()
+    }
+    
+    func flatyBtn() {
+        itemBtnLeft.addItem("", icon: UIImage(named: "Group 1594")!, handler: { item in
+            let appURL = URL(string: self.facebook)!
+            let application = UIApplication.shared
+            if application.canOpenURL(appURL) {
+                application.open(appURL)
+            } else {
+                let webURL = URL(string: self.facebook)!
+                application.open(webURL)
+            }
+
+            self.itemBtnLeft.close()
+        })
+        self.view.addSubview(itemBtnLeft)
+        
+        itemBtnLeft.addItem("", icon: UIImage(named: "whatsapp")!, handler: { item in
+            print(self.whatsapp)
+            let urlWhats = "whatsapp://send?phone=+\(self.whatsapp)&text="
+
+                   var characterSet = CharacterSet.urlQueryAllowed
+            characterSet.insert(charactersIn: "?&")
+            
+            if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: characterSet){
+                
+                if let url = URL(string: urlString),
+                    UIApplication.shared.canOpenURL(url) {
+                    if #available(iOS 10, *) {
+                        UIApplication.shared.open(url, options: [:], completionHandler:nil)
+                    } else {
+                        UIApplication.shared.openURL(url)
+                    }
+                } else {
+                    // add error message here
+                }
+            }
+            self.itemBtnLeft.close()
+               })
+               self.view.addSubview(itemBtnLeft)
+        
+        itemBtnLeft.addItem("", icon: UIImage(named: "Group 1658")!, handler: { item in
+            if let url = URL(string: "tel://\(self.phone)"),
+                UIApplication.shared.canOpenURL(url) {
+                if #available(iOS 10, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler:nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            } else {
+                // add error message here
+            }
+            self.itemBtnLeft.close()
+        })
+        self.view.addSubview(itemBtnLeft)
+        
+        itemBtnLeft.addItem("", icon: UIImage(named: "Group 1659")!, handler: { item in
+            let textToShare = ["يمكنك الاستفادة من الخصم عن طريق تحميل تطبيق #جزر #طلباتك_اوامر","تحميل ايفون :https://apps.apple.com/us/app/id1525254401","تحميل اندرويد https://play.google.com/store/apps/details?id=com.gazr","حمل التطبيق الان واستمتع بعروض وخصومات كل يوم","#جزر_طلباتك_اوامر"]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+            self.present(activityViewController, animated: true, completion: nil)
+            self.itemBtnLeft.close()
+        })
+        self.view.addSubview(itemBtnLeft)
+    }
+    
+    func getWebsiteInfo() {
+        websiteInfoApi.getwebsiteInfoApi { (error, success, webInfo) in
+            if success {
+                self.phone = webInfo?.data?.phone ?? ""
+                self.whatsapp = webInfo?.data?.whatsapp ?? ""
+                self.facebook = webInfo?.data?.socailMedia?.first?.link ?? ""
+                
+                for i in webInfo?.data?.socailMedia ?? [] {
+                    if i.name == "facebook" {
+                        self.facebook = i.link ?? ""
+                        break
+                    }
+                }
+                
+                
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

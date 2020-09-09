@@ -33,7 +33,7 @@ struct productsDataArray: Codable {
         let stock, stockLimitAlert, countSolid, numberViews: Int?
         let numberClicks, totalRate, totalNumberReview: Int?
         let reviews: [Review]?
-        let salePrice, discount, total: Int?
+        let salePrice, discount, total: Double?
         let totalWithCurrency: String?
         let image: String?
         let category, subcategory, brand, createdBy: String?

@@ -42,23 +42,23 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
     
     
     var totlaPrice = 0.0
-    var countCart = 0
+    var countCart = 0.0
     var curancy = ""
-    var promo = 0
-    var delveryTotal = 0
+    var promo = 0.0
+    var delveryTotal = 0.0
     var promoText = ""
     var cityId = 0
     var regionId = 0
     var receivePointsId = ""
     var typeDelivery = ""
-    var slow = 0
-    var fast = 0
+    var slow = 0.0
+    var fast = 0.0
     var products = [productsDataArray]()
     var type = ""
     var delvertyTypes = ""
-    var tex = 0
+    var tex = 0.0
     var promoNext = ""
-    var deliveryPrices = 0
+    var deliveryPrices = 0.0
     var ciytDrvly = 0
     var stateId = 0
     
@@ -182,15 +182,15 @@ class checkOutVC: UIViewController,NVActivityIndicatorViewable {
                     let title = NSLocalizedString("Promo Code", comment: "profuct list lang")
                     let messages = NSLocalizedString("You have Discount", comment: "profuct list lang")
                     self.showAlert(title: title, message: "\(messages) \(message?.data?.discount ?? 0) \(self.curancy)")
-                    self.promo = message?.data?.discount ?? 0
-                    if self.delveryTotal == 0 {
+                    self.promo = Double(message?.data?.discount ?? 0)
+                    if self.delveryTotal == 0.0 {
                         let LE = NSLocalizedString("LE", comment: "profuct list lang")
                         self.promoValues.text = "\(self.promo) \(LE)"
-                        self.allTotalPrice.text = "\(Int(self.totlaPrice) + self.deliveryPrices - self.promo) \(LE)"
+                        self.allTotalPrice.text = "\(self.totlaPrice + self.deliveryPrices - self.promo) \(LE)"
                     }else {
                         let LE = NSLocalizedString("LE", comment: "profuct list lang")
                         self.promoValues.text = "\(self.promo) \(LE)"
-                        self.allTotalPrice.text = "\(Int(self.totlaPrice) + self.deliveryPrices - self.promo) \(LE)"
+                        self.allTotalPrice.text = "\(self.totlaPrice + self.deliveryPrices - self.promo) \(LE)"
                     }
                     self.stopAnimating()
                 }else {
@@ -405,12 +405,12 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
         }else if pickerView == delviryStatePicker {
             regionTF.text = status[row].name
             regionId = status[row].id ?? 0
-            self.deliveryPrices = status[row].price ?? 0
+            self.deliveryPrices = Double(status[row].price ?? 0)
             
             if typeDelivery == "Immediately" {
-                self.deliveryPrices = status[row].price ?? 0
+                self.deliveryPrices = Double(status[row].price ?? 0)
                 self.deliveryPrice.text = "\(deliveryPrices) LE"
-                self.allTotalPrice.text = "\(Int(totlaPrice) + (status[row].price ?? 0)  - self.promo) LE"
+                self.allTotalPrice.text = "\(totlaPrice + Double((status[row].price ?? 0))  - self.promo) LE"
                 
             }else {
                 //timingPikerFunc(id: status[row].id ?? 0)
@@ -441,10 +441,10 @@ extension checkOutVC: UIPickerViewDataSource, UIPickerViewDelegate{
             }
         }else {
             self.receivePointsId = "\(points[row].id ?? 0)"
-            self.deliveryPrices = points[row].price ?? 0
+            self.deliveryPrices = Double(points[row].price ?? 0)
             let LE = NSLocalizedString("LE", comment: "profuct list lang")
             self.deliveryPrice.text = "\(deliveryPrices) \(LE)"
-            self.allTotalPrice.text = "\(Int(totlaPrice) + deliveryPrices - self.promo) \(LE)"
+            self.allTotalPrice.text = "\(totlaPrice + deliveryPrices - self.promo) \(LE)"
             timingTF.text = "\(points[row].title ?? "") \(points[row].datumDescription ?? "") \(points[row].price ?? 0) LE"
         }
         

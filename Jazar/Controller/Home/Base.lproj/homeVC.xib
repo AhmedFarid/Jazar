@@ -26,6 +26,7 @@
                 <outlet property="flashHight" destination="WV9-JB-4hc" id="liS-61-p1D"/>
                 <outlet property="flashLb" destination="DXf-JW-FV4" id="4dG-8f-bCS"/>
                 <outlet property="flashSellCollecetion" destination="2by-hJ-Csg" id="2jo-ie-IMP"/>
+                <outlet property="itemBtnLeft" destination="MZ4-0D-Var" id="CMA-j5-6kC"/>
                 <outlet property="pageControlBanner" destination="a98-OY-AKd" id="AUh-4I-t8e"/>
                 <outlet property="scrollview" destination="0f2-yq-YKi" id="4Su-6k-cr2"/>
                 <outlet property="searchTF" destination="vBT-Pu-fgG" id="Upn-XG-qwa"/>
@@ -242,16 +243,34 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="Rma-Gg-WA7"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="wtS-9t-bLG"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZ4-0D-Var" customClass="Floaty" customModule="Floaty">
+                    <rect key="frame" x="348" y="786" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="RIJ-mv-Hk8"/>
+                        <constraint firstAttribute="width" constant="50" id="f4K-ng-jwh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                            <color key="value" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="plusColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.22352941179999999" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="XoX-Tk-Kem" secondAttribute="bottom" id="6Ws-Bj-PDo"/>
                 <constraint firstAttribute="bottom" secondItem="0f2-yq-YKi" secondAttribute="bottom" id="96Z-cv-7lf"/>
                 <constraint firstItem="0f2-yq-YKi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BXF-BE-olw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MZ4-0D-Var" secondAttribute="trailing" constant="16" id="HeU-kM-WLg"/>
                 <constraint firstItem="0f2-yq-YKi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lwr-l0-mk5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XoX-Tk-Kem" secondAttribute="trailing" id="hBt-zH-IMY"/>
                 <constraint firstItem="XoX-Tk-Kem" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nhT-xF-z1r"/>
                 <constraint firstItem="TWz-By-Cwh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.280134" id="nmT-Q8-6tu"/>
+                <constraint firstAttribute="bottom" secondItem="MZ4-0D-Var" secondAttribute="bottom" constant="60" id="pTD-Ga-4YR"/>
                 <constraint firstItem="TWz-By-Cwh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="sXa-9q-Zz1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0f2-yq-YKi" secondAttribute="trailing" id="uk6-i4-6b4"/>
             </constraints>
